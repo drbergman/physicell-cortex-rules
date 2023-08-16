@@ -14,7 +14,7 @@
     </domain>
 
     <overall>
-        <max_time units="min">7200</max_time>
+        <max_time units="min">8640</max_time>
         <time_units>min</time_units>
         <space_units>micron</space_units>
         <dt_diffusion units="min">0.01</dt_diffusion>
@@ -66,7 +66,7 @@
         </variable>
         <variable name="type 2 diff factor" units="dimensionless" ID="1">
             <physical_parameter_set>
-                <diffusion_coefficient units="micron^2/min">100</diffusion_coefficient>
+                <diffusion_coefficient units="micron^2/min">10000</diffusion_coefficient>
                 <decay_rate units="1/min">1</decay_rate>
             </physical_parameter_set>
             <initial_condition units="dimensionless">0.0</initial_condition>
@@ -98,23 +98,23 @@
         </variable>
         <variable name="rgc taxis factor" units="dimensionless" ID="3">
             <physical_parameter_set>
-                <diffusion_coefficient units="micron^2/min">100</diffusion_coefficient>
+                <diffusion_coefficient units="micron^2/min">10000</diffusion_coefficient>
                 <decay_rate units="1/min">1</decay_rate>
             </physical_parameter_set>
             <initial_condition units="mmHg">0</initial_condition>
-            <Dirichlet_boundary_condition units="mmHg" enabled="True">0</Dirichlet_boundary_condition>
+            <Dirichlet_boundary_condition units="mmHg" enabled="False">0</Dirichlet_boundary_condition>
             <Dirichlet_options>
-                <boundary_value ID="xmin" enabled="True">0</boundary_value>
-                <boundary_value ID="xmax" enabled="True">0</boundary_value>
-                <boundary_value ID="ymin" enabled="True">0</boundary_value>
-                <boundary_value ID="ymax" enabled="True">0</boundary_value>
+                <boundary_value ID="xmin" enabled="False">0</boundary_value>
+                <boundary_value ID="xmax" enabled="False">0</boundary_value>
+                <boundary_value ID="ymin" enabled="False">0</boundary_value>
+                <boundary_value ID="ymax" enabled="False">0</boundary_value>
                 <boundary_value ID="zmin" enabled="False">0</boundary_value>
                 <boundary_value ID="zmax" enabled="False">0</boundary_value>
             </Dirichlet_options>
         </variable>
         <variable name="type 3 diff factor" units="dimensionless" ID="4">
             <physical_parameter_set>
-                <diffusion_coefficient units="micron^2/min">100</diffusion_coefficient>
+                <diffusion_coefficient units="micron^2/min">10000</diffusion_coefficient>
                 <decay_rate units="1/min">1</decay_rate>
             </physical_parameter_set>
             <initial_condition units="dimensionless">0.0</initial_condition>
@@ -160,20 +160,20 @@
                 <boundary_value ID="zmax" enabled="False" />
             </Dirichlet_options>
         </variable>
-        <variable name="pia migration factor" units="dimensionless" ID="7">
+        <variable name="type 4 diff factor" units="dimensionless" ID="7">
             <physical_parameter_set>
-                <diffusion_coefficient units="micron^2/min">0</diffusion_coefficient>
-                <decay_rate units="1/min">0</decay_rate>
+                <diffusion_coefficient units="micron^2/min">10000</diffusion_coefficient>
+                <decay_rate units="1/min">1</decay_rate>
             </physical_parameter_set>
-            <initial_condition units="mmHg">0</initial_condition>
-            <Dirichlet_boundary_condition units="mmHg" enabled="True">0</Dirichlet_boundary_condition>
+            <initial_condition units="dimensionless">0.0</initial_condition>
+            <Dirichlet_boundary_condition units="dimensionless" enabled="False">0.0</Dirichlet_boundary_condition>
             <Dirichlet_options>
-                <boundary_value ID="xmin" enabled="True">0.001</boundary_value>
-                <boundary_value ID="xmax" enabled="True">0.001</boundary_value>
-                <boundary_value ID="ymin" enabled="True">0</boundary_value>
-                <boundary_value ID="ymax" enabled="True">0</boundary_value>
-                <boundary_value ID="zmin" enabled="False">0</boundary_value>
-                <boundary_value ID="zmax" enabled="False">0</boundary_value>
+                <boundary_value ID="xmin" enabled="False" />
+                <boundary_value ID="xmax" enabled="False" />
+                <boundary_value ID="ymin" enabled="False" />
+                <boundary_value ID="ymax" enabled="False" />
+                <boundary_value ID="zmin" enabled="False" />
+                <boundary_value ID="zmax" enabled="False" />
             </Dirichlet_options>
         </variable>
         <options>
@@ -252,6 +252,7 @@
                         <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
@@ -286,7 +287,7 @@
                                 <chemotactic_sensitivity substrate="type 3 diff factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="ipc taxis factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="arrest factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="pia migration factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 4 diff factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -294,13 +295,13 @@
                 <secretion>
                     <substrate name="type 1 diff factor">
                         <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1</secretion_target>
+                        <secretion_target units="substrate density">1.0</secretion_target>
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
                     <substrate name="type 2 diff factor">
                         <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1</secretion_target>
+                        <secretion_target units="substrate density">1.0</secretion_target>
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
@@ -311,14 +312,14 @@
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
                     <substrate name="rgc taxis factor">
-                        <secretion_rate units="1/min">10</secretion_rate>
+                        <secretion_rate units="1/min">1</secretion_rate>
                         <secretion_target units="substrate density">1</secretion_target>
                         <uptake_rate units="1/min">0</uptake_rate>
                         <net_export_rate units="total substrate/min">0</net_export_rate>
                     </substrate>
                     <substrate name="type 3 diff factor">
                         <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1</secretion_target>
+                        <secretion_target units="substrate density">1.0</secretion_target>
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
@@ -334,7 +335,220 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="pia migration factor">
+                    <substrate name="type 4 diff factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">1.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                </secretion>
+                <cell_interactions>
+                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <live_phagocytosis_rates>
+                        <phagocytosis_rate name="default" units="1/min">0</phagocytosis_rate>
+                        <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
+                    </live_phagocytosis_rates>
+                    <attack_rates>
+                        <attack_rate name="default" units="1/min">0</attack_rate>
+                        <attack_rate name="apical" units="1/min">0.0</attack_rate>
+                        <attack_rate name="pial" units="1/min">0.0</attack_rate>
+                        <attack_rate name="rgc" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
+                    </attack_rates>
+                    <damage_rate units="1/min">100</damage_rate>
+                    <fusion_rates>
+                        <fusion_rate name="default" units="1/min">0</fusion_rate>
+                        <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
+                    </fusion_rates>
+                </cell_interactions>
+                <cell_transformations>
+                    <transformation_rates>
+                        <transformation_rate name="apical" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="default" units="1/min">0</transformation_rate>
+                        <transformation_rate name="pial" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
+                    </transformation_rates>
+                </cell_transformations>
+            </phenotype>
+            <custom_data>
+                <sample conserved="false" units="dimensionless" description="">1.0</sample>
+                <time_alive conserved="false" units="min" description="">0.0</time_alive>
+            </custom_data>
+        </cell_definition>
+        <cell_definition name="pial" ID="1">
+            <phenotype>
+                <cycle code="5" name="live">
+                    <phase_transition_rates units="1/min">
+                        <rate start_index="0" end_index="0" fixed_duration="false">0</rate>
+                    </phase_transition_rates>
+                </cycle>
+                <death>
+                    <model code="100" name="apoptosis">
+                        <death_rate units="1/min">0</death_rate>
+                        <phase_durations units="min">
+                            <duration index="0" fixed_duration="true">516</duration>
+                        </phase_durations>
+                        <parameters>
+                            <unlysed_fluid_change_rate units="1/min">0.05</unlysed_fluid_change_rate>
+                            <lysed_fluid_change_rate units="1/min">0</lysed_fluid_change_rate>
+                            <cytoplasmic_biomass_change_rate units="1/min">1.66667e-02</cytoplasmic_biomass_change_rate>
+                            <nuclear_biomass_change_rate units="1/min">5.83333e-03</nuclear_biomass_change_rate>
+                            <calcification_rate units="1/min">0</calcification_rate>
+                            <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
+                        </parameters>
+                    </model>
+                    <model code="101" name="necrosis">
+                        <death_rate units="1/min">0</death_rate>
+                        <phase_durations units="min">
+                            <duration index="0" fixed_duration="true">0</duration>
+                            <duration index="1" fixed_duration="true">86400</duration>
+                        </phase_durations>
+                        <parameters>
+                            <unlysed_fluid_change_rate units="1/min">1.11667e-2</unlysed_fluid_change_rate>
+                            <lysed_fluid_change_rate units="1/min">8.33333e-4</lysed_fluid_change_rate>
+                            <cytoplasmic_biomass_change_rate units="1/min">5.33333e-5</cytoplasmic_biomass_change_rate>
+                            <nuclear_biomass_change_rate units="1/min">2.16667e-3</nuclear_biomass_change_rate>
+                            <calcification_rate units="1/min">0</calcification_rate>
+                            <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
+                        </parameters>
+                    </model>
+                </death>
+                <volume>
+                    <total units="micron^3">200</total>
+                    <fluid_fraction units="dimensionless">0.75</fluid_fraction>
+                    <nuclear units="micron^3">540</nuclear>
+                    <fluid_change_rate units="1/min">0.05</fluid_change_rate>
+                    <cytoplasmic_biomass_change_rate units="1/min">0.0045</cytoplasmic_biomass_change_rate>
+                    <nuclear_biomass_change_rate units="1/min">0.0055</nuclear_biomass_change_rate>
+                    <calcified_fraction units="dimensionless">0</calcified_fraction>
+                    <calcification_rate units="1/min">0</calcification_rate>
+                    <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
+                </volume>
+                <mechanics>
+                    <cell_cell_adhesion_strength units="micron/min">0.4</cell_cell_adhesion_strength>
+                    <cell_cell_repulsion_strength units="micron/min">10.0</cell_cell_repulsion_strength>
+                    <relative_maximum_adhesion_distance units="dimensionless">1.25</relative_maximum_adhesion_distance>
+                    <cell_adhesion_affinities>
+                        <cell_adhesion_affinity name="default">1</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="apical">0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="pial">12</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">0.0001</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">0.0001</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">0.0001</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">0.0001</cell_adhesion_affinity>
+                    </cell_adhesion_affinities>
+                    <options>
+                        <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
+                        <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
+                    </options>
+                    <cell_BM_adhesion_strength units="micron/min">4.0</cell_BM_adhesion_strength>
+                    <cell_BM_repulsion_strength units="micron/min">10.0</cell_BM_repulsion_strength>
+                    <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
+                    <attachment_rate units="1/min">0.0</attachment_rate>
+                    <detachment_rate units="1/min">0.0</detachment_rate>
+                </mechanics>
+                <motility>
+                    <speed units="micron/min">0.1</speed>
+                    <persistence_time units="min">5</persistence_time>
+                    <migration_bias units="dimensionless">1</migration_bias>
+                    <options>
+                        <enabled>true</enabled>
+                        <use_2D>true</use_2D>
+                        <chemotaxis>
+                            <enabled>false</enabled>
+                            <substrate>type 4 diff factor</substrate>
+                            <direction>-1</direction>
+                        </chemotaxis>
+                        <advanced_chemotaxis>
+                            <enabled>true</enabled>
+                            <normalize_each_gradient>false</normalize_each_gradient>
+                            <chemotactic_sensitivities>
+                                <chemotactic_sensitivity substrate="type 1 diff factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 2 diff factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="transformation inhibitor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="rgc taxis factor">-1.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 3 diff factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="ipc taxis factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="arrest factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 4 diff factor">0.0</chemotactic_sensitivity>
+                            </chemotactic_sensitivities>
+                        </advanced_chemotaxis>
+                    </options>
+                </motility>
+                <secretion>
+                    <substrate name="type 1 diff factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">0.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="type 2 diff factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">0.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="transformation inhibitor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">0.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="rgc taxis factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">1.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="type 3 diff factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">0.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="ipc taxis factor">
+                        <secretion_rate units="1/min">10</secretion_rate>
+                        <secretion_target units="substrate density">1</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="arrest factor">
+                        <secretion_rate units="1/min">10</secretion_rate>
+                        <secretion_target units="substrate density">1</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="type 4 diff factor">
                         <secretion_rate units="1/min">0.0</secretion_rate>
                         <secretion_target units="substrate density">0.0</secretion_target>
                         <uptake_rate units="1/min">0.0</uptake_rate>
@@ -353,6 +567,7 @@
                         <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -364,8 +579,9 @@
                         <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">100</damage_rate>
+                    <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
                         <fusion_rate name="default" units="1/min">0</fusion_rate>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
@@ -376,19 +592,21 @@
                         <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
                     <transformation_rates>
                         <transformation_rate name="apical" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="pial" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -397,11 +615,11 @@
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
         </cell_definition>
-        <cell_definition name="rgc" ID="1">
+        <cell_definition name="rgc" ID="2">
             <phenotype>
                 <cycle code="5" name="live">
                     <phase_transition_rates units="1/min">
-                        <rate start_index="0" end_index="0" fixed_duration="false">0</rate>
+                        <rate start_index="0" end_index="0" fixed_duration="false">0.0015</rate>
                     </phase_transition_rates>
                 </cycle>
                 <death>
@@ -456,10 +674,11 @@
                         <cell_adhesion_affinity name="pial">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="rgc">0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
@@ -494,7 +713,7 @@
                                 <chemotactic_sensitivity substrate="type 3 diff factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="ipc taxis factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="arrest factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="pia migration factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 4 diff factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -515,7 +734,7 @@
                     <substrate name="transformation inhibitor">
                         <secretion_rate units="1/min">0.0</secretion_rate>
                         <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">1</uptake_rate>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
                     <substrate name="rgc taxis factor">
@@ -542,7 +761,7 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="pia migration factor">
+                    <substrate name="type 4 diff factor">
                         <secretion_rate units="1/min">0.0</secretion_rate>
                         <secretion_target units="substrate density">0.0</secretion_target>
                         <uptake_rate units="1/min">0.0</uptake_rate>
@@ -561,6 +780,7 @@
                         <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -572,6 +792,7 @@
                         <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -584,6 +805,7 @@
                         <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -597,214 +819,7 @@
                         <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
-                    </transformation_rates>
-                </cell_transformations>
-            </phenotype>
-            <custom_data>
-                <sample conserved="false" units="dimensionless" description="">1.0</sample>
-                <time_alive conserved="false" units="min" description="">0.0</time_alive>
-            </custom_data>
-        </cell_definition>
-        <cell_definition name="pial" ID="2">
-            <phenotype>
-                <cycle code="5" name="live">
-                    <phase_transition_rates units="1/min">
-                        <rate start_index="0" end_index="0" fixed_duration="false">0</rate>
-                    </phase_transition_rates>
-                </cycle>
-                <death>
-                    <model code="100" name="apoptosis">
-                        <death_rate units="1/min">0</death_rate>
-                        <phase_durations units="min">
-                            <duration index="0" fixed_duration="true">516</duration>
-                        </phase_durations>
-                        <parameters>
-                            <unlysed_fluid_change_rate units="1/min">0.05</unlysed_fluid_change_rate>
-                            <lysed_fluid_change_rate units="1/min">0</lysed_fluid_change_rate>
-                            <cytoplasmic_biomass_change_rate units="1/min">1.66667e-02</cytoplasmic_biomass_change_rate>
-                            <nuclear_biomass_change_rate units="1/min">5.83333e-03</nuclear_biomass_change_rate>
-                            <calcification_rate units="1/min">0</calcification_rate>
-                            <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
-                        </parameters>
-                    </model>
-                    <model code="101" name="necrosis">
-                        <death_rate units="1/min">0</death_rate>
-                        <phase_durations units="min">
-                            <duration index="0" fixed_duration="true">0</duration>
-                            <duration index="1" fixed_duration="true">86400</duration>
-                        </phase_durations>
-                        <parameters>
-                            <unlysed_fluid_change_rate units="1/min">1.11667e-2</unlysed_fluid_change_rate>
-                            <lysed_fluid_change_rate units="1/min">8.33333e-4</lysed_fluid_change_rate>
-                            <cytoplasmic_biomass_change_rate units="1/min">5.33333e-5</cytoplasmic_biomass_change_rate>
-                            <nuclear_biomass_change_rate units="1/min">2.16667e-3</nuclear_biomass_change_rate>
-                            <calcification_rate units="1/min">0</calcification_rate>
-                            <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
-                        </parameters>
-                    </model>
-                </death>
-                <volume>
-                    <total units="micron^3">2494</total>
-                    <fluid_fraction units="dimensionless">0.75</fluid_fraction>
-                    <nuclear units="micron^3">540</nuclear>
-                    <fluid_change_rate units="1/min">0.05</fluid_change_rate>
-                    <cytoplasmic_biomass_change_rate units="1/min">0.0045</cytoplasmic_biomass_change_rate>
-                    <nuclear_biomass_change_rate units="1/min">0.0055</nuclear_biomass_change_rate>
-                    <calcified_fraction units="dimensionless">0</calcified_fraction>
-                    <calcification_rate units="1/min">0</calcification_rate>
-                    <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
-                </volume>
-                <mechanics>
-                    <cell_cell_adhesion_strength units="micron/min">0.4</cell_cell_adhesion_strength>
-                    <cell_cell_repulsion_strength units="micron/min">10.0</cell_cell_repulsion_strength>
-                    <relative_maximum_adhesion_distance units="dimensionless">1.25</relative_maximum_adhesion_distance>
-                    <cell_adhesion_affinities>
-                        <cell_adhesion_affinity name="default">1</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="apical">0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="pial">4</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc proto">0.01</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">0.01</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">0.01</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">0.01</cell_adhesion_affinity>
-                    </cell_adhesion_affinities>
-                    <options>
-                        <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
-                        <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
-                    </options>
-                    <cell_BM_adhesion_strength units="micron/min">4.0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">10.0</cell_BM_repulsion_strength>
-                    <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
-                    <attachment_rate units="1/min">0.0</attachment_rate>
-                    <detachment_rate units="1/min">0.0</detachment_rate>
-                </mechanics>
-                <motility>
-                    <speed units="micron/min">0.1</speed>
-                    <persistence_time units="min">5</persistence_time>
-                    <migration_bias units="dimensionless">1</migration_bias>
-                    <options>
-                        <enabled>true</enabled>
-                        <use_2D>true</use_2D>
-                        <chemotaxis>
-                            <enabled>false</enabled>
-                            <substrate>pia migration factor</substrate>
-                            <direction>-1</direction>
-                        </chemotaxis>
-                        <advanced_chemotaxis>
-                            <enabled>true</enabled>
-                            <normalize_each_gradient>false</normalize_each_gradient>
-                            <chemotactic_sensitivities>
-                                <chemotactic_sensitivity substrate="type 1 diff factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type 2 diff factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="rgc taxis factor">-1.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type 3 diff factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="ipc taxis factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="arrest factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="pia migration factor">-1.0</chemotactic_sensitivity>
-                            </chemotactic_sensitivities>
-                        </advanced_chemotaxis>
-                    </options>
-                </motility>
-                <secretion>
-                    <substrate name="type 1 diff factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type 2 diff factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="transformation inhibitor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="rgc taxis factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type 3 diff factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="ipc taxis factor">
-                        <secretion_rate units="1/min">10</secretion_rate>
-                        <secretion_target units="substrate density">1</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="arrest factor">
-                        <secretion_rate units="1/min">10</secretion_rate>
-                        <secretion_target units="substrate density">1</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="pia migration factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                </secretion>
-                <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
-                    <live_phagocytosis_rates>
-                        <phagocytosis_rate name="default" units="1/min">0</phagocytosis_rate>
-                        <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
-                    </live_phagocytosis_rates>
-                    <attack_rates>
-                        <attack_rate name="default" units="1/min">0</attack_rate>
-                        <attack_rate name="apical" units="1/min">0.0</attack_rate>
-                        <attack_rate name="pial" units="1/min">0.0</attack_rate>
-                        <attack_rate name="rgc" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
-                    </attack_rates>
-                    <damage_rate units="1/min">1</damage_rate>
-                    <fusion_rates>
-                        <fusion_rate name="default" units="1/min">0</fusion_rate>
-                        <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
-                    </fusion_rates>
-                </cell_interactions>
-                <cell_transformations>
-                    <transformation_rates>
-                        <transformation_rate name="apical" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="pial" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="default" units="1/min">0</transformation_rate>
-                        <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -868,14 +883,15 @@
                     <relative_maximum_adhesion_distance units="dimensionless">1.25</relative_maximum_adhesion_distance>
                     <cell_adhesion_affinities>
                         <cell_adhesion_affinity name="default">1</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="apical">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="pial">0.01</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="apical">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="pial">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="rgc">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
@@ -910,7 +926,7 @@
                                 <chemotactic_sensitivity substrate="type 3 diff factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="ipc taxis factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="arrest factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="pia migration factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 4 diff factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -958,10 +974,10 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="pia migration factor">
+                    <substrate name="type 4 diff factor">
                         <secretion_rate units="1/min">0.0</secretion_rate>
                         <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <uptake_rate units="1/min">1.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
                 </secretion>
@@ -977,6 +993,7 @@
                         <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -988,6 +1005,7 @@
                         <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -1000,6 +1018,7 @@
                         <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -1013,6 +1032,7 @@
                         <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -1080,10 +1100,11 @@
                         <cell_adhesion_affinity name="pial">0.01</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
@@ -1118,7 +1139,7 @@
                                 <chemotactic_sensitivity substrate="type 3 diff factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="ipc taxis factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="arrest factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="pia migration factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 4 diff factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -1166,7 +1187,7 @@
                         <uptake_rate units="1/min">1</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="pia migration factor">
+                    <substrate name="type 4 diff factor">
                         <secretion_rate units="1/min">0.0</secretion_rate>
                         <secretion_target units="substrate density">0.0</secretion_target>
                         <uptake_rate units="1/min">0.0</uptake_rate>
@@ -1185,6 +1206,7 @@
                         <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -1196,6 +1218,7 @@
                         <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -1208,6 +1231,7 @@
                         <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -1221,6 +1245,7 @@
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -1288,10 +1313,11 @@
                         <cell_adhesion_affinity name="pial">0.01</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
@@ -1326,7 +1352,7 @@
                                 <chemotactic_sensitivity substrate="type 3 diff factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="ipc taxis factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="arrest factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="pia migration factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 4 diff factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -1374,7 +1400,7 @@
                         <uptake_rate units="1/min">1</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="pia migration factor">
+                    <substrate name="type 4 diff factor">
                         <secretion_rate units="1/min">0.0</secretion_rate>
                         <secretion_target units="substrate density">0.0</secretion_target>
                         <uptake_rate units="1/min">0.0</uptake_rate>
@@ -1393,6 +1419,7 @@
                         <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -1404,6 +1431,7 @@
                         <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -1416,6 +1444,7 @@
                         <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -1429,6 +1458,7 @@
                         <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -1496,10 +1526,11 @@
                         <cell_adhesion_affinity name="pial">0.01</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
@@ -1534,7 +1565,7 @@
                                 <chemotactic_sensitivity substrate="type 3 diff factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="ipc taxis factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="arrest factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="pia migration factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 4 diff factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -1582,7 +1613,7 @@
                         <uptake_rate units="1/min">1</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="pia migration factor">
+                    <substrate name="type 4 diff factor">
                         <secretion_rate units="1/min">0.0</secretion_rate>
                         <secretion_target units="substrate density">0.0</secretion_target>
                         <uptake_rate units="1/min">0.0</uptake_rate>
@@ -1601,6 +1632,7 @@
                         <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -1612,6 +1644,7 @@
                         <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -1624,6 +1657,7 @@
                         <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -1635,6 +1669,220 @@
                         <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="default" units="1/min">0</transformation_rate>
+                        <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
+                    </transformation_rates>
+                </cell_transformations>
+            </phenotype>
+            <custom_data>
+                <sample conserved="false" units="dimensionless" description="">1.0</sample>
+                <time_alive conserved="false" units="min" description="">0.0</time_alive>
+            </custom_data>
+        </cell_definition>
+        <cell_definition name="ipc 4" ID="7">
+            <phenotype>
+                <cycle code="5" name="live">
+                    <phase_transition_rates units="1/min">
+                        <rate start_index="0" end_index="0" fixed_duration="false">0</rate>
+                    </phase_transition_rates>
+                </cycle>
+                <death>
+                    <model code="100" name="apoptosis">
+                        <death_rate units="1/min">0</death_rate>
+                        <phase_durations units="min">
+                            <duration index="0" fixed_duration="true">516</duration>
+                        </phase_durations>
+                        <parameters>
+                            <unlysed_fluid_change_rate units="1/min">0.05</unlysed_fluid_change_rate>
+                            <lysed_fluid_change_rate units="1/min">0</lysed_fluid_change_rate>
+                            <cytoplasmic_biomass_change_rate units="1/min">1.66667e-02</cytoplasmic_biomass_change_rate>
+                            <nuclear_biomass_change_rate units="1/min">5.83333e-03</nuclear_biomass_change_rate>
+                            <calcification_rate units="1/min">0</calcification_rate>
+                            <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
+                        </parameters>
+                    </model>
+                    <model code="101" name="necrosis">
+                        <death_rate units="1/min">0</death_rate>
+                        <phase_durations units="min">
+                            <duration index="0" fixed_duration="true">0</duration>
+                            <duration index="1" fixed_duration="true">86400</duration>
+                        </phase_durations>
+                        <parameters>
+                            <unlysed_fluid_change_rate units="1/min">1.11667e-2</unlysed_fluid_change_rate>
+                            <lysed_fluid_change_rate units="1/min">8.33333e-4</lysed_fluid_change_rate>
+                            <cytoplasmic_biomass_change_rate units="1/min">5.33333e-5</cytoplasmic_biomass_change_rate>
+                            <nuclear_biomass_change_rate units="1/min">2.16667e-3</nuclear_biomass_change_rate>
+                            <calcification_rate units="1/min">0</calcification_rate>
+                            <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
+                        </parameters>
+                    </model>
+                </death>
+                <volume>
+                    <total units="micron^3">2494</total>
+                    <fluid_fraction units="dimensionless">0.75</fluid_fraction>
+                    <nuclear units="micron^3">540</nuclear>
+                    <fluid_change_rate units="1/min">0.05</fluid_change_rate>
+                    <cytoplasmic_biomass_change_rate units="1/min">0.0045</cytoplasmic_biomass_change_rate>
+                    <nuclear_biomass_change_rate units="1/min">0.0055</nuclear_biomass_change_rate>
+                    <calcified_fraction units="dimensionless">0</calcified_fraction>
+                    <calcification_rate units="1/min">0</calcification_rate>
+                    <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
+                </volume>
+                <mechanics>
+                    <cell_cell_adhesion_strength units="micron/min">0</cell_cell_adhesion_strength>
+                    <cell_cell_repulsion_strength units="micron/min">10.0</cell_cell_repulsion_strength>
+                    <relative_maximum_adhesion_distance units="dimensionless">1.25</relative_maximum_adhesion_distance>
+                    <cell_adhesion_affinities>
+                        <cell_adhesion_affinity name="default">1</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="apical">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="pial">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">0</cell_adhesion_affinity>
+                    </cell_adhesion_affinities>
+                    <options>
+                        <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
+                        <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
+                    </options>
+                    <cell_BM_adhesion_strength units="micron/min">4.0</cell_BM_adhesion_strength>
+                    <cell_BM_repulsion_strength units="micron/min">10.0</cell_BM_repulsion_strength>
+                    <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
+                    <attachment_rate units="1/min">0.0</attachment_rate>
+                    <detachment_rate units="1/min">0.0</detachment_rate>
+                </mechanics>
+                <motility>
+                    <speed units="micron/min">1</speed>
+                    <persistence_time units="min">1</persistence_time>
+                    <migration_bias units="dimensionless">.5</migration_bias>
+                    <options>
+                        <enabled>true</enabled>
+                        <use_2D>true</use_2D>
+                        <chemotaxis>
+                            <enabled>true</enabled>
+                            <substrate>ipc taxis factor</substrate>
+                            <direction>1</direction>
+                        </chemotaxis>
+                        <advanced_chemotaxis>
+                            <enabled>false</enabled>
+                            <normalize_each_gradient>false</normalize_each_gradient>
+                            <chemotactic_sensitivities>
+                                <chemotactic_sensitivity substrate="type 1 diff factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 2 diff factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="transformation inhibitor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="rgc taxis factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 3 diff factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="ipc taxis factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="arrest factor">0.0</chemotactic_sensitivity>
+                                <chemotactic_sensitivity substrate="type 4 diff factor">0.0</chemotactic_sensitivity>
+                            </chemotactic_sensitivities>
+                        </advanced_chemotaxis>
+                    </options>
+                </motility>
+                <secretion>
+                    <substrate name="type 1 diff factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">0.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="type 2 diff factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">0.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="transformation inhibitor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">0.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="rgc taxis factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">1.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="type 3 diff factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">0.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="ipc taxis factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">0.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="arrest factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">0.0</secretion_target>
+                        <uptake_rate units="1/min">1</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                    <substrate name="type 4 diff factor">
+                        <secretion_rate units="1/min">0.0</secretion_rate>
+                        <secretion_target units="substrate density">0.0</secretion_target>
+                        <uptake_rate units="1/min">0.0</uptake_rate>
+                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
+                    </substrate>
+                </secretion>
+                <cell_interactions>
+                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <live_phagocytosis_rates>
+                        <phagocytosis_rate name="default" units="1/min">0</phagocytosis_rate>
+                        <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
+                    </live_phagocytosis_rates>
+                    <attack_rates>
+                        <attack_rate name="default" units="1/min">0</attack_rate>
+                        <attack_rate name="apical" units="1/min">0.0</attack_rate>
+                        <attack_rate name="pial" units="1/min">0.0</attack_rate>
+                        <attack_rate name="rgc" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
+                    </attack_rates>
+                    <damage_rate units="1/min">1</damage_rate>
+                    <fusion_rates>
+                        <fusion_rate name="default" units="1/min">0</fusion_rate>
+                        <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
+                    </fusion_rates>
+                </cell_interactions>
+                <cell_transformations>
+                    <transformation_rates>
+                        <transformation_rate name="apical" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="pial" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
@@ -1657,7 +1905,7 @@
     <cell_rules>
         <rulesets>
             <ruleset protocol="CBHG" version="2.0" format="csv" enabled="true">
-                <folder>./config</folder>
+                <folder>/Users/davidzhou/Desktop/rules_physicell/PhysiCell/config</folder>
                 <filename>rules0.csv</filename>
             </ruleset>
         </rulesets>
