@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+#PhysiCell output folder
+PhysiCell/output/
