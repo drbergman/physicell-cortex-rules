@@ -4,8 +4,8 @@ rgc,custom:time_alive,decreases,transform to ipc proto,0,60,200,0
 ipc proto,intracellular transformation inhibitor,increases,transform to rgc,0.1,0.001,20,0
 ipc proto,time,decreases,transformation inhibitor uptake,0,60,50,0
 ipc proto,time,increases,transformation inhibitor export,1000,60,50,0
-rgc,time,decreases,cycle entry,0,360,100,0
-ipc proto,time,increases,apoptosis,1,360,100,0
+rgc,time,decreases,cycle entry,0,1440,100,0
+ipc proto,time,increases,apoptosis,1,1440,100,0
 apical,time,increases,type 1 diff factor secretion,1,80,50,0
 ipc proto,intracellular type 1 diff factor,increases,transform to ipc 1,0.1,0.001,50,0
 ipc proto,time,decreases,type 1 diff factor uptake,0,360,50,0

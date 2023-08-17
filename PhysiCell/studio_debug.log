@@ -34181,3 +34181,1240 @@ DEBUG:root:--------- found //user_parameters
 DEBUG:root:random_seed
 DEBUG:root:number_of_cells
 DEBUG:root:found 2
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cd16ca0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121444820>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ce18610> <matplotlib.colors.Normalize object at 0x12ce18610>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121444820>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ce18610> <matplotlib.colors.Normalize object at 0x12ce18610>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121444820>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cee3820>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1213efeb0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12cc1a5e0> <matplotlib.colors.Normalize object at 0x12cc1a5e0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1213efeb0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12cc1a5e0> <matplotlib.colors.Normalize object at 0x12cc1a5e0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1213efeb0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1213de0d0> <matplotlib.colors.Normalize object at 0x1213de0d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12e4f7970>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1213de0d0> <matplotlib.colors.Normalize object at 0x1213de0d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12e4f7970>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cbffa90>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cd907f0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ca7f1f0> <matplotlib.colors.Normalize object at 0x12ca7f1f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cd907f0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ca7f1f0> <matplotlib.colors.Normalize object at 0x12ca7f1f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cd907f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12180f8e0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1213d7580>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12e4f48b0> <matplotlib.colors.Normalize object at 0x12e4f48b0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1213d7580>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12e4f48b0> <matplotlib.colors.Normalize object at 0x12e4f48b0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1213d7580>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x1213deeb0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1218494c0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12c97ea00> <matplotlib.colors.Normalize object at 0x12c97ea00>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1218494c0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12c97ea00> <matplotlib.colors.Normalize object at 0x12c97ea00>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1218494c0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x1219f16d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12142af70>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1307f5cd0> <matplotlib.colors.Normalize object at 0x1307f5cd0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12142af70>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1307f5cd0> <matplotlib.colors.Normalize object at 0x1307f5cd0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12142af70>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12137d760>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1218a6610>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x121474160> <matplotlib.colors.Normalize object at 0x121474160>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1218a6610>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x121474160> <matplotlib.colors.Normalize object at 0x121474160>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1218a6610>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12151e3d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12136c8b0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1218eb430> <matplotlib.colors.Normalize object at 0x1218eb430>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12136c8b0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1218eb430> <matplotlib.colors.Normalize object at 0x1218eb430>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12136c8b0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x121564580>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121358130>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1214746a0> <matplotlib.colors.Normalize object at 0x1214746a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121358130>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1214746a0> <matplotlib.colors.Normalize object at 0x1214746a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121358130>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cbff7f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12ca74190>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x121557d90> <matplotlib.colors.Normalize object at 0x121557d90>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12ca74190>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x121557d90> <matplotlib.colors.Normalize object at 0x121557d90>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12ca74190>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12138a460>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cea9f70>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12fcbb9a0> <matplotlib.colors.Normalize object at 0x12fcbb9a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cea9f70>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12fcbb9a0> <matplotlib.colors.Normalize object at 0x12fcbb9a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cea9f70>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12f134e80>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12f174610>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x121a697f0> <matplotlib.colors.Normalize object at 0x121a697f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12f174610>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x121a697f0> <matplotlib.colors.Normalize object at 0x121a697f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12f174610>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cd86130>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12f134130>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ca889d0> <matplotlib.colors.Normalize object at 0x12ca889d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12f134130>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ca889d0> <matplotlib.colors.Normalize object at 0x12ca889d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12f134130>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cd865e0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12141fa90>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12e4d23d0> <matplotlib.colors.Normalize object at 0x12e4d23d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12141fa90>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12e4d23d0> <matplotlib.colors.Normalize object at 0x12e4d23d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12141fa90>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12c9dd2e0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121474550>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12f154b80> <matplotlib.colors.Normalize object at 0x12f154b80>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121474550>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12f154b80> <matplotlib.colors.Normalize object at 0x12f154b80>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121474550>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12ce865e0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12ca8fe50>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x121378250> <matplotlib.colors.Normalize object at 0x121378250>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12ca8fe50>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x121378250> <matplotlib.colors.Normalize object at 0x121378250>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12ca8fe50>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cd89580>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12c97ebb0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12fc8fac0> <matplotlib.colors.Normalize object at 0x12fc8fac0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12c97ebb0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12fc8fac0> <matplotlib.colors.Normalize object at 0x12fc8fac0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12c97ebb0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cbc4460>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12c9ccc40>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12c9e52e0> <matplotlib.colors.Normalize object at 0x12c9e52e0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12c9ccc40>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12c9e52e0> <matplotlib.colors.Normalize object at 0x12c9e52e0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12c9ccc40>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x1218c96d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12c97e880>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12e5e52b0> <matplotlib.colors.Normalize object at 0x12e5e52b0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12c97e880>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12e5e52b0> <matplotlib.colors.Normalize object at 0x12e5e52b0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12c97e880>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12ceb6730>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12168b550>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12168b3d0> <matplotlib.colors.Normalize object at 0x12168b3d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12168b550>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12168b3d0> <matplotlib.colors.Normalize object at 0x12168b3d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12168b550>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x1218233d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12144d6d0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12194f1f0> <matplotlib.colors.Normalize object at 0x12194f1f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12144d6d0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12194f1f0> <matplotlib.colors.Normalize object at 0x12194f1f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12144d6d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x1215c9fd0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121522730>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12141b850> <matplotlib.colors.Normalize object at 0x12141b850>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121522730>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12141b850> <matplotlib.colors.Normalize object at 0x12141b850>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121522730>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12165a7c0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12e5aac10>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ca881f0> <matplotlib.colors.Normalize object at 0x12ca881f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12e5aac10>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ca881f0> <matplotlib.colors.Normalize object at 0x12ca881f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12e5aac10>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cd86b20>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121557f10>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12c9e5f10> <matplotlib.colors.Normalize object at 0x12c9e5f10>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121557f10>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12c9e5f10> <matplotlib.colors.Normalize object at 0x12c9e5f10>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121557f10>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cbc19d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12194f940>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12c9ddf10> <matplotlib.colors.Normalize object at 0x12c9ddf10>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12194f940>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12c9ddf10> <matplotlib.colors.Normalize object at 0x12c9ddf10>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12194f940>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12164af40>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12fcb69a0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1215d9160> <matplotlib.colors.Normalize object at 0x1215d9160>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12fcb69a0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1215d9160> <matplotlib.colors.Normalize object at 0x1215d9160>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12fcb69a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12ce3fcd0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1218d5be0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ce9d250> <matplotlib.colors.Normalize object at 0x12ce9d250>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1218d5be0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ce9d250> <matplotlib.colors.Normalize object at 0x12ce9d250>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1218d5be0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12138a520>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cc73790>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12156f220> <matplotlib.colors.Normalize object at 0x12156f220>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cc73790>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12156f220> <matplotlib.colors.Normalize object at 0x12156f220>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cc73790>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12f13f7c0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12161c310>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12cf6f940> <matplotlib.colors.Normalize object at 0x12cf6f940>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12161c310>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12cf6f940> <matplotlib.colors.Normalize object at 0x12cf6f940>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12161c310>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12144cdc0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1219d41c0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12159d400> <matplotlib.colors.Normalize object at 0x12159d400>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1219d41c0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12159d400> <matplotlib.colors.Normalize object at 0x12159d400>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1219d41c0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cee3430>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12144cd60>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x121474190> <matplotlib.colors.Normalize object at 0x121474190>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12144cd60>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x121474190> <matplotlib.colors.Normalize object at 0x121474190>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12144cd60>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x1215156a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12156f8b0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12178eeb0> <matplotlib.colors.Normalize object at 0x12178eeb0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12156f8b0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12178eeb0> <matplotlib.colors.Normalize object at 0x12178eeb0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12156f8b0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12143bf40>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12fdb6460>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1214747c0> <matplotlib.colors.Normalize object at 0x1214747c0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12fdb6460>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1214747c0> <matplotlib.colors.Normalize object at 0x1214747c0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12fdb6460>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x1307f5e50>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1215c49a0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12fdc0670> <matplotlib.colors.Normalize object at 0x12fdc0670>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1215c49a0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12fdc0670> <matplotlib.colors.Normalize object at 0x12fdc0670>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1215c49a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12e4d20a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12163ed90>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1216905e0> <matplotlib.colors.Normalize object at 0x1216905e0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12163ed90>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x1216905e0> <matplotlib.colors.Normalize object at 0x1216905e0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12163ed90>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x1307c2dc0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1307df730>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12cd727f0> <matplotlib.colors.Normalize object at 0x12cd727f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1307df730>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12cd727f0> <matplotlib.colors.Normalize object at 0x12cd727f0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1307df730>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12162f730>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12ce41ee0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ce86760> <matplotlib.colors.Normalize object at 0x12ce86760>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12ce41ee0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12ce86760> <matplotlib.colors.Normalize object at 0x12ce86760>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12ce41ee0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12cce0f40>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121864b50>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12f1210a0> <matplotlib.colors.Normalize object at 0x12f1210a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121864b50>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12f1210a0> <matplotlib.colors.Normalize object at 0x12f1210a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121864b50>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x1215740a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cda7b80>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12f176370> <matplotlib.colors.Normalize object at 0x12f176370>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cda7b80>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12f176370> <matplotlib.colors.Normalize object at 0x12f176370>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x12cda7b80>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x121521190>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121639f40>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12cd7a760> <matplotlib.colors.Normalize object at 0x12cd7a760>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121639f40>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12cd7a760> <matplotlib.colors.Normalize object at 0x12cd7a760>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x121639f40>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12f17a3d0> <matplotlib.colors.Normalize object at 0x12f17a3d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12fdb6190>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12f17a3d0> <matplotlib.colors.Normalize object at 0x12f17a3d0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12fdb6190>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x12fdb66a0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1215be970>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12e4d2640> <matplotlib.colors.Normalize object at 0x12e4d2640>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1215be970>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x12e4d2640> <matplotlib.colors.Normalize object at 0x12e4d2640>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.FixedLocator object at 0x1215be970>
+DEBUG:root:===========  run_model_cb():  ============
+DEBUG:root:run_tab.py:  doing: mkdir output
+DEBUG:root:----------- microenv_tab.py: fill_xml(): ----------
+DEBUG:root:microenv_tab.py: fill_xml(): num subtrates = 9
+DEBUG:root:substrates_in_tree =['type 1 diff factor', 'type 2 diff factor', 'transformation inhibitor', 'rgc taxis factor', 'type 3 diff factor', 'ipc taxis factor', 'arrest factor', 'type 4 diff factor', 'pia migration factor']
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = type 1 diff factor
+DEBUG:root:matched! type 1 diff factor
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = type 2 diff factor
+DEBUG:root:matched! type 2 diff factor
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = transformation inhibitor
+DEBUG:root:matched! transformation inhibitor
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = rgc taxis factor
+DEBUG:root:matched! rgc taxis factor
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = type 3 diff factor
+DEBUG:root:matched! type 3 diff factor
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = ipc taxis factor
+DEBUG:root:matched! ipc taxis factor
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = arrest factor
+DEBUG:root:matched! arrest factor
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = type 4 diff factor
+DEBUG:root:matched! type 4 diff factor
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = pia migration factor
+DEBUG:root:matched! pia migration factor
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = gradients
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = track_in_agents
+DEBUG:root:
+
+----------- cell_def_tab.py: fill_xml(): ----------
+DEBUG:root:num cell defs = 9
+DEBUG:root:cdefs_in_tree =['apical', 'pial', 'rgc', 'ipc proto', 'ipc 1', 'ipc 2', 'ipc 3', 'ipc 4', 'outer']
+DEBUG:root:
+--- key in param_d.keys() = apical
+DEBUG:root:matched! apical
+DEBUG:root:--- cell_adhesion_affinity= {'default': '1', 'apical': '1.0', 'pial': '1.0', 'rgc': '1.0', 'ntype_nmh': '1.0', 'ipc proto': '1.0', 'ipc 1': '1.0', 'ipc 2': '1.0', 'ipc 3': '1.0', 'ipc 4': '1.0', 'outer': '1.0'}
+DEBUG:root:default  --> 1
+DEBUG:root:apical  --> 1.0
+DEBUG:root:pial  --> 1.0
+DEBUG:root:rgc  --> 1.0
+DEBUG:root:ntype_nmh  --> 1.0
+DEBUG:root:ipc proto  --> 1.0
+DEBUG:root:ipc 1  --> 1.0
+DEBUG:root:ipc 2  --> 1.0
+DEBUG:root:ipc 3  --> 1.0
+DEBUG:root:ipc 4  --> 1.0
+DEBUG:root:outer  --> 1.0
+DEBUG:root:
+
+ ====================> fill_xml_motility(): rgc taxis factor = rgc taxis factor 
+
+
+DEBUG:root:fill_xml_motility(): {'type 1 diff factor': '0.0', 'type 2 diff factor': '0.0', 'transformation inhibitor': '0.0', 'rgc taxis factor': '0.0', 'type 3 diff factor': '0.0', 'ipc taxis factor': '0.0', 'arrest factor': '0.0', 'type 4 diff factor': '0.0', 'pia migration factor': '0.0'}
+DEBUG:root:type 1 diff factor  --> 0.0
+DEBUG:root:type 2 diff factor  --> 0.0
+DEBUG:root:transformation inhibitor  --> 0.0
+DEBUG:root:rgc taxis factor  --> 0.0
+DEBUG:root:type 3 diff factor  --> 0.0
+DEBUG:root:ipc taxis factor  --> 0.0
+DEBUG:root:arrest factor  --> 0.0
+DEBUG:root:type 4 diff factor  --> 0.0
+DEBUG:root:pia migration factor  --> 0.0
+DEBUG:root:self.substrate_list = ['type 1 diff factor', 'type 2 diff factor', 'transformation inhibitor', 'rgc taxis factor', 'type 3 diff factor', 'ipc taxis factor', 'arrest factor', 'type 4 diff factor', 'pia migration factor']
+DEBUG:root:substrate = type 1 diff factor
+DEBUG:root:substrate = type 2 diff factor
+DEBUG:root:substrate = transformation inhibitor
+DEBUG:root:substrate = rgc taxis factor
+DEBUG:root:substrate = type 3 diff factor
+DEBUG:root:substrate = ipc taxis factor
+DEBUG:root:substrate = arrest factor
+DEBUG:root:substrate = type 4 diff factor
+DEBUG:root:substrate = pia migration factor
+DEBUG:root:------------------- fill_xml_interactions():  cdef= apical
+DEBUG:root:--- live_phagocytosis_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0', '': '0.0'}
+DEBUG:root:  key in live_phagocytosis_rate= default
+DEBUG:root:default  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= apical
+DEBUG:root:apical  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= pial
+DEBUG:root:pial  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= rgc
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ntype_nmh
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc proto
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 1
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 2
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 3
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 4
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= outer
+DEBUG:root:outer  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= 
+DEBUG:root:--- attack_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0', '': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- fusion_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0', '': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:default  --> 0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:------------------- fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for apical
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for apical
+DEBUG:root:
+--- key in param_d.keys() = pial
+DEBUG:root:matched! pial
+DEBUG:root:--- cell_adhesion_affinity= {'default': '1', 'apical': '0', 'pial': '5', 'rgc': '1.0', 'ntype_nmh': '1.0', 'ipc proto': '1.0', 'ipc 1': '1.0', 'ipc 2': '1.0', 'ipc 3': '1.0', 'ipc 4': '1.0', 'outer': '1.0'}
+DEBUG:root:default  --> 1
+DEBUG:root:apical  --> 0
+DEBUG:root:pial  --> 5
+DEBUG:root:rgc  --> 1.0
+DEBUG:root:ntype_nmh  --> 1.0
+DEBUG:root:ipc proto  --> 1.0
+DEBUG:root:ipc 1  --> 1.0
+DEBUG:root:ipc 2  --> 1.0
+DEBUG:root:ipc 3  --> 1.0
+DEBUG:root:ipc 4  --> 1.0
+DEBUG:root:outer  --> 1.0
+DEBUG:root:
+
+ ====================> fill_xml_motility(): pia migration factor = pia migration factor 
+
+
+DEBUG:root:fill_xml_motility(): {'type 1 diff factor': '0.0', 'type 2 diff factor': '0.0', 'transformation inhibitor': '0.0', 'rgc taxis factor': '-1.0', 'type 3 diff factor': '0.0', 'ipc taxis factor': '0.0', 'arrest factor': '0.0', 'type 4 diff factor': '0.0', 'pia migration factor': '1.0'}
+DEBUG:root:type 1 diff factor  --> 0.0
+DEBUG:root:type 2 diff factor  --> 0.0
+DEBUG:root:transformation inhibitor  --> 0.0
+DEBUG:root:rgc taxis factor  --> -1.0
+DEBUG:root:type 3 diff factor  --> 0.0
+DEBUG:root:ipc taxis factor  --> 0.0
+DEBUG:root:arrest factor  --> 0.0
+DEBUG:root:type 4 diff factor  --> 0.0
+DEBUG:root:pia migration factor  --> 1.0
+DEBUG:root:self.substrate_list = ['type 1 diff factor', 'type 2 diff factor', 'transformation inhibitor', 'rgc taxis factor', 'type 3 diff factor', 'ipc taxis factor', 'arrest factor', 'type 4 diff factor', 'pia migration factor']
+DEBUG:root:substrate = type 1 diff factor
+DEBUG:root:substrate = type 2 diff factor
+DEBUG:root:substrate = transformation inhibitor
+DEBUG:root:substrate = rgc taxis factor
+DEBUG:root:substrate = type 3 diff factor
+DEBUG:root:substrate = ipc taxis factor
+DEBUG:root:substrate = arrest factor
+DEBUG:root:substrate = type 4 diff factor
+DEBUG:root:substrate = pia migration factor
+DEBUG:root:------------------- fill_xml_interactions():  cdef= pial
+DEBUG:root:--- live_phagocytosis_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:  key in live_phagocytosis_rate= default
+DEBUG:root:default  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= apical
+DEBUG:root:apical  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= pial
+DEBUG:root:pial  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= rgc
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ntype_nmh
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc proto
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 1
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 2
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 3
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 4
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= outer
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- attack_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- fusion_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:default  --> 0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:------------------- fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for pial
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for pial
+DEBUG:root:
+--- key in param_d.keys() = rgc
+DEBUG:root:matched! rgc
+DEBUG:root:--- cell_adhesion_affinity= {'default': '1', 'apical': '1.0', 'pial': '1.0', 'rgc': '0', 'ntype_nmh': '1.0', 'ipc proto': '1.0', 'ipc 1': '1.0', 'ipc 2': '1.0', 'ipc 3': '1.0', 'ipc 4': '1.0', 'outer': '1.0'}
+DEBUG:root:default  --> 1
+DEBUG:root:apical  --> 1.0
+DEBUG:root:pial  --> 1.0
+DEBUG:root:rgc  --> 0
+DEBUG:root:ntype_nmh  --> 1.0
+DEBUG:root:ipc proto  --> 1.0
+DEBUG:root:ipc 1  --> 1.0
+DEBUG:root:ipc 2  --> 1.0
+DEBUG:root:ipc 3  --> 1.0
+DEBUG:root:ipc 4  --> 1.0
+DEBUG:root:outer  --> 1.0
+DEBUG:root:
+
+ ====================> fill_xml_motility(): rgc taxis factor = rgc taxis factor 
+
+
+DEBUG:root:fill_xml_motility(): {'type 1 diff factor': '0.0', 'type 2 diff factor': '0.0', 'transformation inhibitor': '0.0', 'rgc taxis factor': '0.0', 'type 3 diff factor': '0.0', 'ipc taxis factor': '0.0', 'arrest factor': '0.0', 'type 4 diff factor': '0.0', 'pia migration factor': '0.0'}
+DEBUG:root:type 1 diff factor  --> 0.0
+DEBUG:root:type 2 diff factor  --> 0.0
+DEBUG:root:transformation inhibitor  --> 0.0
+DEBUG:root:rgc taxis factor  --> 0.0
+DEBUG:root:type 3 diff factor  --> 0.0
+DEBUG:root:ipc taxis factor  --> 0.0
+DEBUG:root:arrest factor  --> 0.0
+DEBUG:root:type 4 diff factor  --> 0.0
+DEBUG:root:pia migration factor  --> 0.0
+DEBUG:root:self.substrate_list = ['type 1 diff factor', 'type 2 diff factor', 'transformation inhibitor', 'rgc taxis factor', 'type 3 diff factor', 'ipc taxis factor', 'arrest factor', 'type 4 diff factor', 'pia migration factor']
+DEBUG:root:substrate = type 1 diff factor
+DEBUG:root:substrate = type 2 diff factor
+DEBUG:root:substrate = transformation inhibitor
+DEBUG:root:substrate = rgc taxis factor
+DEBUG:root:substrate = type 3 diff factor
+DEBUG:root:substrate = ipc taxis factor
+DEBUG:root:substrate = arrest factor
+DEBUG:root:substrate = type 4 diff factor
+DEBUG:root:substrate = pia migration factor
+DEBUG:root:------------------- fill_xml_interactions():  cdef= rgc
+DEBUG:root:--- live_phagocytosis_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:  key in live_phagocytosis_rate= default
+DEBUG:root:default  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= apical
+DEBUG:root:apical  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= pial
+DEBUG:root:pial  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= rgc
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ntype_nmh
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc proto
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 1
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 2
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 3
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 4
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= outer
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- attack_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- fusion_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:default  --> 0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.1
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:------------------- fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for rgc
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for rgc
+DEBUG:root:
+--- key in param_d.keys() = ipc proto
+DEBUG:root:matched! ipc proto
+DEBUG:root:--- cell_adhesion_affinity= {'default': '1', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '1.0', 'ipc proto': '0.0', 'ipc 1': '1.0', 'ipc 2': '1.0', 'ipc 3': '1.0', 'ipc 4': '1.0', 'outer': '1.0'}
+DEBUG:root:default  --> 1
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 1.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 1.0
+DEBUG:root:ipc 2  --> 1.0
+DEBUG:root:ipc 3  --> 1.0
+DEBUG:root:ipc 4  --> 1.0
+DEBUG:root:outer  --> 1.0
+DEBUG:root:
+
+ ====================> fill_xml_motility(): rgc taxis factor = rgc taxis factor 
+
+
+DEBUG:root:fill_xml_motility(): {'type 1 diff factor': '0.0', 'type 2 diff factor': '0.0', 'transformation inhibitor': '0.0', 'rgc taxis factor': '0.0', 'type 3 diff factor': '0.0', 'ipc taxis factor': '0.0', 'arrest factor': '0.0', 'type 4 diff factor': '0.0', 'pia migration factor': '0.0'}
+DEBUG:root:type 1 diff factor  --> 0.0
+DEBUG:root:type 2 diff factor  --> 0.0
+DEBUG:root:transformation inhibitor  --> 0.0
+DEBUG:root:rgc taxis factor  --> 0.0
+DEBUG:root:type 3 diff factor  --> 0.0
+DEBUG:root:ipc taxis factor  --> 0.0
+DEBUG:root:arrest factor  --> 0.0
+DEBUG:root:type 4 diff factor  --> 0.0
+DEBUG:root:pia migration factor  --> 0.0
+DEBUG:root:self.substrate_list = ['type 1 diff factor', 'type 2 diff factor', 'transformation inhibitor', 'rgc taxis factor', 'type 3 diff factor', 'ipc taxis factor', 'arrest factor', 'type 4 diff factor', 'pia migration factor']
+DEBUG:root:substrate = type 1 diff factor
+DEBUG:root:substrate = type 2 diff factor
+DEBUG:root:substrate = transformation inhibitor
+DEBUG:root:substrate = rgc taxis factor
+DEBUG:root:substrate = type 3 diff factor
+DEBUG:root:substrate = ipc taxis factor
+DEBUG:root:substrate = arrest factor
+DEBUG:root:substrate = type 4 diff factor
+DEBUG:root:substrate = pia migration factor
+DEBUG:root:------------------- fill_xml_interactions():  cdef= ipc proto
+DEBUG:root:--- live_phagocytosis_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:  key in live_phagocytosis_rate= default
+DEBUG:root:default  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= apical
+DEBUG:root:apical  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= pial
+DEBUG:root:pial  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= rgc
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ntype_nmh
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc proto
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 1
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 2
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 3
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 4
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= outer
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- attack_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- fusion_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:default  --> 0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:------------------- fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for ipc proto
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for ipc proto
+DEBUG:root:
+--- key in param_d.keys() = ipc 1
+DEBUG:root:matched! ipc 1
+DEBUG:root:--- cell_adhesion_affinity= {'default': '1', 'apical': '1.0', 'pial': '0.01', 'rgc': '1.0', 'ntype_nmh': '1.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '1.0', 'ipc 3': '1.0', 'ipc 4': '1.0', 'outer': '1.0'}
+DEBUG:root:default  --> 1
+DEBUG:root:apical  --> 1.0
+DEBUG:root:pial  --> 0.01
+DEBUG:root:rgc  --> 1.0
+DEBUG:root:ntype_nmh  --> 1.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 1.0
+DEBUG:root:ipc 3  --> 1.0
+DEBUG:root:ipc 4  --> 1.0
+DEBUG:root:outer  --> 1.0
+DEBUG:root:
+
+ ====================> fill_xml_motility(): ipc taxis factor = ipc taxis factor 
+
+
+DEBUG:root:fill_xml_motility(): {'type 1 diff factor': '0.0', 'type 2 diff factor': '0.0', 'transformation inhibitor': '0.0', 'rgc taxis factor': '0.0', 'type 3 diff factor': '0.0', 'ipc taxis factor': '0.0', 'arrest factor': '0.0', 'type 4 diff factor': '0.0', 'pia migration factor': '0.0'}
+DEBUG:root:type 1 diff factor  --> 0.0
+DEBUG:root:type 2 diff factor  --> 0.0
+DEBUG:root:transformation inhibitor  --> 0.0
+DEBUG:root:rgc taxis factor  --> 0.0
+DEBUG:root:type 3 diff factor  --> 0.0
+DEBUG:root:ipc taxis factor  --> 0.0
+DEBUG:root:arrest factor  --> 0.0
+DEBUG:root:type 4 diff factor  --> 0.0
+DEBUG:root:pia migration factor  --> 0.0
+DEBUG:root:self.substrate_list = ['type 1 diff factor', 'type 2 diff factor', 'transformation inhibitor', 'rgc taxis factor', 'type 3 diff factor', 'ipc taxis factor', 'arrest factor', 'type 4 diff factor', 'pia migration factor']
+DEBUG:root:substrate = type 1 diff factor
+DEBUG:root:substrate = type 2 diff factor
+DEBUG:root:substrate = transformation inhibitor
+DEBUG:root:substrate = rgc taxis factor
+DEBUG:root:substrate = type 3 diff factor
+DEBUG:root:substrate = ipc taxis factor
+DEBUG:root:substrate = arrest factor
+DEBUG:root:substrate = type 4 diff factor
+DEBUG:root:substrate = pia migration factor
+DEBUG:root:------------------- fill_xml_interactions():  cdef= ipc 1
+DEBUG:root:--- live_phagocytosis_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:  key in live_phagocytosis_rate= default
+DEBUG:root:default  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= apical
+DEBUG:root:apical  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= pial
+DEBUG:root:pial  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= rgc
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ntype_nmh
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc proto
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 1
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 2
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 3
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 4
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= outer
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- attack_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- fusion_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:default  --> 0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:------------------- fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for ipc 1
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for ipc 1
+DEBUG:root:
+--- key in param_d.keys() = ipc 2
+DEBUG:root:matched! ipc 2
+DEBUG:root:--- cell_adhesion_affinity= {'default': '1', 'apical': '1.0', 'pial': '0.01', 'rgc': '1.0', 'ntype_nmh': '1.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '1.0', 'ipc 4': '1.0', 'outer': '1.0'}
+DEBUG:root:default  --> 1
+DEBUG:root:apical  --> 1.0
+DEBUG:root:pial  --> 0.01
+DEBUG:root:rgc  --> 1.0
+DEBUG:root:ntype_nmh  --> 1.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 1.0
+DEBUG:root:ipc 4  --> 1.0
+DEBUG:root:outer  --> 1.0
+DEBUG:root:
+
+ ====================> fill_xml_motility(): ipc taxis factor = ipc taxis factor 
+
+
+DEBUG:root:fill_xml_motility(): {'type 1 diff factor': '0.0', 'type 2 diff factor': '0.0', 'transformation inhibitor': '0.0', 'rgc taxis factor': '0.0', 'type 3 diff factor': '0.0', 'ipc taxis factor': '0.0', 'arrest factor': '0.0', 'type 4 diff factor': '0.0', 'pia migration factor': '0.0'}
+DEBUG:root:type 1 diff factor  --> 0.0
+DEBUG:root:type 2 diff factor  --> 0.0
+DEBUG:root:transformation inhibitor  --> 0.0
+DEBUG:root:rgc taxis factor  --> 0.0
+DEBUG:root:type 3 diff factor  --> 0.0
+DEBUG:root:ipc taxis factor  --> 0.0
+DEBUG:root:arrest factor  --> 0.0
+DEBUG:root:type 4 diff factor  --> 0.0
+DEBUG:root:pia migration factor  --> 0.0
+DEBUG:root:self.substrate_list = ['type 1 diff factor', 'type 2 diff factor', 'transformation inhibitor', 'rgc taxis factor', 'type 3 diff factor', 'ipc taxis factor', 'arrest factor', 'type 4 diff factor', 'pia migration factor']
+DEBUG:root:substrate = type 1 diff factor
+DEBUG:root:substrate = type 2 diff factor
+DEBUG:root:substrate = transformation inhibitor
+DEBUG:root:substrate = rgc taxis factor
+DEBUG:root:substrate = type 3 diff factor
+DEBUG:root:substrate = ipc taxis factor
+DEBUG:root:substrate = arrest factor
+DEBUG:root:substrate = type 4 diff factor
+DEBUG:root:substrate = pia migration factor
+DEBUG:root:------------------- fill_xml_interactions():  cdef= ipc 2
+DEBUG:root:--- live_phagocytosis_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:  key in live_phagocytosis_rate= default
+DEBUG:root:default  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= apical
+DEBUG:root:apical  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= pial
+DEBUG:root:pial  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= rgc
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ntype_nmh
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc proto
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 1
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 2
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 3
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 4
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= outer
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- attack_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- fusion_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:default  --> 0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:------------------- fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for ipc 2
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for ipc 2
+DEBUG:root:
+--- key in param_d.keys() = ipc 3
+DEBUG:root:matched! ipc 3
+DEBUG:root:--- cell_adhesion_affinity= {'default': '1', 'apical': '1.0', 'pial': '0.01', 'rgc': '1.0', 'ntype_nmh': '1.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '1.0', 'outer': '1.0'}
+DEBUG:root:default  --> 1
+DEBUG:root:apical  --> 1.0
+DEBUG:root:pial  --> 0.01
+DEBUG:root:rgc  --> 1.0
+DEBUG:root:ntype_nmh  --> 1.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 1.0
+DEBUG:root:outer  --> 1.0
+DEBUG:root:
+
+ ====================> fill_xml_motility(): ipc taxis factor = ipc taxis factor 
+
+
+DEBUG:root:fill_xml_motility(): {'type 1 diff factor': '0.0', 'type 2 diff factor': '0.0', 'transformation inhibitor': '0.0', 'rgc taxis factor': '0.0', 'type 3 diff factor': '0.0', 'ipc taxis factor': '0.0', 'arrest factor': '0.0', 'type 4 diff factor': '0.0', 'pia migration factor': '0.0'}
+DEBUG:root:type 1 diff factor  --> 0.0
+DEBUG:root:type 2 diff factor  --> 0.0
+DEBUG:root:transformation inhibitor  --> 0.0
+DEBUG:root:rgc taxis factor  --> 0.0
+DEBUG:root:type 3 diff factor  --> 0.0
+DEBUG:root:ipc taxis factor  --> 0.0
+DEBUG:root:arrest factor  --> 0.0
+DEBUG:root:type 4 diff factor  --> 0.0
+DEBUG:root:pia migration factor  --> 0.0
+DEBUG:root:self.substrate_list = ['type 1 diff factor', 'type 2 diff factor', 'transformation inhibitor', 'rgc taxis factor', 'type 3 diff factor', 'ipc taxis factor', 'arrest factor', 'type 4 diff factor', 'pia migration factor']
+DEBUG:root:substrate = type 1 diff factor
+DEBUG:root:substrate = type 2 diff factor
+DEBUG:root:substrate = transformation inhibitor
+DEBUG:root:substrate = rgc taxis factor
+DEBUG:root:substrate = type 3 diff factor
+DEBUG:root:substrate = ipc taxis factor
+DEBUG:root:substrate = arrest factor
+DEBUG:root:substrate = type 4 diff factor
+DEBUG:root:substrate = pia migration factor
+DEBUG:root:------------------- fill_xml_interactions():  cdef= ipc 3
+DEBUG:root:--- live_phagocytosis_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:  key in live_phagocytosis_rate= default
+DEBUG:root:default  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= apical
+DEBUG:root:apical  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= pial
+DEBUG:root:pial  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= rgc
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ntype_nmh
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc proto
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 1
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 2
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 3
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 4
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= outer
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- attack_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- fusion_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:default  --> 0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:------------------- fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for ipc 3
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for ipc 3
+DEBUG:root:
+--- key in param_d.keys() = ipc 4
+DEBUG:root:matched! ipc 4
+DEBUG:root:--- cell_adhesion_affinity= {'default': '1', 'apical': '1.0', 'pial': '1.0', 'rgc': '1.0', 'ntype_nmh': '1.0', 'ipc proto': '0.0', 'ipc 1': '0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0', 'outer': '1.0'}
+DEBUG:root:default  --> 1
+DEBUG:root:apical  --> 1.0
+DEBUG:root:pial  --> 1.0
+DEBUG:root:rgc  --> 1.0
+DEBUG:root:ntype_nmh  --> 1.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0
+DEBUG:root:outer  --> 1.0
+DEBUG:root:
+
+ ====================> fill_xml_motility(): ipc taxis factor = ipc taxis factor 
+
+
+DEBUG:root:fill_xml_motility(): {'type 1 diff factor': '0.0', 'type 2 diff factor': '0.0', 'transformation inhibitor': '0.0', 'rgc taxis factor': '0.0', 'type 3 diff factor': '0.0', 'ipc taxis factor': '0.0', 'arrest factor': '0.0', 'type 4 diff factor': '0.0', 'pia migration factor': '0.0'}
+DEBUG:root:type 1 diff factor  --> 0.0
+DEBUG:root:type 2 diff factor  --> 0.0
+DEBUG:root:transformation inhibitor  --> 0.0
+DEBUG:root:rgc taxis factor  --> 0.0
+DEBUG:root:type 3 diff factor  --> 0.0
+DEBUG:root:ipc taxis factor  --> 0.0
+DEBUG:root:arrest factor  --> 0.0
+DEBUG:root:type 4 diff factor  --> 0.0
+DEBUG:root:pia migration factor  --> 0.0
+DEBUG:root:self.substrate_list = ['type 1 diff factor', 'type 2 diff factor', 'transformation inhibitor', 'rgc taxis factor', 'type 3 diff factor', 'ipc taxis factor', 'arrest factor', 'type 4 diff factor', 'pia migration factor']
+DEBUG:root:substrate = type 1 diff factor
+DEBUG:root:substrate = type 2 diff factor
+DEBUG:root:substrate = transformation inhibitor
+DEBUG:root:substrate = rgc taxis factor
+DEBUG:root:substrate = type 3 diff factor
+DEBUG:root:substrate = ipc taxis factor
+DEBUG:root:substrate = arrest factor
+DEBUG:root:substrate = type 4 diff factor
+DEBUG:root:substrate = pia migration factor
+DEBUG:root:------------------- fill_xml_interactions():  cdef= ipc 4
+DEBUG:root:--- live_phagocytosis_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:  key in live_phagocytosis_rate= default
+DEBUG:root:default  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= apical
+DEBUG:root:apical  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= pial
+DEBUG:root:pial  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= rgc
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ntype_nmh
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc proto
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 1
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 2
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 3
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 4
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= outer
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- attack_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- fusion_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:default  --> 0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:------------------- fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for ipc 4
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for ipc 4
+DEBUG:root:
+--- key in param_d.keys() = outer
+DEBUG:root:matched! outer
+DEBUG:root:--- cell_adhesion_affinity= {'default': '1', 'apical': '1.0', 'pial': '1.0', 'rgc': '1.0', 'ntype_nmh': '1.0', 'ipc proto': '1.0', 'ipc 1': '1.0', 'ipc 2': '1.0', 'ipc 3': '1.0', 'ipc 4': '1.0', 'outer': '1.0'}
+DEBUG:root:default  --> 1
+DEBUG:root:apical  --> 1.0
+DEBUG:root:pial  --> 1.0
+DEBUG:root:rgc  --> 1.0
+DEBUG:root:ntype_nmh  --> 1.0
+DEBUG:root:ipc proto  --> 1.0
+DEBUG:root:ipc 1  --> 1.0
+DEBUG:root:ipc 2  --> 1.0
+DEBUG:root:ipc 3  --> 1.0
+DEBUG:root:ipc 4  --> 1.0
+DEBUG:root:outer  --> 1.0
+DEBUG:root:
+
+ ====================> fill_xml_motility(): rgc taxis factor = rgc taxis factor 
+
+
+DEBUG:root:fill_xml_motility(): {'type 1 diff factor': '0.0', 'type 2 diff factor': '0.0', 'transformation inhibitor': '0.0', 'rgc taxis factor': '0.0', 'type 3 diff factor': '0.0', 'ipc taxis factor': '0.0', 'arrest factor': '0.0', 'type 4 diff factor': '0.0', 'pia migration factor': '0.0'}
+DEBUG:root:type 1 diff factor  --> 0.0
+DEBUG:root:type 2 diff factor  --> 0.0
+DEBUG:root:transformation inhibitor  --> 0.0
+DEBUG:root:rgc taxis factor  --> 0.0
+DEBUG:root:type 3 diff factor  --> 0.0
+DEBUG:root:ipc taxis factor  --> 0.0
+DEBUG:root:arrest factor  --> 0.0
+DEBUG:root:type 4 diff factor  --> 0.0
+DEBUG:root:pia migration factor  --> 0.0
+DEBUG:root:self.substrate_list = ['type 1 diff factor', 'type 2 diff factor', 'transformation inhibitor', 'rgc taxis factor', 'type 3 diff factor', 'ipc taxis factor', 'arrest factor', 'type 4 diff factor', 'pia migration factor']
+DEBUG:root:substrate = type 1 diff factor
+DEBUG:root:substrate = type 2 diff factor
+DEBUG:root:substrate = transformation inhibitor
+DEBUG:root:substrate = rgc taxis factor
+DEBUG:root:substrate = type 3 diff factor
+DEBUG:root:substrate = ipc taxis factor
+DEBUG:root:substrate = arrest factor
+DEBUG:root:substrate = type 4 diff factor
+DEBUG:root:substrate = pia migration factor
+DEBUG:root:------------------- fill_xml_interactions():  cdef= outer
+DEBUG:root:--- live_phagocytosis_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:  key in live_phagocytosis_rate= default
+DEBUG:root:default  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= apical
+DEBUG:root:apical  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= pial
+DEBUG:root:pial  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= rgc
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ntype_nmh
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc proto
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 1
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 2
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 3
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= ipc 4
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= outer
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- attack_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:--- fusion_rate= {'default': '0', 'apical': '0.0', 'pial': '0.0', 'rgc': '0.0', 'ntype_nmh': '0.0', 'ipc proto': '0.0', 'ipc 1': '0.0', 'ipc 2': '0.0', 'ipc 3': '0.0', 'ipc 4': '0.0', 'outer': '0.0'}
+DEBUG:root:default  --> 0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:apical  --> 0.0
+DEBUG:root:pial  --> 0.0
+DEBUG:root:rgc  --> 0.0
+DEBUG:root:ipc proto  --> 0.0
+DEBUG:root:ipc 1  --> 0.0
+DEBUG:root:ipc 2  --> 0.0
+DEBUG:root:ipc 3  --> 0.0
+DEBUG:root:ipc 4  --> 0.0
+DEBUG:root:outer  --> 0.0
+DEBUG:root:default  --> 0
+DEBUG:root:ntype_nmh  --> 0.0
+DEBUG:root:------------------- fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for outer
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for outer
+DEBUG:root:----------- end cell_def_tab.py: fill_xml(): ----------
+DEBUG:root:
+--------- user_params_tab.py:  fill_xml(): self.count = 100
+DEBUG:root:--------- found //user_parameters
+DEBUG:root:random_seed
+DEBUG:root:number_of_cells
+DEBUG:root:found 2
