@@ -462,10 +462,10 @@
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">0.0001</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">0.0001</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">0.0001</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 4">0.0001</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
@@ -674,11 +674,11 @@
                         <cell_adhesion_affinity name="pial">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="rgc">0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
@@ -888,10 +888,10 @@
                         <cell_adhesion_affinity name="rgc">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
@@ -1102,9 +1102,9 @@
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
@@ -1316,8 +1316,8 @@
                         <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
@@ -1530,7 +1530,7 @@
                         <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>

@@ -129,7 +129,10 @@ void create_cell_types( void )
 
 	find_cell_definition( "rgc" )->functions.update_phenotype = dividing_phenotype_function;
 	find_cell_definition( "ipc proto" )->functions.update_phenotype = dividing_phenotype_function;
-
+	find_cell_definition( "ipc 1" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "ipc 2" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "ipc 3" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "ipc 4" )->functions.update_phenotype = migrating_phenotype_function;
 	
 	/*
 	   This builds the map of cell definitions and summarizes the setup. 
@@ -223,5 +226,45 @@ void dividing_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt )
 	return; 
 } 
 
+void migrating_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt )
+{
+	
+	if( phenotype.motility.migration_speed > 0.2 )
+	{
+		phenotype.mechanics.cell_cell_repulsion_strength = 0;
+	}
+	else
+	{
+		phenotype.mechanics.cell_cell_repulsion_strength = find_cell_definition( pCell->type_name )->phenotype.mechanics.cell_cell_repulsion_strength; 
+	}
+	return;
+
+}
+
 void contact_function( Cell* pMe, Phenotype& phenoMe , Cell* pOther, Phenotype& phenoOther , double dt )
 { return; } 
+
+
+/* 
+ok here goes... overloading everything:
+need to overload divide() --> overload flag_cell_for_division --> overload ...
+--> overload division_at_phase_exit --> overload live model --> overload create_models
+
+!!unfinished:
+
+Cycle_Model timed;
+
+void create_timed_model( void )
+{
+	timed.code = 8;
+	timed.name = "Live model with time-since-birth tracker";
+
+	timed.data.time_units = "min"; 
+
+	timed.add_phase( PhysiCell_constants::live , "Live" );
+
+	timed.phases[0].division_at_phase_exit = true;
+	return;
+}
+
+*/
