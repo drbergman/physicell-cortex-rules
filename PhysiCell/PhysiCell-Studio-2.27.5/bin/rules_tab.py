@@ -224,9 +224,9 @@ class Rules(QWidget):
         self.substrates = []
 
         # ----- signals:
-        # -- <ubstrates>
+        # -- <substrates>
         # -- intracellular <substrate>
-        # -- <substrate> <radient>
+        # -- <substrate> <gradient>
         # -- pressure
         # -- volume
         # -- contact with <cell type>
