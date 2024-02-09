@@ -1,0 +1,2 @@
+DEBUG:root:studio.py: config file is config/template.xml
+ERROR:root:config_file is NOT valid: config/template.xml
