@@ -1,10 +1,10 @@
 <PhysiCell_settings version="devel-version">
 
     <domain>
-        <x_min>1800</x_min>
-        <x_max>4500</x_max>
-        <y_min>-2000</y_min>
-        <y_max>200</y_max>
+        <x_min>-650</x_min>
+        <x_max>650</x_max>
+        <y_min>-200</y_min>
+        <y_max>1100</y_max>
         <z_min>-10</z_min>
         <z_max>10</z_max>
         <dx>20</dx>
@@ -35,6 +35,11 @@
         <SVG>
             <interval units="min">60</interval>
             <enable>true</enable>
+            <plot_substrate enabled="false" limits="false">
+                <substrate>type 1 diff factor</substrate>
+                <min_conc />
+                <max_conc />
+            </plot_substrate>
         </SVG>
         <legacy_data>
             <enable>false</enable>
@@ -265,20 +270,18 @@
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="interneuron">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
                         <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
                     </options>
-                    <cell_BM_adhesion_strength units="micron/min">4.0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">10.0</cell_BM_repulsion_strength>
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
@@ -377,13 +380,13 @@
                         <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="outer" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="interneuron" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="wall" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -392,13 +395,13 @@
                         <attack_rate name="rgc" units="1/min">0.0</attack_rate>
                         <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                         <attack_rate name="outer" units="1/min">0.0</attack_rate>
                         <attack_rate name="interneuron" units="1/min">0.0</attack_rate>
                         <attack_rate name="wall" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">100</damage_rate>
                     <fusion_rates>
@@ -408,13 +411,13 @@
                         <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="outer" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="interneuron" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="wall" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -425,13 +428,13 @@
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="outer" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="wall" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -479,9 +482,9 @@
                     </model>
                 </death>
                 <volume>
-                    <total units="micron^3">200</total>
+                    <total units="micron^3">499</total>
                     <fluid_fraction units="dimensionless">0.75</fluid_fraction>
-                    <nuclear units="micron^3">540</nuclear>
+                    <nuclear units="micron^3">108</nuclear>
                     <fluid_change_rate units="1/min">0.05</fluid_change_rate>
                     <cytoplasmic_biomass_change_rate units="1/min">0.0045</cytoplasmic_biomass_change_rate>
                     <nuclear_biomass_change_rate units="1/min">0.0055</nuclear_biomass_change_rate>
@@ -490,36 +493,34 @@
                     <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
                 </volume>
                 <mechanics>
-                    <cell_cell_adhesion_strength units="micron/min">0.4</cell_cell_adhesion_strength>
+                    <cell_cell_adhesion_strength units="micron/min">1</cell_cell_adhesion_strength>
                     <cell_cell_repulsion_strength units="micron/min">10.0</cell_cell_repulsion_strength>
                     <relative_maximum_adhesion_distance units="dimensionless">1.25</relative_maximum_adhesion_distance>
                     <cell_adhesion_affinities>
                         <cell_adhesion_affinity name="default">1</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="apical">0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="pial">5</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="pial">1</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="interneuron">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="interneuron">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
                         <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
                     </options>
-                    <cell_BM_adhesion_strength units="micron/min">4.0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">10.0</cell_BM_repulsion_strength>
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
-                    <attachment_rate units="1/min">0.0</attachment_rate>
+                    <attachment_rate units="1/min">0.1</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
                 </mechanics>
                 <motility>
-                    <speed units="micron/min">0.08</speed>
+                    <speed units="micron/min">0</speed>
                     <persistence_time units="min">5</persistence_time>
                     <migration_bias units="dimensionless">1</migration_bias>
                     <options>
@@ -612,13 +613,13 @@
                         <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="outer" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="interneuron" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="wall" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -627,13 +628,13 @@
                         <attack_rate name="rgc" units="1/min">0.0</attack_rate>
                         <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                         <attack_rate name="outer" units="1/min">0.0</attack_rate>
                         <attack_rate name="interneuron" units="1/min">0.0</attack_rate>
                         <attack_rate name="wall" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -643,13 +644,13 @@
                         <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="outer" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="interneuron" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="wall" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -660,13 +661,13 @@
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="outer" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="wall" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -679,7 +680,7 @@
             <phenotype>
                 <cycle code="5" name="live">
                     <phase_transition_rates units="1/min">
-                        <rate start_index="0" end_index="0" fixed_duration="false">0.003</rate>
+                        <rate start_index="0" end_index="0" fixed_duration="false">0.001</rate>
                     </phase_transition_rates>
                 </cycle>
                 <death>
@@ -735,20 +736,18 @@
                         <cell_adhesion_affinity name="rgc">0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="interneuron">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
                         <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
                     </options>
-                    <cell_BM_adhesion_strength units="micron/min">4.0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">10.0</cell_BM_repulsion_strength>
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
@@ -847,13 +846,13 @@
                         <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="outer" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="interneuron" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="wall" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -862,13 +861,13 @@
                         <attack_rate name="rgc" units="1/min">0.0</attack_rate>
                         <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                         <attack_rate name="outer" units="1/min">0.0</attack_rate>
                         <attack_rate name="interneuron" units="1/min">0.0</attack_rate>
                         <attack_rate name="wall" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -878,13 +877,13 @@
                         <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="outer" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="interneuron" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="wall" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -894,14 +893,14 @@
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc proto" units="1/min">0.2</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc proto" units="1/min">0.06</transformation_rate>
                         <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="outer" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="wall" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -970,20 +969,18 @@
                         <cell_adhesion_affinity name="rgc">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="interneuron">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
                         <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
                     </options>
-                    <cell_BM_adhesion_strength units="micron/min">4.0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">10.0</cell_BM_repulsion_strength>
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
@@ -1082,13 +1079,13 @@
                         <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="outer" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="interneuron" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="wall" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -1097,13 +1094,13 @@
                         <attack_rate name="rgc" units="1/min">0.0</attack_rate>
                         <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                         <attack_rate name="outer" units="1/min">0.0</attack_rate>
                         <attack_rate name="interneuron" units="1/min">0.0</attack_rate>
                         <attack_rate name="wall" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -1113,13 +1110,13 @@
                         <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="outer" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="interneuron" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="wall" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -1130,13 +1127,13 @@
                         <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="outer" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="wall" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -1205,20 +1202,18 @@
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="interneuron">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="interneuron">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
                         <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
                     </options>
-                    <cell_BM_adhesion_strength units="micron/min">0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">0</cell_BM_repulsion_strength>
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
@@ -1317,13 +1312,13 @@
                         <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="outer" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="interneuron" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="wall" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -1332,13 +1327,13 @@
                         <attack_rate name="rgc" units="1/min">0.0</attack_rate>
                         <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                         <attack_rate name="outer" units="1/min">0.0</attack_rate>
                         <attack_rate name="interneuron" units="1/min">0.0</attack_rate>
                         <attack_rate name="wall" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -1348,13 +1343,13 @@
                         <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="outer" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="interneuron" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="wall" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -1363,15 +1358,15 @@
                         <transformation_rate name="pial" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="outer" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="wall" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -1380,7 +1375,7 @@
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
         </cell_definition>
-        <cell_definition name="ipc 3" ID="5">
+        <cell_definition name="ipc 2" ID="5">
             <phenotype>
                 <cycle code="5" name="live">
                     <phase_transition_rates units="1/min">
@@ -1440,20 +1435,18 @@
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="interneuron">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="interneuron">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
                         <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
                     </options>
-                    <cell_BM_adhesion_strength units="micron/min">0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">0</cell_BM_repulsion_strength>
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
@@ -1552,13 +1545,13 @@
                         <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="outer" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="interneuron" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="wall" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -1567,13 +1560,13 @@
                         <attack_rate name="rgc" units="1/min">0.0</attack_rate>
                         <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                         <attack_rate name="outer" units="1/min">0.0</attack_rate>
                         <attack_rate name="interneuron" units="1/min">0.0</attack_rate>
                         <attack_rate name="wall" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -1583,13 +1576,13 @@
                         <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="outer" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="interneuron" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="wall" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -1598,15 +1591,15 @@
                         <transformation_rate name="pial" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="outer" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="wall" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -1615,7 +1608,7 @@
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
         </cell_definition>
-        <cell_definition name="ipc 2" ID="6">
+        <cell_definition name="ipc 3" ID="6">
             <phenotype>
                 <cycle code="5" name="live">
                     <phase_transition_rates units="1/min">
@@ -1675,20 +1668,18 @@
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="interneuron">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="interneuron">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
                         <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
                     </options>
-                    <cell_BM_adhesion_strength units="micron/min">0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">0</cell_BM_repulsion_strength>
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
@@ -1787,13 +1778,13 @@
                         <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="outer" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="interneuron" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="wall" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -1802,13 +1793,13 @@
                         <attack_rate name="rgc" units="1/min">0.0</attack_rate>
                         <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                         <attack_rate name="outer" units="1/min">0.0</attack_rate>
                         <attack_rate name="interneuron" units="1/min">0.0</attack_rate>
                         <attack_rate name="wall" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -1818,13 +1809,13 @@
                         <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="outer" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="interneuron" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="wall" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -1833,15 +1824,15 @@
                         <transformation_rate name="pial" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="outer" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="wall" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -1910,20 +1901,18 @@
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="interneuron">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="interneuron">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
                         <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
                     </options>
-                    <cell_BM_adhesion_strength units="micron/min">0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">0</cell_BM_repulsion_strength>
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
@@ -2022,13 +2011,13 @@
                         <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="outer" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="interneuron" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="wall" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -2037,13 +2026,13 @@
                         <attack_rate name="rgc" units="1/min">0.0</attack_rate>
                         <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                         <attack_rate name="outer" units="1/min">0.0</attack_rate>
                         <attack_rate name="interneuron" units="1/min">0.0</attack_rate>
                         <attack_rate name="wall" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -2053,13 +2042,13 @@
                         <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="outer" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="interneuron" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="wall" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -2068,15 +2057,15 @@
                         <transformation_rate name="pial" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="outer" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="wall" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -2145,20 +2134,18 @@
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 4">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="interneuron">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">1.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
                         <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
                     </options>
-                    <cell_BM_adhesion_strength units="micron/min">4.0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">10.0</cell_BM_repulsion_strength>
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
@@ -2257,13 +2244,13 @@
                         <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="outer" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="interneuron" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="wall" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -2272,13 +2259,13 @@
                         <attack_rate name="rgc" units="1/min">0.0</attack_rate>
                         <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                         <attack_rate name="outer" units="1/min">0.0</attack_rate>
                         <attack_rate name="interneuron" units="1/min">0.0</attack_rate>
                         <attack_rate name="wall" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1.0</damage_rate>
                     <fusion_rates>
@@ -2288,13 +2275,13 @@
                         <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="outer" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="interneuron" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="wall" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -2303,15 +2290,15 @@
                         <transformation_rate name="pial" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="outer" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="wall" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -2380,20 +2367,18 @@
                         <cell_adhesion_affinity name="rgc">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">1.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 4">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="outer">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="interneuron">0.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="wall">1.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">0.0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">0.0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
                         <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
                     </options>
-                    <cell_BM_adhesion_strength units="micron/min">0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">0</cell_BM_repulsion_strength>
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
@@ -2492,13 +2477,13 @@
                         <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="outer" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="interneuron" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="wall" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -2507,13 +2492,13 @@
                         <attack_rate name="rgc" units="1/min">0.0</attack_rate>
                         <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                         <attack_rate name="outer" units="1/min">0.0</attack_rate>
                         <attack_rate name="interneuron" units="1/min">0.0</attack_rate>
                         <attack_rate name="wall" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                     </attack_rates>
                     <damage_rate units="1/min">1</damage_rate>
                     <fusion_rates>
@@ -2523,13 +2508,13 @@
                         <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="outer" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="interneuron" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="wall" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
@@ -2538,15 +2523,15 @@
                         <transformation_rate name="pial" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="outer" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="wall" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -2580,7 +2565,7 @@
                     <model code="101" name="necrosis">
                         <death_rate units="1/min">0.0</death_rate>
                         <phase_transition_rates units="1/min">
-                            <rate start_index="0" end_index="1" fixed_duration="false">9e9</rate>
+                            <rate start_index="0" end_index="1" fixed_duration="false">9000000000.0</rate>
                             <rate start_index="1" end_index="2" fixed_duration="true">1.15741e-05</rate>
                         </phase_transition_rates>
                         <parameters>
@@ -2606,7 +2591,7 @@
                 </volume>
                 <mechanics>
                     <cell_cell_adhesion_strength units="micron/min">0</cell_cell_adhesion_strength>
-                    <cell_cell_repulsion_strength units="micron/min">0</cell_cell_repulsion_strength>
+                    <cell_cell_repulsion_strength units="micron/min">100</cell_cell_repulsion_strength>
                     <relative_maximum_adhesion_distance units="dimensionless">1.25</relative_maximum_adhesion_distance>
                     <cell_adhesion_affinities>
                         <cell_adhesion_affinity name="default">1</cell_adhesion_affinity>
@@ -2615,20 +2600,18 @@
                         <cell_adhesion_affinity name="rgc">0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ntype_nmh">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc proto">0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 1">0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 2">0</cell_adhesion_affinity>
-                        <cell_adhesion_affinity name="ipc 3">0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="ipc 4">0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="outer">0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="interneuron">0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="wall">0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 1">0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 2">0</cell_adhesion_affinity>
+                        <cell_adhesion_affinity name="ipc 3">0</cell_adhesion_affinity>
                     </cell_adhesion_affinities>
                     <options>
                         <set_relative_equilibrium_distance enabled="false" units="dimensionless">1.8</set_relative_equilibrium_distance>
                         <set_absolute_equilibrium_distance enabled="false" units="micron">15.12</set_absolute_equilibrium_distance>
                     </options>
-                    <cell_BM_adhesion_strength units="micron/min">4.0</cell_BM_adhesion_strength>
-                    <cell_BM_repulsion_strength units="micron/min">10.0</cell_BM_repulsion_strength>
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
@@ -2727,13 +2710,13 @@
                         <phagocytosis_rate name="rgc" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ntype_nmh" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc proto" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
-                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="ipc 4" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="outer" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="interneuron" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="wall" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 1" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 2" units="1/min">0.0</phagocytosis_rate>
+                        <phagocytosis_rate name="ipc 3" units="1/min">0.0</phagocytosis_rate>
                     </live_phagocytosis_rates>
                     <attack_rates>
                         <attack_rate name="default" units="1/min">0</attack_rate>
@@ -2742,15 +2725,15 @@
                         <attack_rate name="rgc" units="1/min">0.0</attack_rate>
                         <attack_rate name="ntype_nmh" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc proto" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
-                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                         <attack_rate name="ipc 4" units="1/min">0.0</attack_rate>
                         <attack_rate name="outer" units="1/min">0.0</attack_rate>
                         <attack_rate name="interneuron" units="1/min">0.0</attack_rate>
                         <attack_rate name="wall" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 1" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 2" units="1/min">0.0</attack_rate>
+                        <attack_rate name="ipc 3" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">1.0</damage_rate>
+                    <damage_rate units="1/min">0</damage_rate>
                     <fusion_rates>
                         <fusion_rate name="default" units="1/min">0</fusion_rate>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
@@ -2758,30 +2741,30 @@
                         <fusion_rate name="rgc" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ntype_nmh" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc proto" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
-                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="ipc 4" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="outer" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="interneuron" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="wall" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 1" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 2" units="1/min">0.0</fusion_rate>
+                        <fusion_rate name="ipc 3" units="1/min">0.0</fusion_rate>
                     </fusion_rates>
                 </cell_interactions>
                 <cell_transformations>
                     <transformation_rates>
                         <transformation_rate name="apical" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="pial" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="default" units="1/min">0</transformation_rate>
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc proto" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="ipc 4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="outer" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="wall" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="default" units="1/min">0</transformation_rate>
+                        <transformation_rate name="ntype_nmh" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 1" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 2" units="1/min">0.0</transformation_rate>
+                        <transformation_rate name="ipc 3" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
             </phenotype>
@@ -2795,7 +2778,7 @@
     <initial_conditions>
         <cell_positions type="csv" enabled="true">
             <folder>/Users/davidzhou/Documents/GitHub/physicell-cortex-rules/PhysiCell/config</folder>
-            <filename>mimic.csv</filename>
+            <filename>fittedCoords.csv</filename>
         </cell_positions>
     </initial_conditions>
 
