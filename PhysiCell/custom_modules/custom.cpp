@@ -129,10 +129,9 @@ void create_cell_types( void )
 
 	find_cell_definition( "rgc" )->functions.update_phenotype = dividing_phenotype_function;
 	find_cell_definition( "ipc proto" )->functions.update_phenotype = dividing_phenotype_function;
-	find_cell_definition( "ipc 1" )->functions.update_phenotype = migrating_phenotype_function;
-	find_cell_definition( "ipc 2" )->functions.update_phenotype = migrating_phenotype_function;
-	find_cell_definition( "ipc 3" )->functions.update_phenotype = migrating_phenotype_function;
-	find_cell_definition( "ipc 4" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "layer 6" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "layer 4-5" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "layer 2-3" )->functions.update_phenotype = migrating_phenotype_function;
 	
 	/*
 	   This builds the map of cell definitions and summarizes the setup. 

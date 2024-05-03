@@ -1,36 +1,31 @@
 apical,time,decreases,is_movable,0,0,4,0
 rgc,contact with apical,decreases,migration speed,0,0.5,20,0
-rgc,custom:time_alive,decreases,transform to ipc proto,0,30,200,0
+rgc,custom:time_alive,decreases,transform to ipc proto,0,60,200,0
 ipc proto,intracellular transformation inhibitor,increases,transform to rgc,0.1,0.001,20,0
 ipc proto,time,decreases,transformation inhibitor uptake,0,720,50,0
-rgc,time,decreases,cycle entry,0,6480,100,0
-ipc proto,time,increases,apoptosis,10,6480,100,0
+rgc,time,decreases,cycle entry,0,5040,100,0
+ipc proto,time,increases,apoptosis,10,5040,100,0
 apical,time,increases,type 1 diff factor secretion,1,720,50,0
-ipc proto,intracellular type 1 diff factor,increases,transform to ipc 1,1,0.001,50,0
-ipc proto,time,decreases,type 1 diff factor uptake,0,2160,50,0
-apical,time,increases,type 2 diff factor secretion,1,2175,50,0
-ipc proto,intracellular type 2 diff factor,increases,transform to ipc 2,1,0.001,50,0
-ipc proto,time,decreases,type 2 diff factor uptake,0,3600,50,0
-apical,time,increases,type 3 diff factor secretion,1,3615,50,0
-ipc proto,intracellular type 3 diff factor,increases,transform to ipc 3,1,0.001,50,0
+ipc proto,intracellular type 1 diff factor,increases,transform to layer 6,1,0.001,50,0
+ipc proto,time,decreases,type 1 diff factor uptake,0,2280,50,0
+apical,time,increases,type 2 diff factor secretion,1,2295,50,0
+ipc proto,intracellular type 2 diff factor,increases,transform to layer 4-5,1,0.001,50,0
+ipc proto,time,decreases,type 2 diff factor uptake,0,3540,50,0
+apical,time,increases,type 3 diff factor secretion,1,3555,50,0
+ipc proto,intracellular type 3 diff factor,increases,transform to layer 2-3,1,0.001,50,0
 ipc proto,time,decreases,type 3 diff factor uptake,0,5040,50,0
-apical,time,increases,type 4 diff factor secretion,1,5055,50,0
-ipc proto,intracellular type 4 diff factor,increases,transform to ipc 4,1,0.001,50,0
-ipc proto,time,decreases,type 4 diff factor uptake,0,6480,50,0
-ipc 1,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
-ipc 2,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
-ipc 3,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
-ipc 4,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
+layer 6,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
+layer 4-5,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
+layer 2-3,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
 interneuron,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
-ipc 1,intracellular arrest factor,decreases,migration speed,0,0.000001,20,0
-ipc 2,intracellular arrest factor,decreases,migration speed,0,0.000001,20,0
-ipc 3,intracellular arrest factor,decreases,migration speed,0,0.000001,20,0
-ipc 4,intracellular arrest factor,decreases,migration speed,0,0.000001,20,0
+layer 6,intracellular arrest factor,decreases,migration speed,0,0.000001,20,0
+layer 4-5,intracellular arrest factor,decreases,migration speed,0,0.000001,20,0
+layer 2-3,intracellular arrest factor,decreases,migration speed,0,0.000001,20,0
 interneuron,intracellular arrest factor,decreases,migration speed,0,0.000001,20,0
 outer,time,decreases,is_movable,0,0,4,0
 pial,contact with outer,decreases,migration speed,0,0.5,4,0
 ipc proto,time,increases,rgc taxis factor uptake,1,120,50,0
 ipc proto,intracellular rgc taxis factor,increases,transform to interneuron,0.01,0.001,50,0
-rgc,type 1 diff factor,decreases,exit from cycle phase 0,0.0,6480,50,0
+rgc,type 1 diff factor,decreases,exit from cycle phase 0,0.0,5040,50,0
 wall,time,decreases,is_movable,0,0,4,0
-rgc,time,increases,apoptosis,10,6480,100,0
+rgc,time,increases,apoptosis,10,5040,100,0
