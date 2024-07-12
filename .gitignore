@@ -37,5 +37,14 @@ PhysiCell/output/
 # PCStudio debug log
 PhysiCell/studio_debug.log
 
+# PhysiCell copies
+PhysiCell copy
+
+# my jupyter notebooks
+*.ipynb
+
+# log files
+*.log
+
 # .DS_Store for MacOS
 *.DS_Store

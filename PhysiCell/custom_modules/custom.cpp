@@ -67,7 +67,7 @@
 
 #include "./custom.h"
 
-void create_cell_types( void )
+void create_cell_types(void)
 {
 	// set the random seed 
 	SeedRandom( parameters.ints("random_seed") );  
@@ -115,7 +115,7 @@ void create_cell_types( void )
        Cell rule definitions 
 	*/
 
-	setup_cell_rules(); 
+	setup_cell_rules();
 
 	/* 
 	   Put any modifications to individual cell definitions here. 
@@ -125,14 +125,28 @@ void create_cell_types( void )
 	
 	cell_defaults.functions.update_phenotype = phenotype_function; 
 	cell_defaults.functions.custom_cell_rule = custom_function; 
-	cell_defaults.functions.contact_function = contact_function; 
+	cell_defaults.functions.contact_function = contact_function;
+
+	find_cell_definition("apical")->is_movable = false;
 
 	find_cell_definition( "rgc" )->functions.update_phenotype = dividing_phenotype_function;
-	find_cell_definition( "ipc proto" )->functions.update_phenotype = dividing_phenotype_function;
-	find_cell_definition( "layer 6" )->functions.update_phenotype = migrating_phenotype_function;
-	find_cell_definition( "layer 4-5" )->functions.update_phenotype = migrating_phenotype_function;
-	find_cell_definition( "layer 2-3" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "ipc" )->functions.update_phenotype = dividing_phenotype_function;
+	find_cell_definition( "layer_6" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "layer_5" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "layer_4" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "layer_3" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "layer_2" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "layer_1" )->functions.update_phenotype = migrating_phenotype_function;
+	find_cell_definition( "interneuron" )->functions.update_phenotype = migrating_phenotype_function;
 	
+	find_cell_definition( "layer_6" )->functions.custom_cell_rule = custom_function;
+	find_cell_definition( "layer_5" )->functions.custom_cell_rule = custom_function;
+	find_cell_definition( "layer_4" )->functions.custom_cell_rule = custom_function;
+	find_cell_definition( "layer_3" )->functions.custom_cell_rule = custom_function;
+	find_cell_definition( "layer_2" )->functions.custom_cell_rule = custom_function;
+	find_cell_definition( "layer_1" )->functions.custom_cell_rule = custom_function;
+	find_cell_definition( "interneuron" )->functions.custom_cell_rule = custom_function;
+	find_cell_definition( "pial" )->functions.custom_cell_rule = pial_function;
 	/*
 	   This builds the map of cell definitions and summarizes the setup. 
 	*/
@@ -142,21 +156,30 @@ void create_cell_types( void )
 	return; 
 }
 
-void setup_microenvironment( void )
+void setup_microenvironment(void)
 {
 	// set domain parameters 
 	
 	// put any custom code to set non-homogeneous initial conditions or 
 	// extra Dirichlet nodes here. 
 	
-	// initialize BioFVM 
-	
-	initialize_microenvironment(); 	
-	
+	// initialize BioFVM
+
+	initialize_microenvironment();
+
 	return; 
 }
 
-void setup_tissue( void )
+void setup_tissue(void)
+{
+	setup_tissue_domain();
+	// load cells from your CSV file (if enabled)
+	load_cells_from_pugixml();
+
+	return;
+}
+
+void setup_tissue_domain(void)
 {
 	double Xmin = microenvironment.mesh.bounding_box[0]; 
 	double Ymin = microenvironment.mesh.bounding_box[1]; 
@@ -196,11 +219,6 @@ void setup_tissue( void )
 		}
 	}
 	std::cout << std::endl; 
-	
-	// load cells from your CSV file (if enabled)
-	load_cells_from_pugixml(); 	
-	
-	return; 
 }
 
 std::vector<std::string> my_coloring_function( Cell* pCell )
@@ -210,7 +228,21 @@ void phenotype_function( Cell* pCell, Phenotype& phenotype, double dt )
 { return; }
 
 void custom_function( Cell* pCell, Phenotype& phenotype , double dt )
-{ return; }
+{
+	// check if any neighbors are pial cells
+	// if so, stop migration
+	// if not, continue migration
+	for (int i = 0; i < pCell->state.neighbors.size(); i++)
+	{
+		if (pCell->state.neighbors[i]->type_name == "pial")
+		{
+			phenotype.motility.migration_speed = 0;
+			pCell->functions.custom_cell_rule = NULL;
+			return;
+		}
+	}
+	return;
+}
 
 void dividing_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt )
 { 
@@ -238,6 +270,26 @@ void migrating_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt 
 	}
 	return;
 
+}
+
+// DZ: 6-19 - a pial cell phenotype function to prevent the cells from being caught at the sides
+void pial_function( Cell* pCell, Phenotype& phenotype, double dt )
+{
+	/*
+	std::vector<double> boundaries = pCell->get_microenvironment()->mesh.bounding_box;
+	float diameter = 2 * pCell->phenotype.geometry.radius;
+	if( pCell->position[0] < boundaries[0] + diameter)
+	{
+		pCell->position[0] = boundaries[0] + diameter;
+		// std::cout << "X position updated to " << pCell->position[0] << std::endl;
+	}
+	else if( pCell->position[0] > boundaries[3] - diameter)
+	{
+		pCell->position[0] = boundaries[3] - diameter;
+		// std::cout << "X position updated to " << pCell->position[0] << std::endl;
+	}
+	*/
+	return;
 }
 
 void contact_function( Cell* pMe, Phenotype& phenoMe , Cell* pOther, Phenotype& phenoOther , double dt )

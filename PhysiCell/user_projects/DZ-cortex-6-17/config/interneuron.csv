@@ -1,0 +1,39 @@
+apical,time,decreases,is_movable,0,0,4,0
+rgc,contact with apical,decreases,migration speed,0,0.5,20,0
+rgc,custom:time_alive,decreases,transform to ipc proto,0,60,200,0
+ipc proto,intracellular transformation inhibitor,increases,transform to rgc,0.1,0.001,20,0
+ipc proto,time,decreases,transformation inhibitor uptake,0,720,50,0
+rgc,time,decreases,cycle entry,0,5040,100,0
+ipc proto,time,increases,apoptosis,10,5040,100,0
+apical,time,increases,type 1 diff factor secretion,1,720,50,0
+ipc proto,intracellular type 1 diff factor,increases,transform to layer 6,1,0.001,50,0
+ipc proto,time,decreases,type 1 diff factor uptake,0,2040,50,0
+apical,time,increases,type 2 diff factor secretion,1,2055,50,0
+ipc proto,intracellular type 2 diff factor,increases,transform to layer 4-5,1,0.001,50,0
+ipc proto,time,decreases,type 2 diff factor uptake,0,3360,50,0
+apical,time,increases,type 3 diff factor secretion,1,3375,50,0
+ipc proto,intracellular type 3 diff factor,increases,transform to layer 2-3,1,0.001,50,0
+ipc proto,time,decreases,type 3 diff factor uptake,0,5040,50,0
+layer 6,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
+layer 4-5,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
+layer 2-3,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
+interneuron,intracellular arrest factor,decreases,chemotactic response to reelin,0,0.000001,20,0
+layer 6,intracellular arrest factor,increases,transform to layer_6_t,1,0.000001,20,0
+layer 4-5,intracellular arrest factor,increases,transform to layer_4-5_t,1,0.000001,20,0
+layer 2-3,intracellular arrest factor,increases,transform to layer_2-3_t,1,0.000001,20,0
+interneuron,intracellular arrest factor,increases,transform to interneuron_t,1,0.000001,20,0
+outer,time,decreases,is_movable,0,0,4,0
+pial,contact with outer,decreases,migration speed,0,0.5,4,0
+ipc proto,time,increases,rgc taxis factor uptake,1,120,50,0
+ipc proto,intracellular rgc taxis factor,increases,transform to interneuron,0.01,0.001,50,0
+rgc,type 1 diff factor,decreases,exit from cycle phase 0,0.0,5040,50,0
+wall,time,decreases,is_movable,0,0,4,0
+rgc,time,increases,apoptosis,10,5040,100,0
+layer 6,intracellular arrest factor,increases,cell-cell repulsion,10,0.000001,20,0
+layer 4-5,intracellular arrest factor,increases,cell-cell repulsion,10,0.000001,20,0
+layer 2-3,intracellular arrest factor,increases,cell-cell repulsion,10,0.000001,20,0
+interneuron,intracellular arrest factor,increases,cell-cell repulsion,10,0.000001,20,0
+layer_6_t,spacer,increases,migration speed,0.5,5,4,0
+layer_4-5_t,spacer,increases,migration speed,0.5,5,4,0
+layer_2-3_t,spacer,increases,migration speed,0.5,5,4,0
+interneuron_t,spacer,increases,migration speed,0.5,5,4,0

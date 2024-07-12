@@ -156,7 +156,7 @@ class Cell_State
 	
 	double damage; 
 	double total_attack_time; 
-	double time_alive;
+	double time_alive;					// DZ custom for rgc asym div
 	bool contact_with_basement_membrane; // not implemented yet 
 	
 	Cell_State(); 

@@ -71,13 +71,14 @@
 using namespace BioFVM; 
 using namespace PhysiCell;
 
-// setup functions to help us along 
+// setup functions to help us along
 
-void create_cell_types( void );
-void setup_tissue( void ); 
+void create_cell_types(void);
+void setup_tissue(void);
+void setup_tissue_domain(void);
 
-// set up the BioFVM microenvironment 
-void setup_microenvironment( void ); 
+// set up the BioFVM microenvironment
+void setup_microenvironment(void);
 
 // custom pathology coloring function 
 
@@ -91,6 +92,7 @@ void dividing_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt )
 void migrating_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt );
 
 void custom_function( Cell* pCell, Phenotype& phenotype , double dt );
+void pial_function( Cell* pCell, Phenotype& phenotype, double dt);
 
 void contact_function( Cell* pMe, Phenotype& phenoMe , Cell* pOther, Phenotype& phenoOther , double dt ); 
 

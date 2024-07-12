@@ -248,7 +248,7 @@ Cell_State::Cell_State()
 	
 	damage = 0.0; 
 	total_attack_time = 0.0; 
-	time_alive = 0.0;
+	time_alive = 0.0;	// DZ custom for RGC asym div
 	
 	contact_with_basement_membrane = false; 
 
@@ -649,7 +649,7 @@ Cell* Cell::divide( )
 	state.total_attack_time = 0; 
 	child->state.damage = 0.0; 
 	child->state.total_attack_time = 0.0; 
-	child->state.time_alive = 0.0;
+	child->state.time_alive = 0.0;	// DZ custom for asym div
 
 	return child;
 }
