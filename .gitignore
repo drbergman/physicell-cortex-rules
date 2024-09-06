@@ -32,10 +32,10 @@
 *.app
 
 # PhysiCell output folder
-PhysiCell/output/
+PhysiCell*/output*/
 
 # PCStudio debug log
-PhysiCell/studio_debug.log
+PhysiCell*/studio_debug.log
 
 # PhysiCell copies
 PhysiCell copy
@@ -48,3 +48,37 @@ PhysiCell copy
 
 # .DS_Store for MacOS
 *.DS_Store
+
+# Python
+__pycache__/
+
+# PhysiCell stuff
+PhysiCell*/config/PhysiCell_settings_[0-9]*.xml
+PhysiCell*/config/rules_RGC_CCR_decrease_[0-9]*.csv
+project
+PhysiCell*/ALL_CITATIONS.txt
+PhysiCell*/BioFVM
+PhysiCell*/CITATION.txt
+PhysiCell*/Makefile*
+PhysiCell*/README.md
+PhysiCell*/VERSION.txt
+PhysiCell*/addons
+PhysiCell*/beta
+PhysiCell*/changes.md
+PhysiCell*/config/base_rulesets.csv
+PhysiCell*/core
+PhysiCell*/custom_modules
+PhysiCell*/documentation-deprecated
+PhysiCell*/examples
+PhysiCell*/heterogeneity
+PhysiCell*/licenses
+PhysiCell*/matlab
+PhysiCell*/modules
+PhysiCell*/ode_energy
+PhysiCell*/pcStudio
+PhysiCell*/povray
+PhysiCell*/protocols
+PhysiCell*/sample_projects
+PhysiCell*/sample_projects_intracellular
+PhysiCell*/tests
+PhysiCell*/unit_tests

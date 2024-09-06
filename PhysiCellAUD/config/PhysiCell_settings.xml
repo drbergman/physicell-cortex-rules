@@ -10,8 +10,8 @@
     </cell_rules>
 
     <domain>
-        <x_min>-650</x_min>
-        <x_max>650</x_max>
+        <x_min>-205</x_min>
+        <x_max>205</x_max>
         <y_min>-200</y_min>
         <y_max>1100</y_max>
         <z_min>-10</z_min>
@@ -23,7 +23,7 @@
     </domain>
 
     <overall>
-        <max_time units="min">10080.0</max_time>
+        <max_time units="min">11520.0</max_time>
         <time_units>min</time_units>
         <space_units>micron</space_units>
         <dt_diffusion units="min">0.01</dt_diffusion>
@@ -36,13 +36,13 @@
     </parallel>
 
     <save>
-        <folder>output_decrease_halfmax_6600-run_4</folder>
+        <folder>output</folder>
         <full_data>
-            <interval units="min">1440</interval>
+            <interval units="min">60</interval>
             <enable>true</enable>
         </full_data>
         <SVG>
-            <interval units="min">1440</interval>
+            <interval units="min">60</interval>
             <enable>true</enable>
             <plot_substrate enabled="true" limits="true">
                 <substrate>type_6_diff_factor</substrate>
@@ -700,7 +700,7 @@
             <phenotype>
                 <cycle code="5" name="live">
                     <phase_transition_rates units="1/min">
-                        <rate start_index="0" end_index="0" fixed_duration="false">0.003</rate>
+                        <rate start_index="0" end_index="0" fixed_duration="false">0.0016</rate>
                     </phase_transition_rates>
                 </cycle>
                 <death>
