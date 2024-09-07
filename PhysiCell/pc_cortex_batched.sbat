@@ -8,6 +8,6 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=dbergma5@jh.edu
-#SBATCH --array=0-0
+#SBATCH --array=0-5
 
 ./project ./config/PhysiCell_settings_$SLURM_ARRAY_TASK_ID.xml

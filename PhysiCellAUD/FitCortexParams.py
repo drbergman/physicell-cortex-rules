@@ -14,6 +14,7 @@ import copy
 
 layer_celldef_id = {6: 4, 5: 5, 4: 6, 3: 7, 2: 9}
 layer_list = [2, 3, 4, 5, 6]
+original_start_time = {6: 1440.0, 5: 3000.0, 4: 6000.0, 3: 7300.0, 2: 9500.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
 
 home_dir = os.path.expanduser("~")
 path_to_physicell = home_dir + "/physicell-cortex-rules/PhysiCellAUD"
@@ -24,7 +25,7 @@ user_name = "dbergman"
 def main():
     # layer_counts_data = 5500
     # layer_counts_data = {2: 196, 4: 53, 5: 214, 6: 197} # AUD in 1.083 (probably not using this)
-    layer_counts_data = {2: 347, 4: 126, 5: 376, 6: 229} # AUD in 1.086
+    layer_counts_data = {2: 338, 4: 121, 5: 362, 6: 220} # AUD in 1.086
 
     result, order = optimizeParameters(layer_counts_data, min_replicates=6, maxfev = 100)
     print(result)
@@ -56,7 +57,7 @@ def initializeParameters():
     parameters = {}
     # rgc ec50 of cycle rate decrease due to time
     initialzeRGCEC50(parameters)
-    for layer_start in [6, 5, 4, 3, 2]:
+    for layer_start in [6, 5, 4, 3]:
         initializeGap(parameters, layer_start)
     for p in parameters.values():
         p["current_value"] = p["initial_value"] # ensure that the current value is set to the initial value when initializing
@@ -66,7 +67,7 @@ def initializeParameters():
 def initialzeRGCEC50(parameters):
     p = {}
     p["name"] = "rgc_ec50"
-    p["initial_value"] = 4000.0
+    p["initial_value"] = 6600.0
     p["min_value"] = 0.0
     p["max_value"] = 10000.0
     p["min_step_size"] = 1.0
@@ -83,7 +84,7 @@ def initializeGap(parameters, layer_start):
     # layer_start is i
     p = {}
     p["name"] = f"gap_{layer_start}"
-    p["initial_value"] = 1150.0
+    p["initial_value"] = original_start_time[layer_start-1] - original_start_time[layer_start]
     p["min_value"] = 0.0
     p["max_value"] = 10000.0
     p["min_step_size"] = 1.0
@@ -105,12 +106,21 @@ def setUpTimeSubs(layer_start):
     if layer_start == 6:
         sub_diff_factor_uptake_decrease["fn"] = lambda _, delta : 1440.0 + delta
         sub_diff_factor_secretion_increase["fn"] = lambda _, delta : 1440.0 + delta
+    elif layer_start == 3:
+        # set the transition from 3->2 at the halfway point since we don't have data separating 2 and 3
+        sub_diff_factor_uptake_decrease["fn"] = lambda df, delta : float(df.iloc[13 - layer_start, 5]) + 0.5 * delta 
+        sub_diff_factor_secretion_increase["fn"] = lambda df, delta : float(df.iloc[19 - layer_start, 5]) + 0.5 * delta
     else:
         sub_diff_factor_uptake_decrease["fn"] = lambda df, delta : float(df.iloc[13 - layer_start, 5]) + delta
         sub_diff_factor_secretion_increase["fn"] = lambda df, delta : float(df.iloc[19 - layer_start, 5])+ delta
 
-    if layer_start == 2: # no rule for increasing apical secretion of diff factor 1
-        return [sub_diff_factor_uptake_decrease]
+    if layer_start == 3: # then have layer 2 start halfway between start and end time of 3
+        sub_diff_factor_2_uptake_decrease = {}
+        sub_diff_factor_2_uptake_decrease["location"] = "rules"
+        sub_diff_factor_2_uptake_decrease["line_number_0_based"] = 12
+        sub_diff_factor_2_uptake_decrease["col_number_0_based"] = 5
+        sub_diff_factor_2_uptake_decrease["fn"] = lambda df, delta : float(df.iloc[10, 5]) + delta # the remaining half of the 2/3 layer formation time is spent forming layer 2 (rather than add it to layer 3's updated time, add it to layer 4's so that we don't need to worry about the order of resolving these subs)
+        return [sub_diff_factor_uptake_decrease, sub_diff_factor_secretion_increase, sub_diff_factor_2_uptake_decrease]
     else:
         return [sub_diff_factor_uptake_decrease, sub_diff_factor_secretion_increase]
 
@@ -208,12 +218,17 @@ def runSimulationsAndError( x, parameters, layer_counts_data, parameter_order, m
         # calculate mean for each layer
         simulated_layer_means = {i: np.mean(counts) for i, counts in layer_counts_simulated_all.items()}
         simulated_layer_stds = {i: np.std(counts) for i, counts in layer_counts_simulated_all.items()}
-        temp_dict = {i: (simulated_layer_means[i], simulated_layer_stds[i]) for i in layer_celldef_id}
-        print(f"(mean, std) for each layer: {temp_dict}")
+        temp_dict = {i: (simulated_layer_means[i], simulated_layer_stds[i]) for i in layer_list}
+        for layer in layer_list:
+            print(f"- Layer {layer}:")
+            print(f"\tcounts: {layer_counts_simulated_all[layer]}")
+            print(f"\t(mean, std): {temp_dict[layer]}\n")
         if 3 not in layer_counts_data.keys():
             # in this case, layers 2 and 3 are combined in the data
             simulated_layer_means[2] = simulated_layer_means[2] + simulated_layer_means[3]
         # calculate error
+        temp_dict = {i: simulated_layer_means[i] - layer_counts_data[i] for i in layer_list}
+        print(f"Model - Data: {temp_dict}")
         error = sum([np.square(simulated_layer_means[i] - layer_counts_data[i]) for i in layer_counts_data.keys()]) # important that we loop over the data keys, since the simulated keys could include 2 and 3
     else: # assume that it is the total cell count
         layer_counts_simulated_all = []
@@ -225,6 +240,8 @@ def runSimulationsAndError( x, parameters, layer_counts_data, parameter_order, m
         layer_means_simulated = np.mean(layer_counts_simulated_all)
         # calculate error
         error = np.square(layer_means_simulated - layer_counts_data)
+    
+    print(f"Error: {error}\n", flush=True)
     return error
 
 def setUpSlurmScript( min_replicates ):
