@@ -3,7 +3,7 @@
 # Any modules needed
 
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import pandas as pd
 
 import scipy.io
@@ -22,9 +22,13 @@ import subprocess
 
 parallel = True
 
-executable_path = "/home/dzhou20/PhysiCell/project"
+home_dir = os.path.expanduser("~")
+physicell_dir = f"{home_dir}/physicell-cortex-rules/PhysiCell"     # path to PhysiCell directory
 
-config_settings_path = "/home/dzhou20/PhysiCell/config/PhysiCell_settings.xml"
+executable_path = f"{physicell_dir}/project"     # path to model .exe file
+
+
+config_settings_path = f"{physicell_dir}/config/PhysiCell_settings.xml"      # path to model's settings file
 
 layers_by_index = {"l6": 4,         # Edit this dict with the PhysiCell IDs of the layer-specific cell types
                    "l5": 5,
@@ -32,7 +36,10 @@ layers_by_index = {"l6": 4,         # Edit this dict with the PhysiCell IDs of t
                    "l3": 7,
                    "l2": 9}
 
-def run_pc(run_set, output_folder_prefix):
+# import shutil
+def run_pc(i1, i2, output_folder_prefix):
+    run_set = range(i1, i2)
+    print(f"Running sims {run_set} with output folder prefix {output_folder_prefix}")
 
     start = time.time()
 
@@ -42,33 +49,45 @@ def run_pc(run_set, output_folder_prefix):
 
         print("Run", i, "started")
 
-        # Editing XML parameters. Make sure to modify this to vary your desired parameter.
+    #     # Editing XML parameters. Make sure to modify this to vary your desired parameter.
         
         tree = ET.parse(config_settings_path)
         
-        output_folder_name = output_folder_prefix + "-run=" + str(i)
+        output_folder_name = output_folder_prefix + "-run_" + str(i)
         
         tree.find("save").find("folder").text = output_folder_name
+
         
-        '''
-        for node in tree.find("cell_definitions"):
-            if node.attrib['name'] == 'rgc':
+    #     '''
+    #     for node in tree.find("cell_definitions"):
+    #         if node.attrib['name'] == 'rgc':
 
-                node.find(".//phenotype//cycle//phase_transition_rates//rate").text = str(run_set[i])
-        '''
+    #             node.find(".//phenotype//cycle//phase_transition_rates//rate").text = str(run_set[i])
+    #     '''
 
-        tree.write(config_settings_path)
+        config_for_i = f"{config_settings_path[:-4]}_{i}.xml"
+        tree.write(config_for_i)
+        # tree.write(config_settings_path)
+        # shutil.copy(config_settings_path, f"{physicell_dir}/config/PhysiCell_settings_{i}.xml")
 
         os.system('rm -rf ./' + output_folder_name)
         os.makedirs(output_folder_name, exist_ok = True)
+    #     print(f"Output folder {output_folder_name} created")
+    #     # open(output_folder_name + "/empty.txt", 'w').close()
+
+        time.sleep(1)
 
         if parallel == True:
-            processes.append(subprocess.Popen(executable_path))
-            time.sleep(.1)
+            print(f"Running {[executable_path, config_for_i]} in parallel")
+            processes.append(subprocess.Popen([executable_path, config_for_i]))
+            # processes.append(subprocess.Popen([executable_path]))
+            # processes.append(subprocess.Popen(["./project"]))
+            time.sleep(0.1)
         else:
             subprocess.run(executable_path)
             print("Run", i, "finished")
 
+    print("processes:", processes)
     if parallel == True:
         for p in processes:
             p.wait()
@@ -76,24 +95,24 @@ def run_pc(run_set, output_folder_prefix):
 
 
 
-    # Layer cell counts + proportions
+    # # Layer cell counts + proportions
 
-    run_stats = pd.DataFrame(columns = layers_by_index, index = [param for param in run_set])
-    for i in run_set:
-        final_SVG_path = output_folder_prefix + "-run=" + str(i) + "/final_cells.mat"
-        output = pd.DataFrame(scipy.io.loadmat(final_SVG_path)['cells'].T, index = None, columns = None)
-        run_stats.loc[i] = [output[5].value_counts()[layers_by_index[j]] for j in run_stats.columns]
+    # run_stats = pd.DataFrame(columns = layers_by_index, index = [param for param in run_set])
+    # for i in run_set:
+    #     final_SVG_path = output_folder_prefix + "-run_" + str(i) + "/final_cells.mat"
+    #     output = pd.DataFrame(scipy.io.loadmat(final_SVG_path)['cells'].T, index = None, columns = None)
+    #     run_stats.loc[i] = [output[5].value_counts()[layers_by_index[j]] for j in run_stats.columns]
 
-    run_stats.loc["mean"] = run_stats.mean(axis = 0)
-    run_stats["total"] = run_stats.sum(axis = 1)
+    # run_stats.loc["mean"] = run_stats.mean(axis = 0)
+    # run_stats["total"] = run_stats.sum(axis = 1)
 
-    run_props = run_stats.div(run_stats.iloc[:, :-1].sum(axis=1), axis=0)
+    # run_props = run_stats.div(run_stats.iloc[:, :-1].sum(axis=1), axis=0)
 
-    run_stats.loc["stdev"] = run_stats.std(axis = 0)
+    # run_stats.loc["stdev"] = run_stats.std(axis = 0)
 
 
-    print("Counts:\n{}\n".format(run_stats))
-    print("Proportions:\n{}\n".format(run_props))
+    # print("Counts:\n{}\n".format(run_stats))
+    # print("Proportions:\n{}\n".format(run_props))
 
 '''
 # Layer dist visualization
@@ -108,14 +127,14 @@ def leastDist(layer1, layer2):
 
 def multiDistLayersHist(output_prefix: str, parameter_name: str, run_set: list, layers: dict):
     for i in run_set:
-        final_SVG_path = output_prefix + parameter_name + "=" + str(i) + "/final_cells.mat"
+        final_SVG_path = output_prefix + parameter_name + "_" + str(i) + "/final_cells.mat"
         output = pd.DataFrame(scipy.io.loadmat(final_SVG_path)['cells'].T, index = None, columns = None)
         apical = output[output[5] == 0]
         for layer, id in layers.items():
             plt.hist(leastDist(output[output[5] == id], apical), alpha = 0.8, label = layer)
         plt.legend(loc = 'upper right')
         plt.title("Run " + str(run_set.index(i)) + ": " + parameter_name + " = " + str(i))
-        plt.savefig("/home/dzhou20/PC_output_images/" + output_prefix + parameter_name + '=' + str(i) + "_layersDist.jpg")
+        plt.savefig("/home/dzhou20/PC_output_images/" + output_prefix + parameter_name + "_" + str(i) + "_layersDist.jpg")
         plt.show()
         plt.clf()
 

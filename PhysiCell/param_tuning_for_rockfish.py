@@ -3,7 +3,7 @@
 # Any modules needed
 
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import pandas as pd
 
 import scipy.io
@@ -44,7 +44,7 @@ for i in range(len(parameter_values)):
     
     tree = ET.parse(config_settings_path)
     
-    output_folder_name = output_prefix + parameter_name + "=" + str(parameter_values[i])
+    output_folder_name = output_prefix + parameter_name + "_" + str(parameter_values[i])
     
     tree.find("save").find("folder").text = output_folder_name
 
@@ -77,7 +77,7 @@ if parallel == True:
 
 run_stats = pd.DataFrame(columns = layers_by_index, index = [param for param in parameter_values])
 for i in parameter_values:
-    final_SVG_path = output_prefix + parameter_name + "=" + str(i) + "/final_cells.mat"
+    final_SVG_path = output_prefix + parameter_name + "_" + str(i) + "/final_cells.mat"
     output = pd.DataFrame(scipy.io.loadmat(final_SVG_path)['cells'].T, index = None, columns = None)
     run_stats.loc[i] = [output[5].value_counts()[layers_by_index[j]] for j in run_stats.columns]
 
@@ -99,16 +99,16 @@ def leastDist(layer1, layer2):
         dists.append(min(pairDists.sum(axis=1) ** 0.5))
     return dists
 
-def multiDistLayersHist(output_prefix: str, parameter_name: str, parameter_values: list, layers: dict):
-    for i in parameter_values:
-        final_SVG_path = output_prefix + parameter_name + "=" + str(i) + "/final_cells.mat"
-        output = pd.DataFrame(scipy.io.loadmat(final_SVG_path)['cells'].T, index = None, columns = None)
-        apical = output[output[5] == 0]
-        for layer, id in layers.items():
-            plt.hist(leastDist(output[output[5] == id], apical), alpha = 0.8, label = layer)
-        plt.legend(loc = 'upper right')
-        plt.title("Run " + str(parameter_values.index(i)) + ": " + parameter_name + " = " + str(i))
-        plt.savefig(output_prefix + parameter_name + '=' + str(i) + "/layersDist.jpg")
-        plt.show()
+# def multiDistLayersHist(output_prefix: str, parameter_name: str, parameter_values: list, layers: dict):
+#     for i in parameter_values:
+#         final_SVG_path = output_prefix + parameter_name + "_" + str(i) + "/final_cells.mat"
+#         output = pd.DataFrame(scipy.io.loadmat(final_SVG_path)['cells'].T, index = None, columns = None)
+#         apical = output[output[5] == 0]
+#         for layer, id in layers.items():
+#             plt.hist(leastDist(output[output[5] == id], apical), alpha = 0.8, label = layer)
+#         plt.legend(loc = 'upper right')
+#         plt.title("Run " + str(parameter_values.index(i)) + ": " + parameter_name + " = " + str(i))
+#         plt.savefig(output_prefix + parameter_name + '_' + str(i) + "/layersDist.jpg")
+#         plt.show()
 
-multiDistLayersHist(output_prefix, parameter_name, parameter_values, layers_by_index)
+# multiDistLayersHist(output_prefix, parameter_name, parameter_values, layers_by_index)

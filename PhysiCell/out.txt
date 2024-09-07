@@ -1,0 +1,10 @@
+       message: Maximum number of function evaluations has been exceeded.
+       success: False
+        status: 1
+           fun: 29017973.36111111
+             x: [ 5.940e+03]
+           nit: 2
+          nfev: 5
+ final_simplex: (array([[ 5.940e+03],
+                       [ 6.600e+03]]), array([ 2.902e+07,  2.905e+07]))
+{'rgc_ec50': 0}
