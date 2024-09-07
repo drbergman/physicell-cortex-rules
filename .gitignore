@@ -32,13 +32,16 @@
 *.app
 
 # PhysiCell output folder
-PhysiCell/output/
+output/
 
 # PCStudio debug log
-PhysiCell/studio_debug.log
+studio_debug.log
 
 # PhysiCell copies
 PhysiCell copy
+
+# compiled project
+project
 
 # my jupyter notebooks
 *.ipynb
@@ -48,3 +51,18 @@ PhysiCell copy
 
 # .DS_Store for MacOS
 *.DS_Store
+
+# pcvct stuff
+*.db
+compilation.err
+compilation.log
+outputs
+variations
+rulesets_variation_*.xml
+
+# misc
+.vscode
+*.zip
+
+# do not commit h5ad (big files)
+*.h5ad
