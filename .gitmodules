@@ -1,4 +1,0 @@
-[submodule "PhysiCell_dev"]
-	path = PhysiCell-cortex_dev
-	url = https://github.com/drbergman/PhysiCell
-	branch = cortex-dev
