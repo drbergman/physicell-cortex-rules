@@ -1,0 +1,4 @@
+[submodule "PhysiCell_dev"]
+	path = PhysiCell_dev
+	url = https://github.com/MathCancer/PhysiCell
+	branch = development
