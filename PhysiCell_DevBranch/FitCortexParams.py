@@ -129,7 +129,7 @@ def setUpTimeSubs(layer_start):
 
 def writeNewParameters( parameters, idx ):
     path_to_config = f"{path_to_physicell}/config/PhysiCell_settings.xml"
-    path_to_rules = f"{path_to_physicell}/config/rules_RGC_CCR_decrease.csv"
+    path_to_rules = f"{path_to_physicell}/config/cell_rules.csv"
     config_tree = ET.parse(path_to_config)
     rules_df = pd.read_csv( path_to_rules, dtype = str, header = None)
 
