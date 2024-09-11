@@ -67,14 +67,14 @@ def initializeParameters():
 def initialzeRGCEC50(parameters):
     p = {}
     p["name"] = "rgc_ec50"
-    p["initial_value"] = 6600.0
+    p["initial_value"] = 5000.0
     p["min_value"] = 0.0
     p["max_value"] = 10000.0
     p["min_step_size"] = 1.0
     p["max_step_size"] = 1000.0
     sub = {}
     sub["location"] = "rules"
-    sub["line_number_0_based"] = 18
+    sub["line_number_0_based"] = 19
     sub["col_number_0_based"] = 5
     p["subs"] = [sub]
     parameters[p["name"]] = p
@@ -93,33 +93,36 @@ def initializeGap(parameters, layer_start):
     parameters[p["name"]] = p
 
 def setUpTimeSubs(layer_start):
+    uptake_base_line = 15 # 0-based line number so that (uptake_base_line - layer) is ipc,time,decreases,type_{layer}_diff_factor uptake,...
+    secretion_base_line = 20 # 0-based line number so that (secretion_base_line - layer) is apical,time,increases,type_{layer}_diff_factor secretion,...
+
     sub_diff_factor_uptake_decrease = {}
     sub_diff_factor_uptake_decrease["location"] = "rules"
-    sub_diff_factor_uptake_decrease["line_number_0_based"] = 14 - layer_start
+    sub_diff_factor_uptake_decrease["line_number_0_based"] = uptake_base_line - layer_start
     sub_diff_factor_uptake_decrease["col_number_0_based"] = 5
 
     sub_diff_factor_secretion_increase = {}
     sub_diff_factor_secretion_increase["location"] = "rules"
-    sub_diff_factor_secretion_increase["line_number_0_based"] = 20 - layer_start
+    sub_diff_factor_secretion_increase["line_number_0_based"] = secretion_base_line - layer_start
     sub_diff_factor_secretion_increase["col_number_0_based"] = 5
 
     if layer_start == 6:
-        sub_diff_factor_uptake_decrease["fn"] = lambda _, delta : 1440.0 + delta
+        sub_diff_factor_uptake_decrease["fn"]    = lambda _, delta : 1440.0 + delta
         sub_diff_factor_secretion_increase["fn"] = lambda _, delta : 1440.0 + delta
     elif layer_start == 3:
         # set the transition from 3->2 at the halfway point since we don't have data separating 2 and 3
-        sub_diff_factor_uptake_decrease["fn"] = lambda df, delta : float(df.iloc[13 - layer_start, 5]) + 0.5 * delta 
-        sub_diff_factor_secretion_increase["fn"] = lambda df, delta : float(df.iloc[19 - layer_start, 5]) + 0.5 * delta
+        sub_diff_factor_uptake_decrease["fn"]    = lambda df, delta : float(df.iloc[uptake_base_line    - (layer_start+1), 5]) + 0.5 * delta 
+        sub_diff_factor_secretion_increase["fn"] = lambda df, delta : float(df.iloc[secretion_base_line - (layer_start+1), 5]) + 0.5 * delta
     else:
-        sub_diff_factor_uptake_decrease["fn"] = lambda df, delta : float(df.iloc[13 - layer_start, 5]) + delta
-        sub_diff_factor_secretion_increase["fn"] = lambda df, delta : float(df.iloc[19 - layer_start, 5])+ delta
+        sub_diff_factor_uptake_decrease["fn"] =    lambda df, delta : float(df.iloc[uptake_base_line    - (layer_start+1), 5]) + delta
+        sub_diff_factor_secretion_increase["fn"] = lambda df, delta : float(df.iloc[secretion_base_line - (layer_start+1), 5]) + delta
 
     if layer_start == 3: # then have layer 2 start halfway between start and end time of 3
         sub_diff_factor_2_uptake_decrease = {}
         sub_diff_factor_2_uptake_decrease["location"] = "rules"
-        sub_diff_factor_2_uptake_decrease["line_number_0_based"] = 12
+        sub_diff_factor_2_uptake_decrease["line_number_0_based"] = uptake_base_line - (layer_start - 1)
         sub_diff_factor_2_uptake_decrease["col_number_0_based"] = 5
-        sub_diff_factor_2_uptake_decrease["fn"] = lambda df, delta : float(df.iloc[10, 5]) + delta # the remaining half of the 2/3 layer formation time is spent forming layer 2 (rather than add it to layer 3's updated time, add it to layer 4's so that we don't need to worry about the order of resolving these subs)
+        sub_diff_factor_2_uptake_decrease["fn"] = lambda df, delta : float(df.iloc[uptake_base_line - (layer_start + 1), 5]) + delta # the remaining half of the 2/3 layer formation time is spent forming layer 2 (rather than add it to layer 3's updated time, add it to layer 4's so that we don't need to worry about the order of resolving these subs)
         return [sub_diff_factor_uptake_decrease, sub_diff_factor_secretion_increase, sub_diff_factor_2_uptake_decrease]
     else:
         return [sub_diff_factor_uptake_decrease, sub_diff_factor_secretion_increase]
