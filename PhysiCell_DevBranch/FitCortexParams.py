@@ -14,10 +14,10 @@ import copy
 
 layer_celldef_id = {6: 4, 5: 5, 4: 6, 3: 7, 2: 9}
 layer_list = [2, 3, 4, 5, 6]
-original_start_time = {6: 1440.0, 5: 3000.0, 4: 6000.0, 3: 7300.0, 2: 9500.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
+original_start_time = {6: 1440.0, 5: 3400.0, 4: 6300.0, 3: 7400.0, 2: 11400.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
 
 home_dir = os.path.expanduser("~")
-path_to_physicell = home_dir + "/physicell-cortex-rules/PhysiCellAUD"
+path_to_physicell = home_dir + "/physicell-cortex-rules/PhysiCell_DevBranch"
 path_to_sbatch = f"{path_to_physicell}/pc_cortex_batched.sbat"
 
 user_name = "dbergman"
