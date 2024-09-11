@@ -230,7 +230,7 @@ def runSimulationsAndError( x, parameters, layer_counts_data, parameter_order, m
             # in this case, layers 2 and 3 are combined in the data
             simulated_layer_means[2] = simulated_layer_means[2] + simulated_layer_means[3]
         # calculate error
-        temp_dict = {i: (simulated_layer_means[i], layer_counts_data[i], simulated_layer_means[i] - layer_counts_data[i]) for i in layer_list}
+        temp_dict = {i: (simulated_layer_means[i], layer_counts_data[i], simulated_layer_means[i] - layer_counts_data[i]) for i in layer_counts_data.keys()}
         print("\n(Model, Data, Model - Data):")
         for layer, v in temp_dict.items():
             print(f"\t- Layer {layer}: {v}")
