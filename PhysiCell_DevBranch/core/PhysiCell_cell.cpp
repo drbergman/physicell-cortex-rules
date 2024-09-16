@@ -248,7 +248,9 @@ Cell_State::Cell_State()
 	
 	// damage = 0.0; 
 	// total_attack_time = 0.0; 
+#ifdef TIME_ALIVE
 	time_alive = 0.0;
+#endif
 	
 	contact_with_basement_membrane = false; 
 
@@ -656,7 +658,9 @@ Cell* Cell::divide( )
 	// child->state.damage = 0.0; 
 	// child->phenotype.integrity.damage = 0.0; // leave alone - damage is heritable 
 	child->state.total_attack_time = 0.0; 
+#ifdef TIME_ALIVE
 	child->state.time_alive = 0.0;	// DZ custom for asym div
+#endif
 
     if( this->functions.cell_division_function )
         { this->functions.cell_division_function( this, child); }

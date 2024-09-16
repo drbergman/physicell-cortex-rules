@@ -14,13 +14,18 @@ import copy
 
 layer_celldef_id = {6: 4, 5: 5, 4: 6, 3: 7, 2: 9}
 layer_list = [2, 3, 4, 5, 6]
-original_start_time = {6: 1440.0, 5: 3400.0, 4: 6300.0, 3: 7400.0, 2: 11400.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
 
 home_dir = os.path.expanduser("~")
 path_to_physicell = home_dir + "/physicell-cortex-rules/PhysiCell_DevBranch"
 path_to_sbatch = f"{path_to_physicell}/pc_cortex_batched.sbat"
 
 user_name = "dbergman"
+
+using_custom_division_fn = True
+if using_custom_division_fn:
+    original_start_time = {6: 1440.0, 5: 2920.0, 4: 5750.0, 3: 6820.0, 2: 11430.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
+else:
+    original_start_time = {6: 1440.0, 5: 3400.0, 4: 6300.0, 3: 7400.0, 2: 11400.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
 
 def main():
     # layer_counts_data = 5500
@@ -67,15 +72,19 @@ def initializeParameters():
 def initialzeRGCEC50(parameters):
     p = {}
     p["name"] = "rgc_ec50"
-    p["initial_value"] = 5000.0
+    p["initial_value"] = 5500.0
     p["min_value"] = 0.0
     p["max_value"] = 10000.0
     p["min_step_size"] = 1.0
     p["max_step_size"] = 1000.0
     sub = {}
     sub["location"] = "rules"
-    sub["line_number_0_based"] = 19
-    sub["col_number_0_based"] = 5
+    if using_custom_division_fn:
+        sub["line_number_0_based"] = 1
+        sub["col_number_0_based"] = 5
+    else:
+        sub["line_number_0_based"] = 19
+        sub["col_number_0_based"] = 5
     p["subs"] = [sub]
     parameters[p["name"]] = p
 
@@ -89,9 +98,34 @@ def initializeGap(parameters, layer_start):
     p["max_value"] = 10000.0
     p["min_step_size"] = 1.0
     p["max_step_size"] = 1000.0
-    p["subs"] = setUpTimeSubs(layer_start)
+    if using_custom_division_fn:
+        p["subs"] = setUpCustomDivisionTimeSubs(layer_start)
+    else:
+        p["subs"] = setUpTimeSubs(layer_start)
     parameters[p["name"]] = p
 
+def setUpCustomDivisionTimeSubs(layer_start):
+    sub = {}
+    sub["location"] = "config"
+    sub["xml_path"] = f"user_parameters//layer_{layer_start}_end_time"
+    if layer_start == 6:
+        sub["fn"] = lambda _, delta: 1440.0 + delta
+    elif layer_start == 3:
+        sub["fn"] = lambda ct, delta: getPreviousEndTime(ct, layer_start) + 0.5 * delta
+        sub_layer_2 = {}
+        sub_layer_2["location"] = "config"
+        sub_layer_2["xml_path"] = f"user_parameters//layer_2_end_time"
+        sub_layer_2["fn"] = lambda ct, delta: getPreviousEndTime(ct, 3) + delta
+        return [sub, sub_layer_2]
+    else:
+        sub["fn"] = lambda ct, delta: getPreviousEndTime(ct, layer_start) + delta
+    return [sub]
+
+    
+def getPreviousEndTime(config_tree, layer_start):
+    previous_start_time = config_tree.find(".//user_parameters").find(f".//layer_{layer_start+1}_end_time").text
+    return float(previous_start_time)
+    
 def setUpTimeSubs(layer_start):
     uptake_base_line = 15 # 0-based line number so that (uptake_base_line - layer) is ipc,time,decreases,type_{layer}_diff_factor uptake,...
     secretion_base_line = 21 # 0-based line number so that (secretion_base_line - layer) is apical,time,increases,type_{layer}_diff_factor secretion,...
@@ -138,14 +172,29 @@ def writeNewParameters( parameters, idx ):
     for par_name in p_values_list:
         p = parameters[par_name]
         for sub in p["subs"]:
-            if "fn" in sub:
-                new_value = sub["fn"](rules_df, p["current_value"])
-            else:
-                new_value = p["current_value"]
             if sub["location"] == "rules":
+                if "fn" in sub:
+                    new_value = sub["fn"](rules_df, p["current_value"])
+                else:
+                    new_value = p["current_value"]
                 rules_df.iloc[sub["line_number_0_based"], sub["col_number_0_based"]] = str(new_value)
             elif sub["location"] == "config":
-                raise NotImplementedError("Error: location 'config' not implemented")
+                if "fn" in sub:
+                    new_value = sub["fn"](config_tree, p["current_value"])
+                else:
+                    new_value = p["current_value"]
+                final_node = config_tree
+                xml_path = sub["xml_path"].split("//")
+                for xp in xml_path:
+                    tokens = xp.split(":")
+                    if len(tokens)==1:
+                        final_node = final_node.find(f".//{tokens[0]}")
+                        continue
+                    for var in final_node.findall(tokens[0]):
+                        if var.attrib[tokens[1]] == tokens[2]:
+                            final_node = var
+                            break
+                final_node.text = str(new_value)
             else:
                 print(f"Error: unknown location {sub['location']} for parameter {sub['name']}")
 
@@ -199,6 +248,7 @@ def runSimulationsAndError( x, parameters, layer_counts_data, parameter_order, m
         os.system(f"rm -rf {path_to_output}")
         os.makedirs(path_to_output, exist_ok = True)
         
+    exit()
     time.sleep(1) # make sure the files are written before running the simulations
 
     # run sbatch script
