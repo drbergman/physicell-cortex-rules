@@ -32,7 +32,7 @@ def main():
     # layer_counts_data = {2: 196, 4: 53, 5: 214, 6: 197} # AUD in 1.083 (probably not using this)
     layer_counts_data = {2: 338, 4: 121, 5: 362, 6: 220} # AUD in 1.086
 
-    result, order = optimizeParameters(layer_counts_data, min_replicates=6, maxfev = 100)
+    result, order = optimizeParameters(layer_counts_data, min_replicates=1, maxfev = 100)
     print(result)
     print(order)
 
@@ -120,7 +120,6 @@ def setUpCustomDivisionTimeSubs(layer_start):
     else:
         sub["fn"] = lambda ct, delta: getPreviousEndTime(ct, layer_start) + delta
     return [sub]
-
     
 def getPreviousEndTime(config_tree, layer_start):
     previous_start_time = config_tree.find(".//user_parameters").find(f".//layer_{layer_start+1}_end_time").text
@@ -248,16 +247,9 @@ def runSimulationsAndError( x, parameters, layer_counts_data, parameter_order, m
         os.system(f"rm -rf {path_to_output}")
         os.makedirs(path_to_output, exist_ok = True)
         
-    exit()
     time.sleep(1) # make sure the files are written before running the simulations
 
-    # run sbatch script
-    job = subprocess.check_output(["sbatch", path_to_sbatch])
-    # get jobid
-    jobid = job.decode("utf-8").split(" ")[-1].strip()
-
-    while jobIDInQueue(jobid) == True:
-        time.sleep(5)
+    runReplicates(range(min_replicates))
 
     # check if layer_counts_data is a dictionary
     if isinstance(layer_counts_data, dict):
@@ -299,7 +291,27 @@ def runSimulationsAndError( x, parameters, layer_counts_data, parameter_order, m
     print(f"Error: {error}\n", flush=True)
     return error
 
-def setUpSlurmScript( min_replicates ):
+def runReplicates(replicate_ids):
+    setUpSlurmScript(replicate_ids)
+    
+    # run sbatch script
+    job = subprocess.check_output(["sbatch", path_to_sbatch])
+    # get jobid
+    jobid = job.decode("utf-8").split(" ")[-1].strip()
+
+    while jobIDInQueue(jobid) == True:
+        time.sleep(5)
+
+    ids_left = []
+    for id in replicate_ids:
+        path_to_output = f"{path_to_physicell}/output_{id}/final_cells.mat"
+        if not os.path.exists(path_to_output):
+            ids_left.append(id)
+
+    if len(ids_left) > 0:
+        runReplicates(ids_left)
+        
+def setUpSlurmScript( replicate_ids ):
     with open(path_to_sbatch, "r") as f:
         lines = f.readlines()
     
@@ -309,13 +321,14 @@ def setUpSlurmScript( min_replicates ):
             break
 
     # replace the number of jobs to go 0-min_replicates
-    lines[i] = f"#SBATCH --array=0-{min_replicates-1}\n"
+    id_str = ",".join(map(str, replicate_ids))
+    lines[i] = f"#SBATCH --array={id_str}\n"
 
     with open(path_to_sbatch, "w") as f:
         f.writelines(lines)
 
 def optimizeParameters( layer_counts_data, initial_parameters = None, min_replicates = 6, maxfev = None ):
-    setUpSlurmScript(min_replicates)
+    setUpSlurmScript(range(min_replicates))
     if initial_parameters is None:
         initial_parameters = initializeParameters()
     parameter_order = {}

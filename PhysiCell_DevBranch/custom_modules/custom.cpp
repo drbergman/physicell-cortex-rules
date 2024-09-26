@@ -129,8 +129,6 @@ void create_cell_types(void)
 
 	find_cell_definition("apical")->is_movable = false;
 
-	find_cell_definition( "rgc" )->functions.update_phenotype = dividing_phenotype_function;
-	find_cell_definition( "ipc" )->functions.update_phenotype = dividing_phenotype_function;
 	find_cell_definition( "layer_6" )->functions.update_phenotype = migrating_phenotype_function;
 	find_cell_definition( "layer_5" )->functions.update_phenotype = migrating_phenotype_function;
 	find_cell_definition( "layer_4" )->functions.update_phenotype = migrating_phenotype_function;
@@ -147,6 +145,8 @@ void create_cell_types(void)
 	find_cell_definition( "layer_1" )->functions.custom_cell_rule = custom_function;
 	find_cell_definition( "interneuron" )->functions.custom_cell_rule = custom_function;
 	find_cell_definition( "pial" )->functions.custom_cell_rule = pial_function;
+
+	find_cell_definition( "rgc" )->functions.cell_division_function = asymmetric_division_function;
 	/*
 	   This builds the map of cell definitions and summarizes the setup. 
 	*/
@@ -181,7 +181,6 @@ void setup_tissue(void)
 		if (pC->type_name == "rgc")
 		{
 			pC->phenotype.cycle.data.elapsed_time_in_phase = UniformRandom() / get_single_base_behavior(pC, "cycle entry");
-			pC->state.time_alive = 10000;
 		}
 	}
 
@@ -253,19 +252,6 @@ void custom_function( Cell* pCell, Phenotype& phenotype , double dt )
 	return;
 }
 
-void dividing_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt )
-{ 
-	pCell->state.time_alive += dt;
-	pCell->custom_data.variables[pCell->custom_data.find_variable_index("time_alive")].value = pCell->state.time_alive;
-	/*
-	if( pCell->type_name == "rgc")
-	{
-		std::cout << pCell->phenotype.cell_transformations.transformation_rate("ipc proto") << std::endl;
-	}
-	*/
-	return; 
-} 
-
 void migrating_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt )
 {
 	
@@ -302,29 +288,41 @@ void pial_function( Cell* pCell, Phenotype& phenotype, double dt )
 }
 
 void contact_function( Cell* pMe, Phenotype& phenoMe , Cell* pOther, Phenotype& phenoOther , double dt )
-{ return; } 
+{ return; }
 
-
-/* 
-ok here goes... overloading everything:
-need to overload divide() --> overload flag_cell_for_division --> overload ...
---> overload division_at_phase_exit --> overload live model --> overload create_models
-
-!!unfinished:
-
-Cycle_Model timed;
-
-void create_timed_model( void )
+void asymmetric_division_function(Cell *pC1, Cell *pC2)
 {
-	timed.code = 8;
-	timed.name = "Live model with time-since-birth tracker";
-
-	timed.data.time_units = "min"; 
-
-	timed.add_phase( PhysiCell_constants::live , "Live" );
-
-	timed.phases[0].division_at_phase_exit = true;
+	double ct = PhysiCell_globals.current_time;
+	std::string new_cell_type;
+	if (ct <= 1440.0)
+	{
+		return; // symmetric divsion into two rgc cells
+	}
+	else if (ct <= parameters.doubles("layer_6_end_time"))
+	{
+		new_cell_type = "layer_6";
+	}
+	else if (ct <= parameters.doubles("layer_5_end_time"))
+	{
+		new_cell_type = "layer_5";
+	}
+	else if (ct <= parameters.doubles("layer_4_end_time"))
+	{
+		new_cell_type = "layer_4";
+	}
+	else if (ct <= parameters.doubles("layer_3_end_time"))
+	{
+		new_cell_type = "layer_3";
+	}
+	else if (ct <= parameters.doubles("layer_2_end_time"))
+	{
+		new_cell_type = "layer_2";
+	}
+	else
+	{
+		return; // no more asymmetric division
+	}
+	Cell_Definition* pCD = cell_definitions_by_name[new_cell_type];
+	pC2->convert_to_cell_definition( *pCD );
 	return;
 }
-
-*/

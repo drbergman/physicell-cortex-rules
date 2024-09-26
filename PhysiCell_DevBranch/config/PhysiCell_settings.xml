@@ -45,7 +45,7 @@
             <interval units="min">60</interval>
             <enable>true</enable>
             <plot_substrate enabled="true" limits="true">
-                <substrate>type_6_diff_factor</substrate>
+                <substrate>rgc_taxis_factor</substrate>
                 <colormap>YlOrRd</colormap>
                 <min_conc>0</min_conc>
                 <max_conc>1.0</max_conc>
@@ -60,6 +60,7 @@
         <legacy_random_points_on_sphere_in_divide>false</legacy_random_points_on_sphere_in_divide>
         <virtual_wall_at_domain_edge>true</virtual_wall_at_domain_edge>
         <disable_automated_spring_adhesions>false</disable_automated_spring_adhesions>
+        <random_seed>0</random_seed>
     </options>
 
     <microenvironment_setup>
@@ -109,118 +110,6 @@
                 <boundary_value ID="ymax" enabled="False">0</boundary_value>
                 <boundary_value ID="zmin" enabled="False">0</boundary_value>
                 <boundary_value ID="zmax" enabled="False">0</boundary_value>
-            </Dirichlet_options>
-        </variable>
-        <variable name="transformation_inhibitor" units="dimensionless" ID="3">
-            <physical_parameter_set>
-                <diffusion_coefficient units="micron^2/min">10000</diffusion_coefficient>
-                <decay_rate units="1/min">1</decay_rate>
-            </physical_parameter_set>
-            <initial_condition units="dimensionless">0.0</initial_condition>
-            <Dirichlet_boundary_condition units="dimensionless" enabled="True">0.0</Dirichlet_boundary_condition>
-            <Dirichlet_options>
-                <boundary_value ID="xmin" enabled="False" />
-                <boundary_value ID="xmax" enabled="False" />
-                <boundary_value ID="ymin" enabled="True">0.0</boundary_value>
-                <boundary_value ID="ymax" enabled="False" />
-                <boundary_value ID="zmin" enabled="False" />
-                <boundary_value ID="zmax" enabled="False" />
-            </Dirichlet_options>
-        </variable>
-        <variable name="type_6_diff_factor" units="dimensionless" ID="4">
-            <physical_parameter_set>
-                <diffusion_coefficient units="micron^2/min">10000</diffusion_coefficient>
-                <decay_rate units="1/min">1</decay_rate>
-            </physical_parameter_set>
-            <initial_condition units="dimensionless">0.0</initial_condition>
-            <Dirichlet_boundary_condition units="dimensionless" enabled="True">0.0</Dirichlet_boundary_condition>
-            <Dirichlet_options>
-                <boundary_value ID="xmin" enabled="False" />
-                <boundary_value ID="xmax" enabled="False" />
-                <boundary_value ID="ymin" enabled="True">0.0</boundary_value>
-                <boundary_value ID="ymax" enabled="False" />
-                <boundary_value ID="zmin" enabled="False" />
-                <boundary_value ID="zmax" enabled="False" />
-            </Dirichlet_options>
-        </variable>
-        <variable name="type_5_diff_factor" units="dimensionless" ID="5">
-            <physical_parameter_set>
-                <diffusion_coefficient units="micron^2/min">10000</diffusion_coefficient>
-                <decay_rate units="1/min">1</decay_rate>
-            </physical_parameter_set>
-            <initial_condition units="dimensionless">0.0</initial_condition>
-            <Dirichlet_boundary_condition units="dimensionless" enabled="True">0.0</Dirichlet_boundary_condition>
-            <Dirichlet_options>
-                <boundary_value ID="xmin" enabled="False" />
-                <boundary_value ID="xmax" enabled="False" />
-                <boundary_value ID="ymin" enabled="True">0.0</boundary_value>
-                <boundary_value ID="ymax" enabled="False" />
-                <boundary_value ID="zmin" enabled="False" />
-                <boundary_value ID="zmax" enabled="False" />
-            </Dirichlet_options>
-        </variable>
-        <variable name="type_4_diff_factor" units="dimensionless" ID="6">
-            <physical_parameter_set>
-                <diffusion_coefficient units="micron^2/min">10000</diffusion_coefficient>
-                <decay_rate units="1/min">1</decay_rate>
-            </physical_parameter_set>
-            <initial_condition units="dimensionless">0.0</initial_condition>
-            <Dirichlet_boundary_condition units="dimensionless" enabled="True">0.0</Dirichlet_boundary_condition>
-            <Dirichlet_options>
-                <boundary_value ID="xmin" enabled="False" />
-                <boundary_value ID="xmax" enabled="False" />
-                <boundary_value ID="ymin" enabled="True">0.0</boundary_value>
-                <boundary_value ID="ymax" enabled="False" />
-                <boundary_value ID="zmin" enabled="False" />
-                <boundary_value ID="zmax" enabled="False" />
-            </Dirichlet_options>
-        </variable>
-        <variable name="type_3_diff_factor" units="dimensionless" ID="7">
-            <physical_parameter_set>
-                <diffusion_coefficient units="micron^2/min">10000</diffusion_coefficient>
-                <decay_rate units="1/min">1</decay_rate>
-            </physical_parameter_set>
-            <initial_condition units="dimensionless">0.0</initial_condition>
-            <Dirichlet_boundary_condition units="dimensionless" enabled="True">0.0</Dirichlet_boundary_condition>
-            <Dirichlet_options>
-                <boundary_value ID="xmin" enabled="False" />
-                <boundary_value ID="xmax" enabled="False" />
-                <boundary_value ID="ymin" enabled="True">0.0</boundary_value>
-                <boundary_value ID="ymax" enabled="False" />
-                <boundary_value ID="zmin" enabled="False" />
-                <boundary_value ID="zmax" enabled="False" />
-            </Dirichlet_options>
-        </variable>
-        <variable name="type_2_diff_factor" units="dimensionless" ID="8">
-            <physical_parameter_set>
-                <diffusion_coefficient units="micron^2/min">10000</diffusion_coefficient>
-                <decay_rate units="1/min">1</decay_rate>
-            </physical_parameter_set>
-            <initial_condition units="dimensionless">0.0</initial_condition>
-            <Dirichlet_boundary_condition units="dimensionless" enabled="True">0.0</Dirichlet_boundary_condition>
-            <Dirichlet_options>
-                <boundary_value ID="xmin" enabled="False" />
-                <boundary_value ID="xmax" enabled="False" />
-                <boundary_value ID="ymin" enabled="True">0.0</boundary_value>
-                <boundary_value ID="ymax" enabled="False" />
-                <boundary_value ID="zmin" enabled="False" />
-                <boundary_value ID="zmax" enabled="False" />
-            </Dirichlet_options>
-        </variable>
-        <variable name="type_1_diff_factor" units="dimensionless" ID="9">
-            <physical_parameter_set>
-                <diffusion_coefficient units="micron^2/min">10000</diffusion_coefficient>
-                <decay_rate units="1/min">1</decay_rate>
-            </physical_parameter_set>
-            <initial_condition units="dimensionless">0.0</initial_condition>
-            <Dirichlet_boundary_condition units="dimensionless" enabled="True">0.0</Dirichlet_boundary_condition>
-            <Dirichlet_options>
-                <boundary_value ID="xmin" enabled="False" />
-                <boundary_value ID="xmax" enabled="False" />
-                <boundary_value ID="ymin" enabled="True">0.0</boundary_value>
-                <boundary_value ID="ymax" enabled="False" />
-                <boundary_value ID="zmin" enabled="False" />
-                <boundary_value ID="zmax" enabled="False" />
             </Dirichlet_options>
         </variable>
         <options>
@@ -309,6 +198,7 @@
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
+                    <maximum_number_of_attachments>12</maximum_number_of_attachments>
                 </mechanics>
                 <motility>
                     <speed units="micron/min">1</speed>
@@ -329,13 +219,6 @@
                                 <chemotactic_sensitivity substrate="reelin">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="pia_migration_factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="rgc_taxis_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation_inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_6_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_5_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_4_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_3_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_2_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_1_diff_factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -359,51 +242,11 @@
                         <uptake_rate units="1/min">0</uptake_rate>
                         <net_export_rate units="total substrate/min">0</net_export_rate>
                     </substrate>
-                    <substrate name="transformation_inhibitor">
-                        <secretion_rate units="1/min">1</secretion_rate>
-                        <secretion_target units="substrate density">1</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_6_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_5_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_4_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_3_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_2_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_1_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
                 </secretion>
                 <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <apoptotic_phagocytosis_rate units="1/min">0.0</apoptotic_phagocytosis_rate>
+                    <necrotic_phagocytosis_rate units="1/min">0.0</necrotic_phagocytosis_rate>
+                    <other_dead_phagocytosis_rate units="1/min">0.0</other_dead_phagocytosis_rate>
                     <live_phagocytosis_rates>
                         <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
@@ -430,7 +273,8 @@
                         <attack_rate name="layer_2" units="1/min">0.0</attack_rate>
                         <attack_rate name="layer_1" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">100</damage_rate>
+                    <attack_damage_rate units="1/min">100</attack_damage_rate>
+                    <attack_duration units="min">0.1</attack_duration>
                     <fusion_rates>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
@@ -460,11 +304,17 @@
                         <transformation_rate name="layer_1" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
+                <cell_integrity>
+                    <damage_rate units="1/min">0.0</damage_rate>
+                    <damage_repair_rate units="1/min">0.0</damage_repair_rate>
+                </cell_integrity>
             </phenotype>
             <custom_data>
                 <sample conserved="false" units="dimensionless" description="">1.0</sample>
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
+            <initial_parameter_distributions enabled="false">
+          </initial_parameter_distributions>
         </cell_definition>
         <cell_definition name="pial" ID="1">
             <phenotype>
@@ -539,6 +389,7 @@
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.1</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
+                    <maximum_number_of_attachments>12</maximum_number_of_attachments>
                 </mechanics>
                 <motility>
                     <speed units="micron/min">0.0</speed>
@@ -559,13 +410,6 @@
                                 <chemotactic_sensitivity substrate="reelin">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="pia_migration_factor">1.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="rgc_taxis_factor">-1.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation_inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_6_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_5_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_4_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_3_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_2_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_1_diff_factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -589,51 +433,11 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="transformation_inhibitor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_6_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_5_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_4_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_3_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_2_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_1_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
                 </secretion>
                 <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <apoptotic_phagocytosis_rate units="1/min">0.0</apoptotic_phagocytosis_rate>
+                    <necrotic_phagocytosis_rate units="1/min">0.0</necrotic_phagocytosis_rate>
+                    <other_dead_phagocytosis_rate units="1/min">0.0</other_dead_phagocytosis_rate>
                     <live_phagocytosis_rates>
                         <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
@@ -660,7 +464,8 @@
                         <attack_rate name="layer_2" units="1/min">0.0</attack_rate>
                         <attack_rate name="layer_1" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">1</damage_rate>
+                    <attack_damage_rate units="1/min">1</attack_damage_rate>
+                    <attack_duration units="min">0.1</attack_duration>
                     <fusion_rates>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
@@ -690,11 +495,17 @@
                         <transformation_rate name="layer_1" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
+                <cell_integrity>
+                    <damage_rate units="1/min">0.0</damage_rate>
+                    <damage_repair_rate units="1/min">0.0</damage_repair_rate>
+                </cell_integrity>
             </phenotype>
             <custom_data>
                 <sample conserved="false" units="dimensionless" description="">1.0</sample>
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
+            <initial_parameter_distributions enabled="false">
+          </initial_parameter_distributions>
         </cell_definition>
         <cell_definition name="rgc" ID="2">
             <phenotype>
@@ -769,6 +580,7 @@
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
+                    <maximum_number_of_attachments>12</maximum_number_of_attachments>
                 </mechanics>
                 <motility>
                     <speed units="micron/min">1</speed>
@@ -789,13 +601,6 @@
                                 <chemotactic_sensitivity substrate="reelin">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="pia_migration_factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="rgc_taxis_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation_inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_6_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_5_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_4_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_3_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_2_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_1_diff_factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -819,51 +624,11 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="transformation_inhibitor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_6_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_5_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_4_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_3_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_2_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_1_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
                 </secretion>
                 <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <apoptotic_phagocytosis_rate units="1/min">0.0</apoptotic_phagocytosis_rate>
+                    <necrotic_phagocytosis_rate units="1/min">0.0</necrotic_phagocytosis_rate>
+                    <other_dead_phagocytosis_rate units="1/min">0.0</other_dead_phagocytosis_rate>
                     <live_phagocytosis_rates>
                         <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
@@ -890,7 +655,8 @@
                         <attack_rate name="layer_2" units="1/min">0.0</attack_rate>
                         <attack_rate name="layer_1" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">1</damage_rate>
+                    <attack_damage_rate units="1/min">1</attack_damage_rate>
+                    <attack_duration units="min">0.1</attack_duration>
                     <fusion_rates>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
@@ -912,7 +678,7 @@
                         <transformation_rate name="rgc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="interneuron" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="layer_6" units="1/min">0.0</transformation_rate>
-                        <transformation_rate name="ipc" units="1/min">0.06</transformation_rate>
+                        <transformation_rate name="ipc" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="layer_5" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="layer_4" units="1/min">0.0</transformation_rate>
                         <transformation_rate name="layer_3" units="1/min">0.0</transformation_rate>
@@ -920,11 +686,17 @@
                         <transformation_rate name="layer_1" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
+                <cell_integrity>
+                    <damage_rate units="1/min">0.0</damage_rate>
+                    <damage_repair_rate units="1/min">0.0</damage_repair_rate>
+                </cell_integrity>
             </phenotype>
             <custom_data>
                 <sample conserved="false" units="dimensionless" description="">1.0</sample>
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
+            <initial_parameter_distributions enabled="false">
+          </initial_parameter_distributions>
         </cell_definition>
         <cell_definition name="ipc" ID="3">
             <phenotype>
@@ -999,6 +771,7 @@
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
+                    <maximum_number_of_attachments>12</maximum_number_of_attachments>
                 </mechanics>
                 <motility>
                     <speed units="micron/min">1</speed>
@@ -1019,13 +792,6 @@
                                 <chemotactic_sensitivity substrate="reelin">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="pia_migration_factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="rgc_taxis_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation_inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_6_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_5_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_4_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_3_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_2_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_1_diff_factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -1049,51 +815,11 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="transformation_inhibitor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">1.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_6_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">1.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_5_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">1.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_4_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">1.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_3_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">1.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_2_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">1.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_1_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">1.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
                 </secretion>
                 <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <apoptotic_phagocytosis_rate units="1/min">0.0</apoptotic_phagocytosis_rate>
+                    <necrotic_phagocytosis_rate units="1/min">0.0</necrotic_phagocytosis_rate>
+                    <other_dead_phagocytosis_rate units="1/min">0.0</other_dead_phagocytosis_rate>
                     <live_phagocytosis_rates>
                         <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
@@ -1120,7 +846,8 @@
                         <attack_rate name="layer_2" units="1/min">0.0</attack_rate>
                         <attack_rate name="layer_1" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">1</damage_rate>
+                    <attack_damage_rate units="1/min">1</attack_damage_rate>
+                    <attack_duration units="min">0.1</attack_duration>
                     <fusion_rates>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
@@ -1150,11 +877,17 @@
                         <transformation_rate name="layer_1" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
+                <cell_integrity>
+                    <damage_rate units="1/min">0.0</damage_rate>
+                    <damage_repair_rate units="1/min">0.0</damage_repair_rate>
+                </cell_integrity>
             </phenotype>
             <custom_data>
                 <sample conserved="false" units="dimensionless" description="">1.0</sample>
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
+            <initial_parameter_distributions enabled="false">
+          </initial_parameter_distributions>
         </cell_definition>
         <cell_definition name="layer_6" ID="4">
             <phenotype>
@@ -1229,6 +962,7 @@
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
+                    <maximum_number_of_attachments>12</maximum_number_of_attachments>
                 </mechanics>
                 <motility>
                     <speed units="micron/min">2</speed>
@@ -1249,13 +983,6 @@
                                 <chemotactic_sensitivity substrate="reelin">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="pia_migration_factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="rgc_taxis_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation_inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_6_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_5_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_4_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_3_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_2_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_1_diff_factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -1279,51 +1006,11 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="transformation_inhibitor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_6_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_5_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_4_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_3_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_2_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_1_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
                 </secretion>
                 <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <apoptotic_phagocytosis_rate units="1/min">0.0</apoptotic_phagocytosis_rate>
+                    <necrotic_phagocytosis_rate units="1/min">0.0</necrotic_phagocytosis_rate>
+                    <other_dead_phagocytosis_rate units="1/min">0.0</other_dead_phagocytosis_rate>
                     <live_phagocytosis_rates>
                         <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
@@ -1350,7 +1037,8 @@
                         <attack_rate name="layer_2" units="1/min">0.0</attack_rate>
                         <attack_rate name="layer_1" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">1</damage_rate>
+                    <attack_damage_rate units="1/min">1</attack_damage_rate>
+                    <attack_duration units="min">0.1</attack_duration>
                     <fusion_rates>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
@@ -1380,11 +1068,17 @@
                         <transformation_rate name="layer_1" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
+                <cell_integrity>
+                    <damage_rate units="1/min">0.0</damage_rate>
+                    <damage_repair_rate units="1/min">0.0</damage_repair_rate>
+                </cell_integrity>
             </phenotype>
             <custom_data>
                 <sample conserved="false" units="dimensionless" description="">1.0</sample>
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
+            <initial_parameter_distributions enabled="false">
+          </initial_parameter_distributions>
         </cell_definition>
         <cell_definition name="layer_5" ID="5">
             <phenotype>
@@ -1459,6 +1153,7 @@
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
+                    <maximum_number_of_attachments>12</maximum_number_of_attachments>
                 </mechanics>
                 <motility>
                     <speed units="micron/min">2</speed>
@@ -1479,13 +1174,6 @@
                                 <chemotactic_sensitivity substrate="reelin">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="pia_migration_factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="rgc_taxis_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation_inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_6_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_5_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_4_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_3_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_2_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_1_diff_factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -1509,51 +1197,11 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="transformation_inhibitor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_6_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_5_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_4_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_3_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_2_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_1_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
                 </secretion>
                 <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <apoptotic_phagocytosis_rate units="1/min">0.0</apoptotic_phagocytosis_rate>
+                    <necrotic_phagocytosis_rate units="1/min">0.0</necrotic_phagocytosis_rate>
+                    <other_dead_phagocytosis_rate units="1/min">0.0</other_dead_phagocytosis_rate>
                     <live_phagocytosis_rates>
                         <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
@@ -1580,7 +1228,8 @@
                         <attack_rate name="layer_2" units="1/min">0.0</attack_rate>
                         <attack_rate name="layer_1" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">1</damage_rate>
+                    <attack_damage_rate units="1/min">1</attack_damage_rate>
+                    <attack_duration units="min">0.1</attack_duration>
                     <fusion_rates>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
@@ -1610,11 +1259,17 @@
                         <transformation_rate name="layer_1" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
+                <cell_integrity>
+                    <damage_rate units="1/min">0.0</damage_rate>
+                    <damage_repair_rate units="1/min">0.0</damage_repair_rate>
+                </cell_integrity>
             </phenotype>
             <custom_data>
                 <sample conserved="false" units="dimensionless" description="">1.0</sample>
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
+            <initial_parameter_distributions enabled="false">
+          </initial_parameter_distributions>
         </cell_definition>
         <cell_definition name="layer_4" ID="6">
             <phenotype>
@@ -1689,6 +1344,7 @@
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
+                    <maximum_number_of_attachments>12</maximum_number_of_attachments>
                 </mechanics>
                 <motility>
                     <speed units="micron/min">2</speed>
@@ -1709,13 +1365,6 @@
                                 <chemotactic_sensitivity substrate="reelin">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="pia_migration_factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="rgc_taxis_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation_inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_6_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_5_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_4_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_3_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_2_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_1_diff_factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -1739,51 +1388,11 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="transformation_inhibitor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_6_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_5_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_4_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_3_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_2_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_1_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
                 </secretion>
                 <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <apoptotic_phagocytosis_rate units="1/min">0.0</apoptotic_phagocytosis_rate>
+                    <necrotic_phagocytosis_rate units="1/min">0.0</necrotic_phagocytosis_rate>
+                    <other_dead_phagocytosis_rate units="1/min">0.0</other_dead_phagocytosis_rate>
                     <live_phagocytosis_rates>
                         <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
@@ -1810,7 +1419,8 @@
                         <attack_rate name="layer_2" units="1/min">0.0</attack_rate>
                         <attack_rate name="layer_1" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">1</damage_rate>
+                    <attack_damage_rate units="1/min">1</attack_damage_rate>
+                    <attack_duration units="min">0.1</attack_duration>
                     <fusion_rates>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
@@ -1840,11 +1450,17 @@
                         <transformation_rate name="layer_1" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
+                <cell_integrity>
+                    <damage_rate units="1/min">0.0</damage_rate>
+                    <damage_repair_rate units="1/min">0.0</damage_repair_rate>
+                </cell_integrity>
             </phenotype>
             <custom_data>
                 <sample conserved="false" units="dimensionless" description="">1.0</sample>
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
+            <initial_parameter_distributions enabled="false">
+          </initial_parameter_distributions>
         </cell_definition>
         <cell_definition name="layer_3" ID="7">
             <phenotype>
@@ -1919,6 +1535,7 @@
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
+                    <maximum_number_of_attachments>12</maximum_number_of_attachments>
                 </mechanics>
                 <motility>
                     <speed units="micron/min">2</speed>
@@ -1939,13 +1556,6 @@
                                 <chemotactic_sensitivity substrate="reelin">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="pia_migration_factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="rgc_taxis_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation_inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_6_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_5_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_4_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_3_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_2_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_1_diff_factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -1969,51 +1579,11 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="transformation_inhibitor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_6_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_5_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_4_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_3_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_2_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_1_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
                 </secretion>
                 <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <apoptotic_phagocytosis_rate units="1/min">0.0</apoptotic_phagocytosis_rate>
+                    <necrotic_phagocytosis_rate units="1/min">0.0</necrotic_phagocytosis_rate>
+                    <other_dead_phagocytosis_rate units="1/min">0.0</other_dead_phagocytosis_rate>
                     <live_phagocytosis_rates>
                         <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
@@ -2040,7 +1610,8 @@
                         <attack_rate name="layer_2" units="1/min">0.0</attack_rate>
                         <attack_rate name="layer_1" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">1</damage_rate>
+                    <attack_damage_rate units="1/min">1</attack_damage_rate>
+                    <attack_duration units="min">0.1</attack_duration>
                     <fusion_rates>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
@@ -2070,11 +1641,17 @@
                         <transformation_rate name="layer_1" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
+                <cell_integrity>
+                    <damage_rate units="1/min">0.0</damage_rate>
+                    <damage_repair_rate units="1/min">0.0</damage_repair_rate>
+                </cell_integrity>
             </phenotype>
             <custom_data>
                 <sample conserved="false" units="dimensionless" description="">1.0</sample>
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
+            <initial_parameter_distributions enabled="false">
+          </initial_parameter_distributions>
         </cell_definition>
         <cell_definition name="interneuron" ID="8">
             <phenotype>
@@ -2149,6 +1726,7 @@
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
+                    <maximum_number_of_attachments>12</maximum_number_of_attachments>
                 </mechanics>
                 <motility>
                     <speed units="micron/min">2</speed>
@@ -2169,13 +1747,6 @@
                                 <chemotactic_sensitivity substrate="reelin">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="pia_migration_factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="rgc_taxis_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation_inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_6_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_5_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_4_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_3_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_2_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_1_diff_factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -2199,51 +1770,11 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="transformation_inhibitor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_6_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_5_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_4_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_3_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_2_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_1_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
                 </secretion>
                 <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <apoptotic_phagocytosis_rate units="1/min">0.0</apoptotic_phagocytosis_rate>
+                    <necrotic_phagocytosis_rate units="1/min">0.0</necrotic_phagocytosis_rate>
+                    <other_dead_phagocytosis_rate units="1/min">0.0</other_dead_phagocytosis_rate>
                     <live_phagocytosis_rates>
                         <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
@@ -2270,7 +1801,8 @@
                         <attack_rate name="layer_2" units="1/min">0.0</attack_rate>
                         <attack_rate name="layer_1" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">1</damage_rate>
+                    <attack_damage_rate units="1/min">1</attack_damage_rate>
+                    <attack_duration units="min">0.1</attack_duration>
                     <fusion_rates>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
@@ -2300,11 +1832,17 @@
                         <transformation_rate name="layer_1" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
+                <cell_integrity>
+                    <damage_rate units="1/min">0.0</damage_rate>
+                    <damage_repair_rate units="1/min">0.0</damage_repair_rate>
+                </cell_integrity>
             </phenotype>
             <custom_data>
                 <sample conserved="false" units="dimensionless" description="">1.0</sample>
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
+            <initial_parameter_distributions enabled="false">
+          </initial_parameter_distributions>
         </cell_definition>
         <cell_definition name="layer_2" ID="9">
             <phenotype>
@@ -2379,6 +1917,7 @@
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
+                    <maximum_number_of_attachments>12</maximum_number_of_attachments>
                 </mechanics>
                 <motility>
                     <speed units="micron/min">2</speed>
@@ -2399,13 +1938,6 @@
                                 <chemotactic_sensitivity substrate="reelin">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="pia_migration_factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="rgc_taxis_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation_inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_6_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_5_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_4_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_3_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_2_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_1_diff_factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -2429,51 +1961,11 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="transformation_inhibitor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_6_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_5_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_4_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_3_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_2_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_1_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
                 </secretion>
                 <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <apoptotic_phagocytosis_rate units="1/min">0.0</apoptotic_phagocytosis_rate>
+                    <necrotic_phagocytosis_rate units="1/min">0.0</necrotic_phagocytosis_rate>
+                    <other_dead_phagocytosis_rate units="1/min">0.0</other_dead_phagocytosis_rate>
                     <live_phagocytosis_rates>
                         <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
@@ -2500,7 +1992,8 @@
                         <attack_rate name="layer_2" units="1/min">0.0</attack_rate>
                         <attack_rate name="layer_1" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">1</damage_rate>
+                    <attack_damage_rate units="1/min">1</attack_damage_rate>
+                    <attack_duration units="min">0.1</attack_duration>
                     <fusion_rates>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
@@ -2530,11 +2023,17 @@
                         <transformation_rate name="layer_1" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
+                <cell_integrity>
+                    <damage_rate units="1/min">0.0</damage_rate>
+                    <damage_repair_rate units="1/min">0.0</damage_repair_rate>
+                </cell_integrity>
             </phenotype>
             <custom_data>
                 <sample conserved="false" units="dimensionless" description="">1.0</sample>
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
+            <initial_parameter_distributions enabled="false">
+          </initial_parameter_distributions>
         </cell_definition>
         <cell_definition name="layer_1" ID="10">
             <phenotype>
@@ -2609,6 +2108,7 @@
                     <attachment_elastic_constant units="1/min">0.01</attachment_elastic_constant>
                     <attachment_rate units="1/min">0.0</attachment_rate>
                     <detachment_rate units="1/min">0.0</detachment_rate>
+                    <maximum_number_of_attachments>12</maximum_number_of_attachments>
                 </mechanics>
                 <motility>
                     <speed units="micron/min">2</speed>
@@ -2629,13 +2129,6 @@
                                 <chemotactic_sensitivity substrate="reelin">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="pia_migration_factor">0.0</chemotactic_sensitivity>
                                 <chemotactic_sensitivity substrate="rgc_taxis_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="transformation_inhibitor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_6_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_5_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_4_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_3_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_2_diff_factor">0.0</chemotactic_sensitivity>
-                                <chemotactic_sensitivity substrate="type_1_diff_factor">0.0</chemotactic_sensitivity>
                             </chemotactic_sensitivities>
                         </advanced_chemotaxis>
                     </options>
@@ -2659,51 +2152,11 @@
                         <uptake_rate units="1/min">0.0</uptake_rate>
                         <net_export_rate units="total substrate/min">0.0</net_export_rate>
                     </substrate>
-                    <substrate name="transformation_inhibitor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_6_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_5_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_4_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">0.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_3_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_2_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
-                    <substrate name="type_1_diff_factor">
-                        <secretion_rate units="1/min">0.0</secretion_rate>
-                        <secretion_target units="substrate density">1.0</secretion_target>
-                        <uptake_rate units="1/min">0.0</uptake_rate>
-                        <net_export_rate units="total substrate/min">0.0</net_export_rate>
-                    </substrate>
                 </secretion>
                 <cell_interactions>
-                    <dead_phagocytosis_rate units="1/min">0.0</dead_phagocytosis_rate>
+                    <apoptotic_phagocytosis_rate units="1/min">0.0</apoptotic_phagocytosis_rate>
+                    <necrotic_phagocytosis_rate units="1/min">0.0</necrotic_phagocytosis_rate>
+                    <other_dead_phagocytosis_rate units="1/min">0.0</other_dead_phagocytosis_rate>
                     <live_phagocytosis_rates>
                         <phagocytosis_rate name="apical" units="1/min">0.0</phagocytosis_rate>
                         <phagocytosis_rate name="pial" units="1/min">0.0</phagocytosis_rate>
@@ -2730,7 +2183,8 @@
                         <attack_rate name="layer_2" units="1/min">0.0</attack_rate>
                         <attack_rate name="layer_1" units="1/min">0.0</attack_rate>
                     </attack_rates>
-                    <damage_rate units="1/min">1</damage_rate>
+                    <attack_damage_rate units="1/min">1</attack_damage_rate>
+                    <attack_duration units="min">0.1</attack_duration>
                     <fusion_rates>
                         <fusion_rate name="apical" units="1/min">0.0</fusion_rate>
                         <fusion_rate name="pial" units="1/min">0.0</fusion_rate>
@@ -2760,11 +2214,17 @@
                         <transformation_rate name="layer_1" units="1/min">0.0</transformation_rate>
                     </transformation_rates>
                 </cell_transformations>
+                <cell_integrity>
+                    <damage_rate units="1/min">0.0</damage_rate>
+                    <damage_repair_rate units="1/min">0.0</damage_repair_rate>
+                </cell_integrity>
             </phenotype>
             <custom_data>
                 <sample conserved="false" units="dimensionless" description="">1.0</sample>
                 <time_alive conserved="false" units="min" description="">0.0</time_alive>
             </custom_data>
+            <initial_parameter_distributions enabled="false">
+          </initial_parameter_distributions>
         </cell_definition>
     </cell_definitions>
 
@@ -2778,5 +2238,10 @@
     <user_parameters>
         <random_seed type="int" units="dimensionless" description="">0</random_seed>
         <number_of_cells type="int" units="none" description="initial number of cells (for each cell type)">0</number_of_cells>
+        <layer_6_end_time type="double" units="min" description="time to end layer 6 formation">2917.7375301113416</layer_6_end_time>
+        <layer_5_end_time type="double" units="min" description="time to end layer 6 formation">5743.879393269579</layer_5_end_time>
+        <layer_4_end_time type="double" units="min" description="time to end layer 6 formation">6814.016381314366</layer_4_end_time>
+        <layer_3_end_time type="double" units="min" description="time to end layer 6 formation">9122.581215790266</layer_3_end_time>
+        <layer_2_end_time type="double" units="min" description="time to end layer 6 formation">11431.146050266165</layer_2_end_time>
     </user_parameters>
 </PhysiCell_settings>

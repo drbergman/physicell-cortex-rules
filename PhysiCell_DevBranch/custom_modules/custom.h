@@ -88,11 +88,11 @@ std::vector<std::string> my_coloring_function( Cell* );
 
 void phenotype_function( Cell* pCell, Phenotype& phenotype, double dt );
 
-void dividing_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt );
 void migrating_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt );
 
 void custom_function( Cell* pCell, Phenotype& phenotype , double dt );
 void pial_function( Cell* pCell, Phenotype& phenotype, double dt);
 
-void contact_function( Cell* pMe, Phenotype& phenoMe , Cell* pOther, Phenotype& phenoOther , double dt ); 
+void contact_function( Cell* pMe, Phenotype& phenoMe , Cell* pOther, Phenotype& phenoOther , double dt );
 
+void asymmetric_division_function(Cell *pC1, Cell *pC2);
