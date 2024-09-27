@@ -17,11 +17,13 @@ layer_list = [2, 3, 4, 5, 6]
 
 home_dir = os.path.expanduser("~")
 path_to_physicell = home_dir + "/physicell-cortex-rules/PhysiCell_DevBranch"
-path_to_sbatch = f"{path_to_physicell}/pc_cortex_batched.sbat"
+path_to_sbatch = f"{path_to_physicell}/pc_cortex_batched_cpu_specific.sbat"
 
 user_name = "dbergman"
 
 region = "SS"
+
+suffix_fn = lambda id: f"_robust_check_{id}"
 
 using_custom_division_fn = True
 if using_custom_division_fn:
@@ -205,8 +207,8 @@ def writeNewParameters( parameters, idx ):
             else:
                 print(f"Error: unknown location {sub['location']} for parameter {sub['name']}")
 
-    path_to_new_config = f"{path_to_config[:-4]}_{idx}.xml"
-    path_to_new_rules = f"{path_to_rules[:-4]}_{idx}.csv"
+    path_to_new_config = f"{path_to_config[:-4]}{suffix_fn(idx)}.xml"
+    path_to_new_rules = f"{path_to_rules[:-4]}{suffix_fn(idx)}.csv"
     path_to_new_rules_folder = os.path.dirname(path_to_new_rules)
     filename_new_rules = os.path.basename(path_to_new_rules)
 
@@ -215,7 +217,10 @@ def writeNewParameters( parameters, idx ):
     ruleset_node.find("filename").text = filename_new_rules
 
     save_folder_node = config_tree.find("save").find("folder")
-    save_folder_node.text = f"output_{idx}"
+    save_folder_node.text = f"output{suffix_fn(idx)}"
+
+    max_time_node = config_tree.find("overall").find("max_time")
+    max_time_node.text = "60"
 
     config_tree.write(path_to_new_config)
     rules_df.to_csv(path_to_new_rules, header = False, index = False)
@@ -234,7 +239,7 @@ def jobIDInQueue( jobid ):
 
 def cleanUpSimulations( min_replicates ):
     for i in range(min_replicates):
-        path_to_output = f"{path_to_physicell}/output_{i}"
+        path_to_output = f"{path_to_physicell}/output{suffix_fn(i)}"
         os.system(f"rm -rf {path_to_output}")
 
 def printCurrentParameters( parameters ):
@@ -251,7 +256,7 @@ def runSimulationsAndError( x, parameters, layer_counts_data, parameter_order, m
     
     for i in range(min_replicates):
         writeNewParameters(parameters, i)
-        path_to_output = f"{path_to_physicell}/output_{i}"
+        path_to_output = f"{path_to_physicell}/output{suffix_fn(i)}"
         os.system(f"rm -rf {path_to_output}")
         os.makedirs(path_to_output, exist_ok = True)
         
@@ -263,7 +268,7 @@ def runSimulationsAndError( x, parameters, layer_counts_data, parameter_order, m
     if isinstance(layer_counts_data, dict):
         layer_counts_simulated_all = {i: [] for i in layer_celldef_id.keys()}
         for i in range(min_replicates):
-            path_to_output = f"{path_to_physicell}/output_{i}"
+            path_to_output = f"{path_to_physicell}/output{suffix_fn(i)}"
             layer_counts_simulated = layerCountsAtEnd(path_to_output)
             for layer, count in layer_counts_simulated.items():
                 layer_counts_simulated_all[layer].append(count)
@@ -288,7 +293,7 @@ def runSimulationsAndError( x, parameters, layer_counts_data, parameter_order, m
     else: # assume that it is the total cell count
         layer_counts_simulated_all = []
         for i in range(min_replicates):
-            path_to_output = f"{path_to_physicell}/output_{i}"
+            path_to_output = f"{path_to_physicell}/output{suffix_fn(i)}"
             layer_counts_simulated = layerCountsAtEnd(path_to_output)
             layer_counts_simulated_all.append(sum(layer_counts_simulated.values()))
         
@@ -312,7 +317,7 @@ def runReplicates(replicate_ids):
 
     ids_left = []
     for id in replicate_ids:
-        path_to_output = f"{path_to_physicell}/output_{id}/final_cells.mat"
+        path_to_output = f"{path_to_physicell}/output{suffix_fn(id)}/final_cells.mat"
         if not os.path.exists(path_to_output):
             ids_left.append(id)
 

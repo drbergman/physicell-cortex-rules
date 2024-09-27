@@ -42,6 +42,8 @@ PhysiCell copy
 
 # compiled project
 project
+project_amd
+project_intel
 
 # my jupyter notebooks
 *.ipynb

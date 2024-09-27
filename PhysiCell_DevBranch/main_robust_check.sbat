@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=pc_cortex_master
-#SBATCH --output=pc_cortex_master.out
-#SBATCH --error=pc_cortex_master_error.err
+#SBATCH --job-name=pc_cortex_robust_check
+#SBATCH --output=pc_cortex_robust_check.out
+#SBATCH --error=pc_cortex_robust_check.err
 #SBATCH --time=00-48:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
@@ -11,6 +11,7 @@
 #SBATCH --mail-user=dbergma5@jh.edu
 
 echo "Starting the main job"
+mkdir -p logs
 module load conda
 conda activate pc-cortex
-python FitCortexParams.py
+python FitCortexParams_cpu_man_robust.py

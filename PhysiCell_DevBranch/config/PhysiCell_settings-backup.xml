@@ -2238,10 +2238,10 @@
     <user_parameters>
         <random_seed type="int" units="dimensionless" description="">0</random_seed>
         <number_of_cells type="int" units="none" description="initial number of cells (for each cell type)">0</number_of_cells>
-        <layer_6_end_time type="double" units="min" description="time to end layer 6 formation">2962</layer_6_end_time>
-        <layer_5_end_time type="double" units="min" description="time to end layer 5 formation">6057</layer_5_end_time>
-        <layer_4_end_time type="double" units="min" description="time to end layer 4 formation">7090</layer_4_end_time>
-        <layer_3_end_time type="double" units="min" description="time to end layer 3 formation">9083</layer_3_end_time>
-        <layer_2_end_time type="double" units="min" description="time to end layer 2 formation">11075</layer_2_end_time>
+        <layer_6_end_time type="double" units="min" description="time to end layer 6 formation">2917.7375301113416</layer_6_end_time>
+        <layer_5_end_time type="double" units="min" description="time to end layer 6 formation">5743.879393269579</layer_5_end_time>
+        <layer_4_end_time type="double" units="min" description="time to end layer 6 formation">6814.016381314366</layer_4_end_time>
+        <layer_3_end_time type="double" units="min" description="time to end layer 6 formation">9122.581215790266</layer_3_end_time>
+        <layer_2_end_time type="double" units="min" description="time to end layer 6 formation">11431.146050266165</layer_2_end_time>
     </user_parameters>
 </PhysiCell_settings>
