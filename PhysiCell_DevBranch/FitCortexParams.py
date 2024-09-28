@@ -21,14 +21,14 @@ path_to_sbatch = f"{path_to_physicell}/pc_cortex_batched.sbat"
 
 user_name = "dbergman"
 
-region = "SS"
+region = "SOM"
 
 using_custom_division_fn = True
 if using_custom_division_fn:
     if region=="AUD":
         original_start_time = {6: 1440.0, 5: 2920.0, 4: 5750.0, 3: 6820.0, 2: 11430.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
-    elif region=="SS":
-        original_start_time = {6: 1440.0, 5: 4508.0, 4: 6054.0, 3: 8642.0, 2: 10284.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
+    elif region=="SOM":
+        original_start_time = {6: 1440.0, 5: 4508.0, 4: 6054.0, 3: 8642.0, 2: 11800.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
 else:
     original_start_time = {6: 1440.0, 5: 3400.0, 4: 6300.0, 3: 7400.0, 2: 11400.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
 
@@ -37,8 +37,8 @@ def main():
     # layer_counts_data = {2: 196, 4: 53, 5: 214, 6: 197} # AUD in 1.083 (probably not using this)
     if region=="AUD":
         layer_counts_data = {2: 338, 4: 121, 5: 362, 6: 220} # AUD in 1.086
-    elif region=="SS":
-        layer_counts_data = {2: 331, 4: 275, 5: 190, 6: 441} # SS in ????
+    elif region=="SOM":
+        layer_counts_data = {2: 331, 4: 275, 5: 190, 6: 441} # SOM in ????
 
     result, order = optimizeParameters(layer_counts_data, min_replicates=1, maxfev = 100)
     print(result)
@@ -80,7 +80,10 @@ def initializeParameters():
 def initialzeRGCEC50(parameters):
     p = {}
     p["name"] = "rgc_ec50"
-    p["initial_value"] = 5500.0
+    if region=="AUD":
+        p["initial_value"] = 5500.0
+    elif region=="SOM":
+        p["initial_value"] = 6300.0
     p["min_value"] = 0.0
     p["max_value"] = 10000.0
     p["min_step_size"] = 1.0

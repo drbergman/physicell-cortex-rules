@@ -88,6 +88,7 @@ std::vector<std::string> my_coloring_function( Cell* );
 
 void phenotype_function( Cell* pCell, Phenotype& phenotype, double dt );
 
+void rgc_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt );
 void migrating_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt );
 
 void custom_function( Cell* pCell, Phenotype& phenotype , double dt );

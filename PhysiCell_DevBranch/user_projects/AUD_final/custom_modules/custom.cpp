@@ -129,6 +129,7 @@ void create_cell_types(void)
 
 	find_cell_definition("apical")->is_movable = false;
 
+	find_cell_definition( "rgc" )->functions.update_phenotype = rgc_phenotype_function;
 	find_cell_definition( "layer_6" )->functions.update_phenotype = migrating_phenotype_function;
 	find_cell_definition( "layer_5" )->functions.update_phenotype = migrating_phenotype_function;
 	find_cell_definition( "layer_4" )->functions.update_phenotype = migrating_phenotype_function;
@@ -248,6 +249,16 @@ void custom_function( Cell* pCell, Phenotype& phenotype , double dt )
 			pCell->functions.custom_cell_rule = NULL;
 			return;
 		}
+	}
+	return;
+}
+
+void rgc_phenotype_function( Cell* pCell, Phenotype& phenotype, double dt )
+{
+	// if the proliferation phase is over (layer 2 is done forming), then initiate apoptosis
+	if (PhysiCell_globals.current_time > parameters.doubles("layer_2_end_time"))
+	{
+		set_single_behavior(pCell, "apoptosis", 1);
 	}
 	return;
 }
