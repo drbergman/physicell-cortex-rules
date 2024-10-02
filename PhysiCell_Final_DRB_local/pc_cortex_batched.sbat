@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=pc_cortex_sample
+#SBATCH --output=%x_%a.out
+#SBATCH --error=%x_err_%a.err
+#SBATCH --time=00-1:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=dbergma5@jh.edu
+#SBATCH --array=0
+
+echo "SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
+./project ./config/PhysiCell_settings_$SLURM_ARRAY_TASK_ID.xml
