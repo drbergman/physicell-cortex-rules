@@ -16,22 +16,22 @@ layer_celldef_id = {6: 4, 5: 5, 4: 6, 3: 7, 2: 9}
 layer_list = [2, 3, 4, 5, 6, 'total']
 
 home_dir = os.path.expanduser("~")
-path_to_physicell = home_dir + "/physicell-cortex-rules/PhysiCell_DevBranch"
+path_to_physicell = home_dir + "/physicell-cortex-rules/PhysiCell_Final"
 path_to_sbatch = f"{path_to_physicell}/pc_cortex_batched.sbat"
 
 user_name = "dbergman"
-region = "SOM"
+region = "AUD"
 using_custom_division_fn = True
 
 if using_custom_division_fn:
     if region=="AUD":
-        original_start_time = {6: 1440.0, 5: 2920.0, 4: 5750.0, 3: 6820.0, 2: 11430.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
-        initial_rgc_ec50 = 5500.0
+        original_start_time = {6: 1440.0, 5: 3000.0, 4: 6100.0, 3: 7100.0}
+        initial_rgc_ec50 = 6200.0
     elif region=="SOM":
-        original_start_time = {6: 1440.0, 5: 5100.0, 4: 6575.0, 3: 9525.0, 2: 13300.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
+        original_start_time = {6: 1440.0, 5: 5100.0, 4: 6575.0, 3: 9525.0}
         initial_rgc_ec50 = 7800.0
 else:
-    original_start_time = {6: 1440.0, 5: 3400.0, 4: 6300.0, 3: 7400.0, 2: 11400.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
+    original_start_time = {6: 1440.0, 5: 3400.0, 4: 6300.0, 3: 7400.0}
 
 def main():
     # layer_counts_data = 5500
@@ -72,7 +72,7 @@ def initializeParameters():
     parameters = {}
     # rgc ec50 of cycle rate decrease due to time
     initialzeRGCEC50(parameters)
-    for layer_start in [6, 5, 4, 3]:
+    for layer_start in [6, 5, 4]:
         initializeGap(parameters, layer_start)
     for p in parameters.values():
         p["current_value"] = p["initial_value"] # ensure that the current value is set to the initial value when initializing
@@ -120,13 +120,13 @@ def setUpCustomDivisionTimeSubs(layer_start):
     sub["xml_path"] = f"user_parameters//layer_{layer_start}_end_time"
     if layer_start == 6:
         sub["fn"] = lambda _, delta: 1440.0 + delta
-    elif layer_start == 3:
-        sub["fn"] = lambda ct, delta: getPreviousEndTime(ct, layer_start) + 0.5 * delta
-        sub_layer_2 = {}
-        sub_layer_2["location"] = "config"
-        sub_layer_2["xml_path"] = f"user_parameters//layer_2_end_time"
-        sub_layer_2["fn"] = lambda ct, delta: getPreviousEndTime(ct, 3) + delta
-        return [sub, sub_layer_2]
+    elif layer_start == 4:
+        sub["fn"] = lambda ct, delta: getPreviousEndTime(ct, layer_start) + delta
+        sub_layer_3 = {}
+        sub_layer_3["location"] = "config"
+        sub_layer_3["xml_path"] = f"user_parameters//layer_3_end_time"
+        sub_layer_3["fn"] = lambda ct, delta: 0.5 * (getPreviousEndTime(ct, 4) + delta + 12960) # take the average the end of layer 4 formation and the end of all layer formation
+        return [sub, sub_layer_3]
     else:
         sub["fn"] = lambda ct, delta: getPreviousEndTime(ct, layer_start) + delta
     return [sub]
@@ -136,6 +136,7 @@ def getPreviousEndTime(config_tree, layer_start):
     return float(previous_start_time)
     
 def setUpTimeSubs(layer_start):
+    raise NotImplementedError("setUpTimeSubs not implemented yet with fixing the end time.")
     uptake_base_line = 15 # 0-based line number so that (uptake_base_line - layer) is ipc,time,decreases,type_{layer}_diff_factor uptake,...
     secretion_base_line = 21 # 0-based line number so that (secretion_base_line - layer) is apical,time,increases,type_{layer}_diff_factor secretion,...
 

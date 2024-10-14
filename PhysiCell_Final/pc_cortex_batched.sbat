@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=pc_cortex_sample
+#SBATCH --job-name=pc_final_sample
 #SBATCH --output=%x_%a.out
 #SBATCH --error=%x_err_%a.err
 #SBATCH --time=00-1:00:00
@@ -10,6 +10,7 @@
 #SBATCH --mail-user=dbergma5@jh.edu
 #SBATCH --array=0
 
+echo "Working directory: $(pwd)"
 echo "SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
 
 echo "$(scontrol show node $SLURMD_NODENAME)"
@@ -19,7 +20,12 @@ active_features=$(scontrol show node $SLURMD_NODENAME | grep -oP 'ActiveFeatures
 # Determine if 'intel' or 'amd' appears in ActiveFeatures
 if echo "$active_features" | grep -q "intel"; then
     echo "Intel found in ActiveFeatures"
-    ./project_intel ./config/PhysiCell_settings_$SLURM_ARRAY_TASK_ID.xml
+    if echo "$active_features" | grep -q "broadwell"; then
+        echo "broadwell found in ActiveFeatures"
+        ./project_intel_broadwell ./config/PhysiCell_settings_$SLURM_ARRAY_TASK_ID.xml
+    else
+        ./project_intel ./config/PhysiCell_settings_$SLURM_ARRAY_TASK_ID.xml
+    fi
 elif echo "$active_features" | grep -q "amd"; then
     echo "AMD found in ActiveFeatures"
     ./project_amd ./config/PhysiCell_settings_$SLURM_ARRAY_TASK_ID.xml
