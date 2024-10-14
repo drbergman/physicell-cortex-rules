@@ -16,17 +16,17 @@ layer_celldef_id = {6: 4, 5: 5, 4: 6, 3: 7, 2: 9}
 layer_list = [2, 3, 4, 5, 6, 'total']
 
 home_dir = os.path.expanduser("~")
-path_to_physicell = home_dir + "/physicell-cortex-rules/PhysiCell_DevBranch"
+path_to_physicell = home_dir + "/physicell-cortex-rules/PhysiCell_ForAUD_final"
 path_to_sbatch = f"{path_to_physicell}/pc_cortex_batched.sbat"
 
 user_name = "dbergman"
-region = "SOM"
+region = "AUD"
 using_custom_division_fn = True
 
 if using_custom_division_fn:
     if region=="AUD":
-        original_start_time = {6: 1440.0, 5: 2920.0, 4: 5750.0, 3: 6820.0, 2: 11430.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
-        initial_rgc_ec50 = 5500.0
+        original_start_time = {6: 1440.0, 5: 3000.0, 4: 6100.0, 3: 7100.0, 2: 11100.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
+        initial_rgc_ec50 = 6200.0
     elif region=="SOM":
         original_start_time = {6: 1440.0, 5: 5100.0, 4: 6575.0, 3: 9525.0, 2: 13300.0} # 2 accounts for when layers 2/3 finish since we combine them in the data
         initial_rgc_ec50 = 7800.0

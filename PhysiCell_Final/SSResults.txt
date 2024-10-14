@@ -1,0 +1,20 @@
+Result:
+       message: Maximum number of function evaluations has been exceeded.
+       success: False
+        status: 1
+           fun: 44391.0
+             x: [ 5.481e+03  3.181e+03  1.469e+03  2.733e+03  1.790e+03]
+           nit: 39
+          nfev: 100
+ final_simplex: (array([[ 5.481e+03,  3.181e+03, ...,  2.733e+03,
+                         1.790e+03],
+                       [ 5.481e+03,  3.181e+03, ...,  2.733e+03,
+                         1.790e+03],
+                       ...,
+                       [ 5.481e+03,  3.181e+03, ...,  2.732e+03,
+                         1.791e+03],
+                       [ 5.481e+03,  3.181e+03, ...,  2.733e+03,
+                         1.790e+03]]), array([ 4.439e+04,  4.439e+04,  4.439e+04,  4.439e+04,
+                        4.439e+04,  4.439e+04]))
+Parameter Order:
+{'rgc_ec50': 0, 'gap_6': 1, 'gap_5': 2, 'gap_4': 3, 'gap_3': 4}
