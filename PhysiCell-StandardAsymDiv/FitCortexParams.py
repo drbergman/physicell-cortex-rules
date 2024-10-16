@@ -31,8 +31,6 @@ elif region=="SOM":
     initial_rgc_ec50 = 6200.0
 
 def main():
-    # layer_counts_data = 5500
-    # layer_counts_data = {2: 196, 4: 53, 5: 214, 6: 197} # AUD in 1.083 (probably not using this)
     if region=="AUD":
         layer_counts_data = {2: 338, 4: 121, 5: 362, 6: 220} # AUD in 1.086
     elif region=="SOM":
@@ -86,12 +84,8 @@ def initialzeRGCEC50(parameters):
     p["max_step_size"] = 1000.0
     sub = {}
     sub["location"] = "rules"
-    if using_custom_division_fn:
-        sub["line_number_0_based"] = 1
-        sub["col_number_0_based"] = 5
-    else:
-        sub["line_number_0_based"] = 19
-        sub["col_number_0_based"] = 5
+    sub["line_number_0_based"] = 1
+    sub["col_number_0_based"] = 5
     p["subs"] = [sub]
     parameters[p["name"]] = p
 
@@ -105,68 +99,51 @@ def initializeGap(parameters, layer_start):
     p["max_value"] = 10000.0
     p["min_step_size"] = 1.0
     p["max_step_size"] = 1000.0
-    if using_custom_division_fn:
-        p["subs"] = setUpCustomDivisionTimeSubs(layer_start)
-    else:
-        p["subs"] = setUpTimeSubs(layer_start)
+    p["subs"] = setUpTimeSubs(layer_start)
     parameters[p["name"]] = p
 
-def setUpCustomDivisionTimeSubs(layer_start):
-    sub = {}
-    sub["location"] = "config"
-    sub["xml_path"] = f"user_parameters//layer_{layer_start}_end_time"
-    if layer_start == 6:
-        sub["fn"] = lambda _, delta: 1440.0 + delta
-    elif layer_start == 4:
-        sub["fn"] = lambda ct, delta: getPreviousEndTime(ct, layer_start) + delta
-        sub_layer_3 = {}
-        sub_layer_3["location"] = "config"
-        sub_layer_3["xml_path"] = f"user_parameters//layer_3_end_time"
-        sub_layer_3["fn"] = lambda ct, delta: 0.5 * (getPreviousEndTime(ct, 4) + delta + 12960) # take the average the end of layer 4 formation and the end of all layer formation
-        return [sub, sub_layer_3]
-    else:
-        sub["fn"] = lambda ct, delta: getPreviousEndTime(ct, layer_start) + delta
-    return [sub]
-    
 def getPreviousEndTime(config_tree, layer_start):
     previous_start_time = config_tree.find(".//user_parameters").find(f".//layer_{layer_start+1}_end_time").text
     return float(previous_start_time)
     
 def setUpTimeSubs(layer_start):
-    raise NotImplementedError("setUpTimeSubs not implemented yet with fixing the end time.")
-    uptake_base_line = 15 # 0-based line number so that (uptake_base_line - layer) is ipc,time,decreases,type_{layer}_diff_factor uptake,...
-    secretion_base_line = 21 # 0-based line number so that (secretion_base_line - layer) is apical,time,increases,type_{layer}_diff_factor secretion,...
+    layer_6_decrease_line_0_based = 3 # first line to have asymmetric division rule. they will go layer_6, layer_5, etc. and within each layer go increase then decrease
+    prev_layer_decrease_line_0_based = layer_6_decrease_line_0_based - 2*layer_start + 2*6
 
-    sub_diff_factor_uptake_decrease = {}
-    sub_diff_factor_uptake_decrease["location"] = "rules"
-    sub_diff_factor_uptake_decrease["line_number_0_based"] = uptake_base_line - layer_start
-    sub_diff_factor_uptake_decrease["col_number_0_based"] = 5
+    sub_previous_layer_decrease = {}
+    sub_previous_layer_decrease["location"] = "rules"
+    sub_previous_layer_decrease["line_number_0_based"] = prev_layer_decrease_line_0_based
+    sub_previous_layer_decrease["col_number_0_based"] = 5
 
-    sub_diff_factor_secretion_increase = {}
-    sub_diff_factor_secretion_increase["location"] = "rules"
-    sub_diff_factor_secretion_increase["line_number_0_based"] = secretion_base_line - layer_start
-    sub_diff_factor_secretion_increase["col_number_0_based"] = 5
+    sub_next_layer_increase = {}
+    sub_next_layer_increase["location"] = "rules"
+    sub_next_layer_increase["line_number_0_based"] = prev_layer_decrease_line_0_based + 1
+    sub_next_layer_increase["col_number_0_based"] = 5
 
     if layer_start == 6:
-        sub_diff_factor_uptake_decrease["fn"]    = lambda _, delta : 1440.0 + delta
-        sub_diff_factor_secretion_increase["fn"] = lambda _, delta : 1440.0 + delta
-    elif layer_start == 3:
+        sub_previous_layer_decrease["fn"] = lambda _, delta : 1440.0 + delta
+        sub_next_layer_increase["fn"] = lambda _, delta : 1440.0 + delta
+    elif layer_start == 4:
+        sub_previous_layer_decrease["fn"] = lambda df, delta : float(df.iloc[prev_layer_decrease_line_0_based - 1, 5]) + delta
+        sub_next_layer_increase["fn"] = lambda df, delta : float(df.iloc[prev_layer_decrease_line_0_based - 1, 5]) + delta
         # set the transition from 3->2 at the halfway point since we don't have data separating 2 and 3
-        sub_diff_factor_uptake_decrease["fn"]    = lambda df, delta : float(df.iloc[uptake_base_line    - (layer_start+1), 5]) + 0.5 * delta 
-        sub_diff_factor_secretion_increase["fn"] = lambda df, delta : float(df.iloc[secretion_base_line - (layer_start+1), 5]) + 0.5 * delta
-    else:
-        sub_diff_factor_uptake_decrease["fn"] =    lambda df, delta : float(df.iloc[uptake_base_line    - (layer_start+1), 5]) + delta
-        sub_diff_factor_secretion_increase["fn"] = lambda df, delta : float(df.iloc[secretion_base_line - (layer_start+1), 5]) + delta
+        sub_layer_3_decrease = {}
+        sub_layer_3_decrease["location"] = "rules"
+        sub_layer_3_decrease["line_number_0_based"] = prev_layer_decrease_line_0_based + 2
+        sub_layer_3_decrease["col_number_0_based"] = 5
+        sub_layer_3_decrease["fn"] = lambda df, delta : 0.5 * ((float(df.iloc[prev_layer_decrease_line_0_based - 1, 5]) + delta) + 9*1440) # layer 3 stops halfway from the start of it to the end of the layer formation (at t=9*1440)
 
-    if layer_start == 3: # then have layer 2 start halfway between start and end time of 3
-        sub_diff_factor_2_uptake_decrease = {}
-        sub_diff_factor_2_uptake_decrease["location"] = "rules"
-        sub_diff_factor_2_uptake_decrease["line_number_0_based"] = uptake_base_line - (layer_start - 1)
-        sub_diff_factor_2_uptake_decrease["col_number_0_based"] = 5
-        sub_diff_factor_2_uptake_decrease["fn"] = lambda df, delta : float(df.iloc[uptake_base_line - (layer_start + 1), 5]) + delta # the remaining half of the 2/3 layer formation time is spent forming layer 2 (rather than add it to layer 3's updated time, add it to layer 4's so that we don't need to worry about the order of resolving these subs)
-        return [sub_diff_factor_uptake_decrease, sub_diff_factor_secretion_increase, sub_diff_factor_2_uptake_decrease]
+        sub_layer_2_increase = {}
+        sub_layer_2_increase["location"] = "rules"
+        sub_layer_2_increase["line_number_0_based"] = prev_layer_decrease_line_0_based + 3
+        sub_layer_2_increase["col_number_0_based"] = 5
+        sub_layer_2_increase["fn"] = lambda df, delta : 0.5 * ((float(df.iloc[prev_layer_decrease_line_0_based - 1, 5]) + delta) + 9*1440) # layer 2 starts halfway from the start of layer 3 to the end of layer 3 (at t=9*1440)
+        return [sub_previous_layer_decrease, sub_next_layer_increase, sub_layer_3_decrease, sub_layer_2_increase]
     else:
-        return [sub_diff_factor_uptake_decrease, sub_diff_factor_secretion_increase]
+        sub_previous_layer_decrease["fn"] = lambda df, delta : float(df.iloc[prev_layer_decrease_line_0_based - 1, 5]) + delta
+        sub_next_layer_increase["fn"] = lambda df, delta : float(df.iloc[prev_layer_decrease_line_0_based - 1, 5]) + delta
+
+    return [sub_previous_layer_decrease, sub_next_layer_increase]
 
 def writeNewParameters( parameters, idx ):
     path_to_config = f"{path_to_physicell}/config/PhysiCell_settings.xml"
