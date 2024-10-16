@@ -2228,11 +2228,6 @@
     </initial_conditions>
 
     <user_parameters>
-        <random_seed type="int" units="dimensionless" description="">0</random_seed>
         <number_of_cells type="int" units="none" description="initial number of cells (for each cell type)">0</number_of_cells>
-        <layer_6_end_time type="double" units="min" description="time to end layer 6 formation">4508</layer_6_end_time>
-        <layer_5_end_time type="double" units="min" description="time to end layer 5 formation">6054</layer_5_end_time>
-        <layer_4_end_time type="double" units="min" description="time to end layer 4 formation">8642</layer_4_end_time>
-        <layer_3_end_time type="double" units="min" description="time to end layer 3 formation">10284</layer_3_end_time>
     </user_parameters>
 </PhysiCell_settings>

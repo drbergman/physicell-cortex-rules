@@ -37,7 +37,7 @@ def main():
         layer_counts_data = {2: 331, 4: 275, 5: 190, 6: 441} # SOM in ????
 
     layer_counts_data['total'] = sum(layer_counts_data.values())
-    result, order = optimizeParameters(layer_counts_data, min_replicates=1, maxfev = 100)
+    result, order = optimizeParameters(layer_counts_data, min_replicates=3, maxfev = 200)
     print(result)
     print(order)
 
